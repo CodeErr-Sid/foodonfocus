@@ -247,6 +247,45 @@
                 </section>
                 <!-- banner end -->
 
+                                <!-- bg video playing -->
+                                <div class="video-container">
+                                    <video id="video" autoplay loop muted>
+                                      <source src="video/vid1.mp4" type="video/mp4">
+                                    </video>
+                                    <button id="play-pause-btn" class="play">&#10074;&#10074;</button>
+                                  </div>
+                                <script>
+                                    const video = document.getElementById('video');
+                                    const playPauseBtn = document.getElementById('play-pause-btn');
+                
+                                    function playVideo() {
+                                        video.play();
+                                        playPauseBtn.innerHTML = '&#10074;&#10074;';
+                                    }
+                
+                                    function pauseVideo() {
+                                        video.pause();
+                                        playPauseBtn.innerHTML = '&#9658;';
+                                    }
+                
+                                    playPauseBtn.addEventListener('click', function () {
+                                        if (video.paused) {
+                                            playVideo();
+                                        } else {
+                                            pauseVideo();
+                                        }
+                                    });
+                
+                                    playVideo();
+                
+                                    video.addEventListener('ended', function () {
+                                        video.play();
+                                    });
+                
+                
+                                </script>
+                                <!-- bg video playing end-->
+
                 <!-- about -->
                 <section id="about">
                     <div class="container mil-p-120-30">
