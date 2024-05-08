@@ -278,78 +278,7 @@
                 </section>
                 <!-- banner end -->
 
-                <!-- cookie -->
 
-                <div class="wrapper" id="cookieWrapper">
-                    <header>
-                        <i class="bx bx-cookie"></i>
-                        <h2 class="cookietxt">Cookies Consent</h2>
-                    </header>
-
-                    <div class="data">
-                        <p>"Our website uses cookies to enhance your browsing experience, even though we're not a
-                            bakery. 😊" </p>
-                    </div>
-
-                    <div class="buttons">
-                        <button class="button" id="acceptBtn" href="">Accept</button>
-                        <button class="button" id="declineBtn" href="">Decline</button>
-                    </div>
-                </div>
-            </div>
-
-            <script>
-   $(document).ready(function() {
-    // Check if the user has previously accepted or declined the cookie consent
-    var cookieConsentStatus = sessionStorage.getItem("cookieConsentStatus");
-    var popupDisplayed = getCookie("popupDisplayed");
-
-    // If the user has not previously accepted or declined the cookie consent, and the popup hasn't been displayed
-    if (!cookieConsentStatus && !popupDisplayed) {
-        $(".wrapper").show(); // Show the popup
-    }
-
-    // Event listener for accept button
-    $("#acceptBtn").click(function() {
-        $(".wrapper").hide(); // Hide the popup
-        sessionStorage.setItem("cookieConsentStatus", "accepted"); // Set consent status to accepted
-        setCookie("popupDisplayed", true, 1); // Set cookie to expire in 1 day
-    });
-
-    // Event listener for decline button
-    $("#declineBtn").click(function() {
-        $(".wrapper").hide(); // Hide the popup
-        sessionStorage.setItem("cookieConsentStatus", "declined"); // Set consent status to declined
-        setCookie("popupDisplayed", true, 1); // Set cookie to expire in 1 day
-    });
-});
-
-// Function to set cookie
-function setCookie(name, value, days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
-
-// Function to get cookie
-function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
-}
-
-            </script>
-
-            <!-- cookie -->
 
 
             <!-- bg video playing -->
@@ -523,6 +452,194 @@ function getCookie(name) {
                 </div>
             </section>
             <!-- services end -->
+
+            <!-- projects -->
+            <div class="mil-content">
+                <div id="swupMain" class="mil-main-transition">
+    
+                    <!-- portfolio -->
+                    <section class="mil-portfolio-slider-frame">
+                        <div class="mil-animation-frame">
+                            <div class="mil-animation mil-position-4 mil-dark mil-scale" data-value-1="1" data-value-2="2" style="top: -60px; right: -4px;"></div>
+                        </div>
+                        <h2 class="mil-up mil-mb-60">‎ ‎ ‎ Our Projects</h2>
+                        <div class="container">
+                            <div class="row align-items-end">
+                                <div class="col-lg-9">
+                                    <div class="swiper-container mil-portfolio-slider mil-up">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+    
+                                                <div class="mil-portfolio-item mil-slider-item" data-swiper-parallax="-30">
+                                                    <div class="mil-cover-frame mil-drag">
+                                                        <div class="mil-cover" data-swiper-parallax-scale="1.3">
+                                                            <img src="img/works/1.jpg" alt="cover">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mil-descr" data-swiper-parallax-x="104%" data-swiper-parallax-opacity="0">
+                                                        <div class="mil-descr-text" data-swiper-parallax-y="100%" data-swiper-parallax-opacity="0">
+                                                            <div class="mil-labels mil-mb-15">
+                                                                <div class="mil-label mil-upper mil-accent">TECHNOLOGY</div>
+                                                                <div class="mil-label mil-upper">may 24 2023</div>
+                                                            </div>
+                                                            <h5>Interior design studio</h5>
+                                                        </div>
+                                                        <div data-swiper-parallax-y="120" data-swiper-parallax-opacity="0">
+                                                            <a href="project-1.html" class="mil-button mil-arrow-place">
+                                                                <span>View Project</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                            <div class="swiper-slide">
+    
+                                                <div class="mil-portfolio-item mil-slider-item" data-swiper-parallax="-30">
+                                                    <div class="mil-cover-frame mil-drag">
+                                                        <div class="mil-cover" data-swiper-parallax-scale="1.3">
+                                                            <img src="img/works/2.jpg" alt="cover">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mil-descr" data-swiper-parallax-x="104%" data-swiper-parallax-opacity="0">
+                                                        <div class="mil-descr-text" data-swiper-parallax-y="100%" data-swiper-parallax-opacity="0">
+                                                            <div class="mil-labels mil-mb-15">
+                                                                <div class="mil-label mil-upper mil-accent">TECHNOLOGY</div>
+                                                                <div class="mil-label mil-upper">may 24 2023</div>
+                                                            </div>
+                                                            <h5>Home Security Camera</h5>
+                                                        </div>
+                                                        <div data-swiper-parallax-y="100%" data-swiper-parallax-opacity="0">
+                                                            <a href="project-2.html" class="mil-button mil-arrow-place">
+                                                                <span>View Project</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                            <div class="swiper-slide">
+    
+                                                <div class="mil-portfolio-item mil-slider-item" data-swiper-parallax="-30">
+                                                    <div class="mil-cover-frame mil-drag">
+                                                        <div class="mil-cover" data-swiper-parallax-scale="1.3">
+                                                            <img src="img/works/3.jpg" alt="cover">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mil-descr" data-swiper-parallax-x="104%" data-swiper-parallax-opacity="0">
+                                                        <div class="mil-descr-text" data-swiper-parallax-y="100%" data-swiper-parallax-opacity="0">
+                                                            <div class="mil-labels mil-mb-15">
+                                                                <div class="mil-label mil-upper mil-accent">TECHNOLOGY</div>
+                                                                <div class="mil-label mil-upper">may 24 2023</div>
+                                                            </div>
+                                                            <h5>Kemia Honest Skincare</h5>
+                                                        </div>
+                                                        <div data-swiper-parallax-y="100%" data-swiper-parallax-opacity="0">
+                                                            <a href="project-3.html" class="mil-button mil-arrow-place">
+                                                                <span>View Project</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                            <div class="swiper-slide">
+    
+                                                <div class="mil-portfolio-item mil-slider-item" data-swiper-parallax="-30">
+                                                    <div class="mil-cover-frame mil-drag">
+                                                        <div class="mil-cover" data-swiper-parallax-scale="1.3">
+                                                            <img src="img/works/4.jpg" alt="cover">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mil-descr" data-swiper-parallax-x="104%" data-swiper-parallax-opacity="0">
+                                                        <div class="mil-descr-text" data-swiper-parallax-y="100%" data-swiper-parallax-opacity="0">
+                                                            <div class="mil-labels mil-mb-15">
+                                                                <div class="mil-label mil-upper mil-accent">TECHNOLOGY</div>
+                                                                <div class="mil-label mil-upper">may 24 2023</div>
+                                                            </div>
+                                                            <h5>Cascade of Lava</h5>
+                                                        </div>
+                                                        <div data-swiper-parallax-y="100%" data-swiper-parallax-opacity="0">
+                                                            <a href="project-4.html" class="mil-button mil-arrow-place">
+                                                                <span>View Project</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                            <div class="swiper-slide">
+    
+                                                <div class="mil-portfolio-item mil-slider-item" data-swiper-parallax="-30">
+                                                    <div class="mil-cover-frame mil-drag">
+                                                        <div class="mil-cover" data-swiper-parallax-scale="1.3">
+                                                            <img src="img/works/5.jpg" alt="cover">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mil-descr" data-swiper-parallax-x="104%" data-swiper-parallax-opacity="0">
+                                                        <div class="mil-descr-text" data-swiper-parallax-y="100%" data-swiper-parallax-opacity="0">
+                                                            <div class="mil-labels mil-mb-15">
+                                                                <div class="mil-label mil-upper mil-accent">TECHNOLOGY</div>
+                                                                <div class="mil-label mil-upper">may 24 2023</div>
+                                                            </div>
+                                                            <h5>Air Pro by Molekule</h5>
+                                                        </div>
+                                                        <div data-swiper-parallax-y="100%" data-swiper-parallax-opacity="0">
+                                                            <a href="project-5.html" class="mil-button mil-arrow-place">
+                                                                <span>View Project</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                            <div class="swiper-slide">
+    
+                                                <div class="mil-portfolio-item mil-slider-item" data-swiper-parallax="-30">
+                                                    <div class="mil-cover-frame mil-drag">
+                                                        <div class="mil-cover" data-swiper-parallax-scale="1.3">
+                                                            <img src="img/works/6.jpg" alt="cover">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mil-descr" data-swiper-parallax-x="104%" data-swiper-parallax-opacity="0">
+                                                        <div class="mil-descr-text" data-swiper-parallax-y="100%" data-swiper-parallax-opacity="0">
+                                                            <div class="mil-labels mil-mb-15">
+                                                                <div class="mil-label mil-upper mil-accent">TECHNOLOGY</div>
+                                                                <div class="mil-label mil-upper">may 24 2023</div>
+                                                            </div>
+                                                            <h5>Tony's Chocolonely</h5>
+                                                        </div>
+                                                        <div data-swiper-parallax-y="100%" data-swiper-parallax-opacity="0">
+                                                            <a href="project-6.html" class="mil-button mil-arrow-place">
+                                                                <span>View Project</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 mil-relative">
+                                    <div class="mil-portfolio-nav">
+                                        <div class="mil-portfolio-btns-frame">
+                                            <div class="swiper-portfolio-pagination"></div>
+                                            <div class="mil-slider-nav">
+                                                <div class="mil-slider-arrow mil-prev mil-portfolio-prev mil-arrow-place"></div>
+                                                <div class="mil-slider-arrow mil-portfolio-next mil-arrow-place"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- portfolio end -->
+    
+                </div>
+            </div>
+            <!-- projects end -->
 
             <!-- team -->
             <section>
@@ -834,7 +951,7 @@ function getCookie(name) {
             <!-- partners end -->
 
             <!-- blog -->
-            <section>
+            <!-- <section>
                 <div class="container mil-p-120-60">
                     <div class="row align-items-center mil-mb-30">
                         <div class="col-lg-6 mil-mb-30">
@@ -904,8 +1021,62 @@ function getCookie(name) {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- blog end -->
+
+
+            <!-- contact -->
+                   <!-- content -->
+        <div class="mil-content">
+            <div id="swupMain" class="mil-main-transition">
+
+                <!-- banner -->
+                <div class="mil-inner-banner ">
+                    <div class="mil-banner-content mil-center mil-up">
+                        <div class="container">
+                            <ul class="mil-breadcrumbs mil-center mil-mb-60">
+                                <!-- <li><a href="home-1.html">Homepage</a></li> -->
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                            <h1 class="mil-mb-60">Get in touch!</h1>
+                            <!-- <a href="#contact" class="mil-link mil-dark mil-arrow-place mil-down-arrow">
+                                <span>Send message</span>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- banner end -->
+
+                <!-- contact form -->
+                <section id="contact">
+                    <div class="container ">
+                        <!-- <h3 class="mil-center mil-up mil-mb-120">Let's <span class="mil-thin">Talk</span></h3> -->
+                        <form class="row align-items-center">
+                            <div class="col-lg-6 mil-up">
+                                <input type="text" placeholder="What's your name">
+                            </div>
+                            <div class="col-lg-6 mil-up">
+                                <input type="email" placeholder="Your Email">
+                            </div>
+                            <div class="col-lg-12 mil-up">
+                                <textarea placeholder="Tell us about our project"></textarea>
+                            </div>
+                            <div class="col-lg-8">
+                                <p class="mil-up mil-mb-30"><span class="mil-accent">*</span> We promise not to disclose your personal information to third parties.</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="mil-adaptive-right mil-up mil-mb-30">
+                                    <button type="submit" class="mil-button mil-arrow-place">
+                                        <span>Send message</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <!-- contact form end -->
+
+            <!-- contact end -->
 
             <!-- footer -->
             <footer class="mil-soft-bg">

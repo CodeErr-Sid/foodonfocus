@@ -1691,7 +1691,7 @@ banner
 }
 
 .mil-inner-banner .mil-banner-content {
-  padding: 150px 0 0 0;
+  padding: 100px 0 0 0;
 }
 @media screen and (max-width: 1200px) {
   .mil-inner-banner .mil-banner-content {
@@ -4273,101 +4273,6 @@ video {
 /*  */
 .custrow{
   justify-content: space-evenly;
-}
-
-/* cookie popup css */
-/* Google Fonts - Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
-.wrapper {
-  position: fixed;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 345px;
-  width: 100%;
-  background: #fff;
-  border-radius: 8px;
-  padding: 15px 25px 22px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  z-index: 9999;
-  display: none;
-}
-
-.preloader-complete .wrapper {
-  display: block; 
-
-}
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-.wrapper.show {
-  right: 20px;
-  
-}
-.wrapper header {
-  display: flex;
-  align-items: center;
-  column-gap: 15px;
-}
-/* header i {
-  color: #4070f4;
-  font-size: 32px;
-} */
-header h2 {
-  color: black;
-  font-weight: 500;
-}
-.wrapper .data {
-  margin-top: 16px;
-}
-.wrapper .data p {
-  color: #333;
-  font-size: 16px;
-}
-.data p a {
-  color: #4070f4;
-  text-decoration: none;
-}
-.data p a:hover {
-  text-decoration: underline;
-}
-.wrapper .buttons {
-  margin-top: 16px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.buttons .button {
-  border: none;
-  color: #fff;
-  padding: 8px 0;
-  border-radius: 4px;
-  background: rgb(255, 152, 0);
-  cursor: pointer;
-  width: calc(100% / 2 - 10px);
-  transition: all 0.2s ease;
-}
-.buttons #acceptBtn:hover {
-  background-color: rgb(255, 152, 0);
-}
-#declineBtn {
-  border: 2px solid rgb(255, 152, 0);
-  background-color: #fff;
-  color: rgb(255, 152, 0);
-}
-#declineBtn:hover {
-  background-color: rgb(255, 152, 0);
-  color: #fff;
-}
-.cookietxt{
-  font-size: 1.5em;
 }
 
 
