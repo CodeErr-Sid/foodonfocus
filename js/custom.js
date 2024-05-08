@@ -23,13 +23,17 @@ const executeCodes = () => {
 //executeCodes function will be called on webpage load
 window.addEventListener("load", executeCodes);
 
-
 document.addEventListener("DOMContentLoaded", function() {
-    // Simulating preloader completion after 3 seconds (adjust as needed)
-    setTimeout(function() {
-        document.body.classList.add("preloader-complete");
-    }, 6000); // Adjust time as needed
-});
+    // Check if the user has previously accepted or declined the cookie consent
+    var cookieConsentStatus = sessionStorage.getItem("cookieConsentStatus");
+
+    // If the user has not previously accepted or declined the cookie consent, and the preloader animation completes
+    if (!cookieConsentStatus) {
+        setTimeout(function() {
+            document.body.classList.add("preloader-complete");
+            document.getElementById("cookieWrapper").style.display = "block"; // Show cookie wrapper
+        }, 6000); // Adjust time as needed
+    }
 
     // Get reference to accept and decline buttons
     var acceptBtn = document.getElementById("acceptBtn");
@@ -38,9 +42,17 @@ document.addEventListener("DOMContentLoaded", function() {
     // Add event listener to accept button
     acceptBtn.addEventListener("click", function() {
         document.getElementById("cookieWrapper").style.display = "none"; // Hide cookie wrapper
+        sessionStorage.setItem("cookieConsentStatus", "accepted"); // Set consent status to accepted
     });
 
     // Add event listener to decline button
     declineBtn.addEventListener("click", function() {
         document.getElementById("cookieWrapper").style.display = "none"; // Hide cookie wrapper
+        sessionStorage.setItem("cookieConsentStatus", "declined"); // Set consent status to declined
     });
+});
+
+// Clear sessionStorage when leaving the page
+window.addEventListener("unload", function() {
+    sessionStorage.removeItem("cookieConsentStatus");
+});
