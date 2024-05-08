@@ -1492,7 +1492,7 @@ menu
 .mil-menu-list li a:hover {
   -webkit-transform: translateX(5px);
           transform: translateX(5px);
-  color: rgb(255, 255, 255);
+  color: #ff9800;
 }
 .mil-menu-list.mil-hori-list {
   display: -webkit-box;
@@ -1559,7 +1559,7 @@ menu
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
 .mil-main-menu ul li a:hover {
-  color: rgb(255, 255, 255);
+  color: #ff9800;
 }
 .mil-main-menu ul li a.mil-active {
   padding-left: 25px;
