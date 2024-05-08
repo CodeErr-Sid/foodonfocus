@@ -275,7 +275,7 @@
                 <!-- banner end -->
 
                 <!-- cookie -->
-                <div class="unique-section" id="uniqueSection"></div>
+                <div class="unique-section" id="uniqueSection">
                 <div class="wrapper" id="cookieWrapper">
                     <header>
                         <i class="bx bx-cookie"></i>
@@ -292,24 +292,8 @@
                         <button class="button" id="declineBtn" href="">Decline</button>
                     </div>
                 </div>
+                </div>
             </div>
-        </div>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                // Check if the unique section has already been displayed
-                var hasDisplayed = localStorage.getItem("uniqueSectionDisplayed");
-
-                // If the unique section has not been displayed yet
-                if (!hasDisplayed) {
-                    // Display the unique section
-                    document.getElementById("uniqueSection").style.display = "block";
-
-                    // Set flag to indicate that the unique section has been displayed
-                    localStorage.setItem("uniqueSectionDisplayed", "true");
-                }
-            });
-
-        </script>
         <!-- cookie -->
 
 
@@ -347,8 +331,6 @@
             video.addEventListener('ended', function () {
                 video.play();
             });
-
-
         </script>
         <!-- bg video playing end-->
 
