@@ -1,5 +1,4 @@
 // cookie js
-
 const cookieBox = document.querySelector(".wrapper"),
   buttons = document.querySelectorAll(".button");
 
@@ -21,5 +20,27 @@ const executeCodes = () => {
   });
 };
 
+//executeCodes function will be called on webpage load
+window.addEventListener("load", executeCodes);
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Simulating preloader completion after 3 seconds (adjust as needed)
+    setTimeout(function() {
+        document.body.classList.add("preloader-complete");
+    }, 6000); // Adjust time as needed
+});
+
+    // Get reference to accept and decline buttons
+    var acceptBtn = document.getElementById("acceptBtn");
+    var declineBtn = document.getElementById("declineBtn");
+
+    // Add event listener to accept button
+    acceptBtn.addEventListener("click", function() {
+        document.getElementById("cookieWrapper").style.display = "none"; // Hide cookie wrapper
+    });
+
+    // Add event listener to decline button
+    declineBtn.addEventListener("click", function() {
+        document.getElementById("cookieWrapper").style.display = "none"; // Hide cookie wrapper
+    });
