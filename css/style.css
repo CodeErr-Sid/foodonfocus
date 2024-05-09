@@ -97,6 +97,10 @@ body {
   overflow: hidden;
   max-width: 100%;
 }
+#projecttxt {
+  text-align: center;
+}
+
 
 .container {
   pointer-events: all;
