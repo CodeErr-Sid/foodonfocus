@@ -3588,12 +3588,14 @@ footer
 }
 
 .mil-subscribe-form input:focus {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(229, 229, 229);
+  border: 2px solid rgb(255, 152, 0);
   outline: inherit;
 }
 
 .mil-subscribe-form input:hover {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(229, 229, 229);
+
 }
 
 .mil-subscribe-form .mil-button {
@@ -3729,7 +3731,7 @@ portfolio
 
 .mil-portfolio-slider-frame {
   z-index: 0;
-  padding-top: 150px;
+  /* padding-top: 150px; */
 }
 
 @media screen and (max-width: 992px) {
