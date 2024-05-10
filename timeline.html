@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vertical Timeline</title>
+
+<!-- css -->
+<style>
+:root {
+  --darkest: #0f0d11;
+  --blue: #222acc;
+  --120: 120px;
+  --40: 40px;
+  --60: 60px;
+  --20: 20px;
+  --220: 220px;
+  --light-1: white;
+  --light-2: #b5b5c5;
+  --light-3: #87879b;
+  --vtour-blue: #6591c5;
+  --white: white;
+  --xframe-light: #dee3ed;
+  --slider-w: 1200px;
+  --slider-h: 600px;
+  --slider-img-w: 1540px;
+  --slider-img-h: 420px;
+  --180: 180px;
+  --140: 140px;
+  --xf-font: Atkinsonhyperlegible, sans-serif;
+  --80: 80px;
+  --100: 100px;
+  --vtour-dark: #191919
+}
+
+.container---1280 {
+  z-index: 10;
+  max-width: 1280px;
+  position: relative
+}
+
+.container---1280.subpage.how {
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex
+}
+
+.container---1280.subpage.about {
+  margin-top: -50px
+}
+
+
+
+.container-1282 {
+  width: 90vw;
+  max-width: 1360px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.section-timeline {
+  z-index: -3;
+  background-color: var(--light-1);
+  margin-top: 0;
+  position: relative
+}
+
+.text-colour-white {
+  color: #fff
+}
+
+.timeline_circle {
+  border: 1px none var(--light-1);
+  background-color: var(--light-1);
+  border-radius: 100%;
+  width: 12px;
+  min-width: 12px;
+  max-width: 12px;
+  height: 12px;
+  min-height: 12px;
+  max-height: 12px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50vh;
+  box-shadow: 0 0 0 8px #2a30ae
+}
+
+.timeline_quote-text-wrapper {
+  flex: 1
+}
+
+.timeline_quote-title {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500
+}
+
+.timeline_progress-bar {
+  z-index: -1;
+  background-color: var(--light-1);
+  color: var(--darkest);
+  background-image: linear-gradient(#97acc5, #2e1daf 28%, #a74ee2 53%, #2a30ae 79%);
+  width: 3px;
+  height: 50vh;
+  position: fixed;
+  top: 0;
+  bottom: 50vh;
+  left: auto;
+  right: auto
+}
+
+.text-colour-lightgrey {
+  color: var(--light-2)
+}
+
+.margin-bottom-medium {
+  margin-bottom: 220px
+}
+
+.margin-bottom-medium.end {
+  margin-bottom: 0;
+  padding-bottom: 220px
+}
+
+.timeline_quote-image {
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  margin-right: 24px
+}
+
+.timeline_image-wrapper {
+  /* background-image: linear-gradient(138deg, #000, transparent 28%), url(../images/65eaf4a8d77fc7ed93164bd8_Image%20Background.png); */
+  background-position: 0 0, 0 0;
+  background-size: auto, cover;
+  border-radius: 12px;
+  overflow: hidden
+}
+
+.timeline_definition-wrapper {
+  /* background-color: rgba(255, 255, 255, .05); */
+  border-radius: 16px;
+  padding: 16px
+}
+
+.timeline_centre {
+  justify-content: center;
+  display: flex
+}
+
+.margin-bottom-xlarge {
+  margin-bottom: 220px
+}
+
+.margin-bottom-xlarge.dark {
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  -webkit-text-fill-color: inherit;
+  background-clip: border-box;
+  flex-flow: column;
+  display: flex
+}
+
+.timeline_progress {
+  z-index: -2;
+  background-color: var(--darkest);
+  width: 3px;
+  height: 100%;
+  position: absolute
+}
+
+.timeline_progress.dark {
+  background-color: var(--light-1)
+}
+
+.timeline_item {
+  z-index: 2;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 180px 1fr;
+  grid-auto-columns: 1fr;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: grid;
+  position: relative
+}
+
+.timeline_quote-wrapper {
+  border: 2px solid #fff;
+  border-radius: 16px;
+  align-items: flex-start;
+  padding: 24px;
+  display: flex
+}
+
+.inline-block {
+  display: inline-block
+}
+
+.timeline_text {
+  color: var(--light-3);
+  font-family: Atkinsonhyperlegible, sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 110%
+}
+
+.timeline_text.light {
+  color: var(--light-3)
+}
+
+.overlay-fade-top {
+  /* background-image: linear-gradient(#202029, rgba(32, 32, 41, 0)); */
+  height: 120px;
+  position: absolute;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: 0%
+}
+
+.overlay-fade-top.dark {
+  /* background-image: linear-gradient(#161417, rgba(21, 19, 22, .9) 37%, rgba(10, 10, 10, 0)); */
+  width: 30px;
+  max-width: 10%;
+  left: 50%;
+  right: auto;
+  transform: translate(-50%)
+}
+
+.overlay-fade-top.dark.bottom {
+  /* background-image: linear-gradient(rgba(10, 10, 10, 0), rgba(21, 19, 22, .9) 63%, #161417); */
+  height: 160px;
+  top: auto;
+  bottom: 0
+}
+
+.timeline_component {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  position: relative
+}
+
+.link-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px
+}
+
+.timeline_left {
+  text-align: right;
+  justify-content: flex-end;
+  align-items: stretch;
+  position: relative
+}
+
+.overlay-fade-bottom {
+  /* background-image: linear-gradient(rgba(10, 10, 10, 0), #202029); */
+  height: 120px;
+  position: absolute;
+  top: auto;
+  bottom: 0%;
+  left: 0%;
+  right: 0%
+}
+
+
+.overlay-fade-bottom.grid-bottom {
+  height: 400px
+}
+
+.overlay-fade-bottom.grid-top {
+  height: 400px;
+  top: 0;
+  bottom: auto;
+  transform: rotate(180deg)
+}
+
+.timeline_link {
+  opacity: .6;
+  color: #fff;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: opacity .3s;
+  display: flex
+}
+
+.timeline_link:hover {
+  opacity: 1
+}
+
+.timeline_date-text {
+  color: var(--light-3);
+  letter-spacing: -.03em;
+  font-family: Atkinsonhyperlegible, sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50vh
+}
+
+.timeline_date-text.light {
+  color: var(--light-3)
+}
+
+.timeline_milestone-badge {
+  /* color: #161616; */
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 12px;
+  display: inline-block
+}
+
+.timeline_badge {
+  color: #fff;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  /* background-color: rgba(255, 255, 255, .15); */
+  border-radius: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 6px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  display: inline-block
+}
+
+.timeline_quote {
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 14px
+}
+
+.section-vr-timeline {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 6%;
+  display: block;
+  position: relative
+}
+
+@media screen and (max-width:991px) {
+ 
+  .container---1280 {
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex
+  }
+
+
+  .section-vr-timeline-dark {
+    padding-left: 2%;
+    padding-right: 2%
+  }
+}
+
+@media screen and (max-width:767px) {
+  .container-1281 {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px
+  }
+
+  .container-1281.cc-flex-h {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px
+  }
+  .container-1282 {
+    width: 84vw
+  }
+
+  .timeline_quote-image {
+    margin-top: 24px;
+    margin-right: 0
+  }
+
+  .timeline_centre {
+    justify-content: flex-start
+  }
+
+  .margin-bottom-xlarge {
+    margin-bottom: 48px
+  }
+
+  .timeline_progress {
+    left: 6px
+  }
+
+  .timeline_item {
+    grid-template-columns: 64px 1fr;
+    width: 100%
+  }
+
+  .timeline_quote-wrapper {
+    flex-direction: column-reverse
+  }
+
+  .timeline_text {
+    font-size: 20px
+  }
+
+  .overlay-fade-top.dark {
+    left: 0%
+  }
+
+  .timeline_left {
+    text-align: left
+  }
+}
+
+@media screen and (max-width:479px) {
+  .container---1280 {
+    justify-content: flex-start;
+    align-items: flex-start
+  }
+
+  .container---1280.subpage {
+    padding-left: 20px;
+    padding-right: 20px
+  }
+  .section-timeline {
+    margin-top: 130px
+  }
+}
+
+@media screen and (max-width:767px) {
+  #w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3d4-0686a3cd {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3d7-0686a3cd {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3d9-0686a3cd {
+    grid-area: span 1/span 1/span 1/span 1
+  }
+
+  #w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3e1-0686a3cd {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3e4-0686a3cd {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3ec-0686a3cd {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3ef-0686a3cd {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3f7-0686a3cd {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3fa-0686a3cd {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_43c3ed43-6ac2-b500-6d6f-92990686a402-0686a3cd {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_43c3ed43-6ac2-b500-6d6f-92990686a405-0686a3cd {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf12d-1ced2a05 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf130-1ced2a05 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf132-1ced2a05 {
+    grid-area: span 1/span 1/span 1/span 1
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf139-1ced2a05 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf13c-1ced2a05 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf14c-1ced2a05 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf14f-1ced2a05 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf166-1ced2a05 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf169-1ced2a05 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf182-1ced2a05 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf185-1ced2a05 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_60d73f0d-eb97-b20e-d115-fe2d946d0f39-1ced2a05 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_60d73f0d-eb97-b20e-d115-fe2d946d0f3c-1ced2a05 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf12d-3d6ae0a4 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf130-3d6ae0a4 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf132-3d6ae0a4 {
+    grid-area: span 1/span 1/span 1/span 1
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf139-3d6ae0a4 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf13c-3d6ae0a4 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf14c-3d6ae0a4 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf14f-3d6ae0a4 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf166-3d6ae0a4 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf169-3d6ae0a4 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf182-3d6ae0a4 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf185-3d6ae0a4 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_60d73f0d-eb97-b20e-d115-fe2d946d0f39-3d6ae0a4 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_60d73f0d-eb97-b20e-d115-fe2d946d0f3c-3d6ae0a4 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf12d-dc178a7e {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf130-dc178a7e {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf132-dc178a7e {
+    grid-area: span 1/span 1/span 1/span 1
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf139-dc178a7e {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf13c-dc178a7e {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf14c-dc178a7e {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf14f-dc178a7e {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf166-dc178a7e {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf169-dc178a7e {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf182-dc178a7e {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf185-dc178a7e {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_60d73f0d-eb97-b20e-d115-fe2d946d0f39-dc178a7e {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_60d73f0d-eb97-b20e-d115-fe2d946d0f3c-dc178a7e {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf12d-617c441a {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf130-617c441a {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf132-617c441a {
+    grid-area: span 1/span 1/span 1/span 1
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf139-617c441a {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf13c-617c441a {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf14c-617c441a {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf14f-617c441a {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf166-617c441a {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf169-617c441a {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf182-617c441a {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_945c3efd-b92c-7e75-c7e6-ba4805acf185-617c441a {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_60d73f0d-eb97-b20e-d115-fe2d946d0f39-617c441a {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_60d73f0d-eb97-b20e-d115-fe2d946d0f3c-617c441a {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-b8fdc76c-e13a-8445-5730-f0b90333773f-9d5f06ad {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-b8fdc76c-e13a-8445-5730-f0b903337742-9d5f06ad {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-b8fdc76c-e13a-8445-5730-f0b903337744-9d5f06ad {
+    grid-area: span 1/span 1/span 1/span 1
+  }
+
+  #w-node-b8fdc76c-e13a-8445-5730-f0b90333774c-9d5f06ad {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-b8fdc76c-e13a-8445-5730-f0b90333774f-9d5f06ad {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-b8fdc76c-e13a-8445-5730-f0b903337757-9d5f06ad {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-b8fdc76c-e13a-8445-5730-f0b90333775a-9d5f06ad {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-b8fdc76c-e13a-8445-5730-f0b903337762-9d5f06ad {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-b8fdc76c-e13a-8445-5730-f0b903337765-9d5f06ad {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-b8fdc76c-e13a-8445-5730-f0b90333776d-9d5f06ad {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-b8fdc76c-e13a-8445-5730-f0b903337770-9d5f06ad {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_4b7df917-b9b2-99bc-4ead-480c5017922b-bce0b7f8 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_4b7df917-b9b2-99bc-4ead-480c5017922e-bce0b7f8 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_4b7df917-b9b2-99bc-4ead-480c50179230-bce0b7f8 {
+    grid-area: span 1/span 1/span 1/span 1
+  }
+
+  #w-node-_4b7df917-b9b2-99bc-4ead-480c50179237-bce0b7f8 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_4b7df917-b9b2-99bc-4ead-480c5017923a-bce0b7f8 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_4b7df917-b9b2-99bc-4ead-480c50179243-bce0b7f8 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_4b7df917-b9b2-99bc-4ead-480c50179246-bce0b7f8 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_4b7df917-b9b2-99bc-4ead-480c5017924f-bce0b7f8 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_4b7df917-b9b2-99bc-4ead-480c50179252-bce0b7f8 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_4b7df917-b9b2-99bc-4ead-480c5017925b-bce0b7f8 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_4b7df917-b9b2-99bc-4ead-480c5017925e-bce0b7f8 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_4b7df917-b9b2-99bc-4ead-480c50179267-bce0b7f8 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_4b7df917-b9b2-99bc-4ead-480c5017926a-bce0b7f8 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_387c39dc-1ebc-5a11-0030-44ee745146df-bce0b7f8 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_387c39dc-1ebc-5a11-0030-44ee745146e2-bce0b7f8 {
+    grid-area: 1/1/3/2
+  }
+
+  #w-node-_47c9691a-a482-e7b0-34df-61976e1b47e7-bce0b7f8 {
+    grid-area: 1/2/2/3
+  }
+
+  #w-node-_47c9691a-a482-e7b0-34df-61976e1b47ea-bce0b7f8 {
+    grid-area: 1/1/3/2
+  }
+}
+
+</style>
+</head>
+
+
+<!-- html -->
+
+<body>
+
+  <section class="section-vr-timeline">
+    <div class="section-timeline">
+      <div class="container-1282">
+        <div class="timeline_component">
+          <div class="timeline_progress">
+            <div class="timeline_progress-bar"></div>
+          </div>
+          <div  class="timeline_item">
+            <div id="w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3d4-0686a3cd" class="timeline_left">
+              <div class="timeline_date-text">Brief</div>
+            </div>
+            <div id="w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3d7-0686a3cd" class="timeline_centre">
+              <div class="timeline_circle"></div>
+            </div>
+            <div id="w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3d9-0686a3cd" class="timeline_right">
+              <div class="margin-bottom-xlarge">
+                <div class="timeline_text">Share your dreams and ambitions with xfiner, simply contact us.</div>
+              </div>
+            </div>
+          </div>
+          <div data-w-id="43c3ed43-6ac2-b500-6d6f-92990686a3e0" class="timeline_item">
+            <div id="w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3e1-0686a3cd" class="timeline_left">
+              <div class="timeline_date-text">Discover</div>
+            </div>
+            <div id="w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3e4-0686a3cd" class="timeline_centre">
+              <div class="timeline_circle"></div>
+            </div>
+            <div class="timeline_right">
+              <div class="margin-bottom-medium">
+                <div class="timeline_text">Let's have a discussion, and we will show you the even finer ways.<br>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-w-id="43c3ed43-6ac2-b500-6d6f-92990686a3eb" class="timeline_item">
+            <div id="w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3ec-0686a3cd" class="timeline_left">
+              <div class="timeline_date-text">Scope</div>
+            </div>
+            <div id="w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3ef-0686a3cd" class="timeline_centre">
+              <div class="timeline_circle"></div>
+            </div>
+            <div class="timeline_right">
+              <div class="margin-bottom-medium">
+                <div class="timeline_text">If you like, we will tell you how much time and budget it may take.<br>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-w-id="43c3ed43-6ac2-b500-6d6f-92990686a3f6" class="timeline_item">
+            <div id="w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3f7-0686a3cd" class="timeline_left">
+              <div class="timeline_date-text">Assemble</div>
+            </div>
+            <div id="w-node-_43c3ed43-6ac2-b500-6d6f-92990686a3fa-0686a3cd" class="timeline_centre">
+              <div class="timeline_circle"></div>
+            </div>
+            <div class="timeline_right">
+              <div class="margin-bottom-medium">
+                <div class="timeline_text">If you like, we will assemble the xteam on our private platform.<br></div>
+              </div>
+            </div>
+          </div>
+          <div data-w-id="43c3ed43-6ac2-b500-6d6f-92990686a401" class="timeline_item">
+            <div id="w-node-_43c3ed43-6ac2-b500-6d6f-92990686a402-0686a3cd" class="timeline_left">
+              <!-- <div class="timeline_date-text">Start</div> -->
+            </div>
+            <div id="w-node-_43c3ed43-6ac2-b500-6d6f-92990686a405-0686a3cd" class="timeline_centre">
+              <!-- <div class="timeline_circle"></div> -->
+            </div>
+            <div class="timeline_right">
+              <div class="margin-bottom-medium end">
+                <!-- <div class="timeline_text">And then we start, to finish, with excellence, precision and passion.<br> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="overlay-fade-bottom"></div>
+          <div class="overlay-fade-top"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
