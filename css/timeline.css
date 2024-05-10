@@ -62,7 +62,7 @@
   color: #fff
 }
 
-.timeline_circ {
+.timeline_circle {
   border: 1px none var(--light-1);
   background-color: var(--light-1);
   border-radius: 100%;
@@ -95,7 +95,7 @@
   background-image: linear-gradient(#97acc5, #2e1daf 28%, #a74ee2 53%, #2a30ae 79%);
   width: 3px;
   height: 50vh;
-  /* position: fixed; */
+  position: fixed;
   top: 0;
   bottom: 50vh;
   left: auto;
@@ -193,7 +193,7 @@
 
 .timeline_text {
   color: var(--light-3);
-  font-family:"outfit", sans-serif;
+  font-family: Atkinsonhyperlegible, sans-serif;
   font-size: 30px;
   font-weight: 500;
   line-height: 110%
