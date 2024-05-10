@@ -665,7 +665,7 @@
                 <!-- Timeline start -->
 
 
-                    
+
 
 
 
@@ -1245,7 +1245,7 @@
 
                 </div>
 
-                
+
 
                 <!-- contact -->
                 <!-- content -->
@@ -1546,13 +1546,25 @@
                     var vrTimelineSection = document.querySelector('.section-vr-timeline');
                     var sectionRect = vrTimelineSection.getBoundingClientRect();
                     // Check if the top and bottom of the timeline section are within the viewport
-                    console.log(sectionRect.bottom)
                     if (sectionRect.top <= window.innerHeight && sectionRect.bottom >= 370.10400390625) {
                         timelineProgress.classList.add('show');
                     } else {
                         timelineProgress.classList.remove('show');
                     }
+
+                    var progressRect = timelineProgress.getBoundingClientRect();
+                    var elements = document.querySelectorAll('.timeline_centre');
+                    elements.forEach(function (element) {
+                        var elementRect = element.getBoundingClientRect();
+                        if (progressRect.bottom >= elementRect.top && progressRect.top <= elementRect.bottom) {
+                            element.querySelector('.timeline_circle').style.backgroundColor = 'blue'; // Change circle color when hit
+                        } else {
+                            element.querySelector('.timeline_circle').style.backgroundColor = 'white'; // Reset circle color
+                        }
+                    });
                 });
+
+
             </script>
             <!-- jQuery js -->
             <script src="js/plugins/jquery.min.js"></script>
