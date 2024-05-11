@@ -1510,22 +1510,31 @@
                     var vrTimelineSection = document.querySelector('.section-vr-timeline');
                     var sectionRect = vrTimelineSection.getBoundingClientRect();
                     // Check if the top and bottom of the timeline section are within the viewport
-                    if (sectionRect.top <= window.innerHeight && sectionRect.bottom >= 370.10400390625) {
+                    if (sectionRect.top <= window.innerHeight && sectionRect.bottom >= 0) {
                         timelineProgress.classList.add('show');
                     } else {
                         timelineProgress.classList.remove('show');
                     }
+                    // --maroon:#972221;
+                    //   --orange:#f89c1f;
 
                     var progressRect = timelineProgress.getBoundingClientRect();
-                    var elements = document.querySelectorAll('.timeline_centre');
+                    var elements = document.querySelectorAll('.timeline_item');
                     elements.forEach(function (element) {
-                        var elementRect = element.getBoundingClientRect();
+                        var elementRect = element.querySelector('.timeline_circle').getBoundingClientRect();
                         if (progressRect.bottom >= elementRect.top && progressRect.top <= elementRect.bottom) {
-                            element.querySelector('.timeline_circle').style.backgroundColor = 'blue'; // Change circle color when hit
+                            element.querySelector('.timeline_circle').style.backgroundColor = '#f89c1f'; // Change circle color when hit
+                            element.querySelector('.timeline_left .timeline_date-text').style.color = '#972221'
+                            element.querySelector('.timeline_right .timeline_text').style.color = '#972221'
                         } else {
-                            element.querySelector('.timeline_circle').style.backgroundColor = 'white'; // Reset circle color
+                            element.querySelector('.timeline_circle').style.backgroundColor = '#f89c1f96'; // Reset circle color
+                            element.querySelector('.timeline_left .timeline_date-text').style.color = '#87879b'
+                            element.querySelector('.timeline_right .timeline_text').style.color = '#87879b'
                         }
                     });
+
+
+
                 });
 
 
