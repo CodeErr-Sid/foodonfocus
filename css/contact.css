@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Existing CSS */
+#contact-form-ss {
+  padding: .5rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.container-ss {
+  display: flex;
+  background-color: #edece8;
+}
+
+.txt-thin{
+  font-weight: 900;
+}
+
+.image-container-ss {
+  flex: 1;
+  max-width: 50%;
+}
+
+.image-container-ss img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.form-content {
+  max-width: 50%;
+  flex: 1;
+  padding-left: 20px;
+}
+
+form {
+  margin: 0;
+}
+
+form>div {
+  margin-bottom: 10px;
+}
+
+/* Styling for radio buttons */
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-group fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  border: 0;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.strch-btn{
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-floating {
+  flex: 1 0 calc(50% - 10px); /* Two items per row */
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .form-floating {
+      flex: 1 0 100%; /* One item per row on smaller screens */
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+}
+
+
+.form-group fieldset legend {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.form-group input[type="radio"] {
+  display: none;
+}
+
+.form-group label {
+  position: relative;
+  display: inline-block;
+  padding: 2px 14px;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Styling for semi-circle effect */
+.form-group label:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.form-group label:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Hover effect */
+.form-group label:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Active state */
+.form-group input[type="radio"]:checked+label {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Gap between buttons */
+.form-group label+input[type="radio"] {
+  margin-left: 10px;
+}
