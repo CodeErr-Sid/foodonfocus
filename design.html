@@ -324,8 +324,79 @@ counters.forEach(animateCounter);
 </script>
                 <!-- counter end -->
 
-                
-
+                <!-- section start -->
+                <div class="container-sid">
+                    <div class="content">
+                      <div class="section">
+                        <h2>Why are we special?</h2>
+                        <p style="text-align: center;">Lorem ipsum dolor sit amet, elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <ul>
+                          <li class="expandable">
+                            <h3 style="padding-top: 8px; font-size: 2em;">Award Winning +</h3>
+                            <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </li>
+                          <li class="expandable">
+                            <h3 style="font-size: 2em;">Flawless Design +</h3>
+                            <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </li>
+                          <li class="expandable">
+                            <h3 style="font-size: 2em;">Technical Excellence +</h3>
+                            <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </li>
+                          <li class="expandable">
+                            <h3 style="font-size: 2em;">Easy Building +</h3>
+                            <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="video-container">
+                      <video id="video" autoplay loop muted class="video">
+                        <source src="video/vid1.mp4" type="video/mp4">
+                      </video>
+                      <button id="play-pause-btn" class="play">&#10074;&#10074;</button>
+                    </div>
+                  </div><script>
+                    const video = document.getElementById('video');
+                    const playPauseBtn = document.getElementById('play-pause-btn');
+                  
+                    function playVideo() {
+                        video.play();
+                        playPauseBtn.innerHTML = '&#10074;&#10074;';
+                    }
+                  
+                    function pauseVideo() {
+                        video.pause();
+                        playPauseBtn.innerHTML = '&#9658;';
+                    }
+                  
+                    playPauseBtn.addEventListener('click', function () {
+                        if (video.paused) {
+                            playVideo();
+                        } else {
+                            pauseVideo();
+                        }
+                    });
+                  
+                    playVideo();
+                  
+                    video.addEventListener('ended', function () {
+                        video.play();
+                    });
+                  </script>
+                  
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                      const expandables = document.querySelectorAll('.expandable');
+                  
+                      expandables.forEach(item => {
+                        item.addEventListener('click', () => {
+                          item.querySelector('.expanded').classList.toggle('active');
+                        });
+                      });
+                    });
+                  </script>
+                <!-- section end -->
                                 <!-- featured Products -->
                                 <div class="outer-container-fp">
                                     <div id="container-fp">

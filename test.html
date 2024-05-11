@@ -3,190 +3,153 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Service Request Form</title>
+<link rel="stylesheet" href="css/style.css">
+<title>Horizontal Video with Content</title>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-  }
 
-  .form-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  .container-sid {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px;
   }
 
-  .form-container .left-section {
-    flex: 1;
-    padding: 20px;
+  .video-container {
+    width: 100%;
+    max-width: 800px; /* Set maximum width for the video container */
+    height: auto;
+    background-color: #f0f0f0;
+    margin-top: 20px; /* Add margin to separate video and content */
   }
 
-  .form-container .left-section img {
+  .video {
     width: 100%;
     height: auto;
-    border-radius: 10px;
   }
 
-  .form-container .right-section {
-    flex: 1;
+  .content {
+    width: 100%;
+    max-width: 800px; /* Set maximum width for the content */
+    background-color: #fff;
+  }
+
+  .section {
     padding: 20px;
   }
 
-  .form-group {
-    margin-bottom: 20px;
+  .section h2 {
+    text-align: center;
   }
 
-  .form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+  ul {
+    list-style: none;
+    padding: 0;
   }
 
-  .form-group input[type="text"],
-  .form-group input[type="email"],
-  .form-group textarea,
-  .form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
-    transition: border-color 0.3s;
-  }
-
-  .form-group input[type="text"]:focus,
-  .form-group input[type="email"]:focus,
-  .form-group textarea:focus,
-  .form-group select:focus {
-    border-color: #007bff;
-  }
-
-  .form-group textarea {
-    height: 150px;
-  }
-
-  .btn-group {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-
-  .btn-group button {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f89c1f;
-    color: #fff;
-    font-size: 16px;
+  .expandable {
     cursor: pointer;
-    transition: background-color 0.3s;
   }
 
-  .btn-group button:hover {
-    background-color: #e78312;
+  .expanded {
+    display: none;
   }
 
-  .submit-btn {
+  .expanded.active {
     display: block;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f89c1f;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
   }
 
-  .submit-btn:hover {
-    background-color: #e78312;
-  }
-
-  @media screen and (max-width: 600px) {
-    .form-container {
-      flex-direction: column;
+  @media only screen and (min-width: 601px) {
+    .container-sid {
+      flex-direction: row;
+      justify-content: center;
     }
-    .form-container .left-section,
-    .form-container .right-section {
-      flex: 1 100%;
+
+    .content {
+      margin-right: 20px; /* Add space between content and video on larger screens */
+    }
+
+    .video-container {
+      margin-top: 0; /* Remove margin top on larger screens */
     }
   }
 </style>
 </head>
 <body>
-<div class="form-container">
-  <div class="left-section">
-    <!-- Placeholder image -->
-    <img src="img/works/4.jpg" alt="Placeholder" />
+
+<div class="container-sid">
+  <div class="content">
+    <div class="section">
+      <h2>Why are we special?</h2>
+      <p style="text-align: center;">Lorem ipsum dolor sit amet, elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <ul>
+        <li class="expandable">
+          <h3 style="padding-top: 8px; font-size: 2em;">Award Winning +</h3>
+          <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </li>
+        <li class="expandable">
+          <h3 style="font-size: 2em;">Flawless Design +</h3>
+          <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </li>
+        <li class="expandable">
+          <h3 style="font-size: 2em;">Technical Excellence +</h3>
+          <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </li>
+        <li class="expandable">
+          <h3 style="font-size: 2em;">Easy Building +</h3>
+          <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </li>
+      </ul>
+    </div>
   </div>
-  <div class="right-section">
-    <h2>Service Request Form</h2>
-    <form>
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-      </div>
-      <div class="form-group">
-        <label for="description">Description</label>
-        <textarea id="description" name="description" placeholder="Enter your description" required></textarea>
-      </div>
-      <div class="form-group">
-        <label for="service">What service do you need?</label>
-        <select id="service" name="service">
-          <option value="">Select service</option>
-          <option value="Web Design">Web Design</option>
-          <option value="Graphic Design">Graphic Design</option>
-          <option value="SEO">SEO</option>
-          <option value="Content Writing">Content Writing</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="budget">What is your budget?</label>
-        <select id="budget" name="budget">
-          <option value="">Select budget</option>
-          <option value="Less than $500">$0 - $500</option>
-          <option value="$500 - $1000">$500 - $1000</option>
-          <option value="$1000 - $5000">$1000 - $5000</option>
-          <option value="More than $5000">More than $5000</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="find-us">How did you find us?</label>
-        <div class="btn-group">
-          <button type="button" class="find-us-btn" value="Google">Google</button>
-          <button type="button" class="find-us-btn" value="Social Media">Social Media</button>
-          <button type="button" class="find-us-btn" value="Referral">Referral</button>
-        </div>
-        <p id="find-us-feedback"></p>
-      </div>
-      <button type="submit" class="submit-btn">Submit</button>
-    </form>
+  <div class="video-container">
+    <video id="video" autoplay loop muted class="video">
+      <source src="video/vid1.mp4" type="video/mp4">
+    </video>
+    <button id="play-pause-btn" class="play">&#10074;&#10074;</button>
   </div>
 </div>
 
 <script>
-  const findUsButtons = document.querySelectorAll('.find-us-btn');
-  const feedbackParagraph = document.getElementById('find-us-feedback');
+  const video = document.getElementById('video');
+  const playPauseBtn = document.getElementById('play-pause-btn');
 
-  findUsButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      feedbackParagraph.textContent = `You found us through ${button.value}.`;
+  function playVideo() {
+      video.play();
+      playPauseBtn.innerHTML = '&#10074;&#10074;';
+  }
+
+  function pauseVideo() {
+      video.pause();
+      playPauseBtn.innerHTML = '&#9658;';
+  }
+
+  playPauseBtn.addEventListener('click', function () {
+      if (video.paused) {
+          playVideo();
+      } else {
+          pauseVideo();
+      }
+  });
+
+  playVideo();
+
+  video.addEventListener('ended', function () {
+      video.play();
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const expandables = document.querySelectorAll('.expandable');
+
+    expandables.forEach(item => {
+      item.addEventListener('click', () => {
+        item.querySelector('.expanded').classList.toggle('active');
+      });
     });
   });
 </script>
+
 </body>
 </html>
