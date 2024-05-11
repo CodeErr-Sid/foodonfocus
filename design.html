@@ -26,11 +26,16 @@
     <script src="js/custom.js" defer></script>
     <!-- jquery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <scripts src="js/custom.js"></script>
     <!-- page name -->
     <title>FoodOnFocus</title>
     <!-- icon -->
     <link rel="icon" href="img/base/FNFico.ico" type="image/x-icon">
+    <!-- fancybox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
 
     <style>
         link[rel="icon"] {
@@ -328,62 +333,39 @@ counters.forEach(animateCounter);
                 <div class="container-sid">
                     <div class="content">
                       <div class="section">
-                        <h2>Why are we special?</h2>
-                        <p style="text-align: center;">Lorem ipsum dolor sit amet, elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h2 id="pad">Why are we special?</h2>
+                        <p id="pad1" style="text-align: center;">Lorem ipsum dolor sit amet, elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         <ul>
                           <li class="expandable">
-                            <h3 style="padding-top: 8px; font-size: 2em;">Award Winning +</h3>
+                            <h3 style="padding-top: 8px; font-size: 2em; text-align: center;">Award Winning +</h3>
                             <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                           </li>
                           <li class="expandable">
-                            <h3 style="font-size: 2em;">Flawless Design +</h3>
+                            <h3 style="font-size: 2em; text-align: center">Flawless Design +</h3>
                             <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                           </li>
                           <li class="expandable">
-                            <h3 style="font-size: 2em;">Technical Excellence +</h3>
+                            <h3 style="font-size: 2em; text-align: center">Technical Excellence +</h3>
                             <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                           </li>
                           <li class="expandable">
-                            <h3 style="font-size: 2em;">Easy Building +</h3>
+                            <h3 style="font-size: 2em; text-align: center">Easy Building +</h3>
                             <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                           </li>
                         </ul>
                       </div>
                     </div>
-                    <div class="video-container">
-                      <video id="video" autoplay loop muted class="video">
-                        <source src="video/vid1.mp4" type="video/mp4">
-                      </video>
-                      <button id="play-pause-btn" class="play">&#10074;&#10074;</button>
-                    </div>
-                  </div><script>
-                    const video = document.getElementById('video');
-                    const playPauseBtn = document.getElementById('play-pause-btn');
-                  
-                    function playVideo() {
-                        video.play();
-                        playPauseBtn.innerHTML = '&#10074;&#10074;';
-                    }
-                  
-                    function pauseVideo() {
-                        video.pause();
-                        playPauseBtn.innerHTML = '&#9658;';
-                    }
-                  
-                    playPauseBtn.addEventListener('click', function () {
-                        if (video.paused) {
-                            playVideo();
-                        } else {
-                            pauseVideo();
-                        }
-                    });
-                  
-                    playVideo();
-                  
-                    video.addEventListener('ended', function () {
-                        video.play();
-                    });
-                  </script>
+
+<div class="vertical-video-container">
+  <div class="video-container-abc">
+    <video id="video" autoplay loop muted class="video">
+      <source src="video/vid1.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+                  </div>
+
                   
                   <script>
                     document.addEventListener("DOMContentLoaded", function() {
@@ -397,8 +379,109 @@ counters.forEach(animateCounter);
                     });
                   </script>
                 <!-- section end -->
+
+                <!-- featured services -->
+                <section class="services-section">
+                    <h2>Our Services</h2>
+                    
+                    <div class="lorem-ipsum">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero eu erat posuere facilisis. Sed mollis mauris ut lacinia tempor.</p>
+                    </div>
+                    <div class="text-separator"></div>
+                    
+                    <div class="service-box">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Design 1</h3>
+                    </div>
+                    <div class="service-box">
+                        <i class="fas fa-pencil-alt"></i>
+                        <h3>Design 2</h3>
+                    </div>
+                    <div class="service-box">
+                        <i class="fas fa-drafting-compass"></i>
+                        <h3>Design 3</h3>
+                    </div>
+                    <div class="service-box">
+                        <i class="fas fa-cube"></i>
+                        <h3>Design 4</h3>
+                    </div>
+                    <div class="service-box">
+                        <i class="fas fa-palette"></i>
+                        <h3>Design 5</h3>
+                    </div>
+                    <div class="service-box">
+                        <i class="fas fa-brush"></i>
+                        <h3>Design 6</h3>
+                    </div>
+                    <div class="service-box">
+                        <i class="fas fa-paint-roller"></i>
+                        <h3>Design 7</h3>
+                    </div>
+                    <div class="service-box">
+                        <i class="fas fa-magic"></i>
+                        <h3>Design 8</h3>
+                    </div>
+                    <div class="service-box">
+                        <i class="fas fa-search"></i>
+                        <h3>Design 9</h3>
+                    </div>
+                
+                </section>
+                <!-- featured services end -->
+
+                <!-- featur prod -->
+                <section class="works">
+                    <div class="container">
+                        <h2 style="font-size: 2.5em; text-align: center;">Explore recent works</h2>
+                        <div class="text-separator"></div>
+                      <ul>
+                        <li>
+                          <div class="project-box">
+                            <figure class="project-image reveal-effect masker wow"> <a href="img/works/1.jpg" data-fancybox="2"><img src="img/works/1.jpg" alt="Image"></a> </figure>
+                            <div class="project-content">
+                              <h3><a href="images/works01.jpg" data-fancybox="">Moments Matter Event Studio</a></h3>
+                              <small>Branding — Website</small> </div>
+                            <!-- end project-content --> 
+                          </div>
+                          <!-- end project-box --> 
+                        </li>
+                        <li>
+                          <div class="project-box">
+                            <figure class="project-image reveal-effect masker wow"> <a href="" data-fancybox=""><img src="img/works/1.jpg" alt="Image"></a> </figure>
+                            <div class="project-content">
+                              <h3><a href="img/works/1.jpg" data-fancybox="">More Powered Macbook Pro X</a></h3>
+                              <small>Website — eCommerce</small> </div>
+                            <!-- end project-content --> 
+                          </div>
+                          <!-- end project-box --> 
+                        </li>
+                        <li>
+                            <div class="project-box">
+                              <figure class="project-image reveal-effect masker wow"> <a href="img/works/1.jpg" data-fancybox="2"><img src="img/works/1.jpg" alt="Image"></a> </figure>
+                              <div class="project-content">
+                                <h3><a href="images/works01.jpg" data-fancybox="">Moments Matter Event Studio</a></h3>
+                                <small>Branding — Website</small> </div>
+                              <!-- end project-content --> 
+                            </div>
+                            <!-- end project-box --> 
+                          </li>
+                          <li>
+                            <div class="project-box">
+                              <figure class="project-image reveal-effect masker wow"> <a href="" data-fancybox="2"><img src="img/works/1.jpg" alt="Image"></a> </figure>
+                              <div class="project-content">
+                                <h3><a href="img/works/1.jpg" data-fancybox="">More Powered Macbook Pro X</a></h3>
+                                <small>Website — eCommerce</small> </div>
+                              <!-- end project-content --> 
+                            </div>
+                            <!-- end project-box --> 
+                          </li>
+                      </ul>
+                    </div>
+                    <!-- end container --> 
+                  </section>
+                <!-- featur prod end -->
                                 <!-- featured Products -->
-                                <div class="outer-container-fp">
+                                <!-- <div class="outer-container-fp">
                                     <div id="container-fp">
                                         <div class="primary-heading-box">
                                             <h1>FEATURED WORKS </h1>
@@ -455,7 +538,7 @@ counters.forEach(animateCounter);
                                         </div>
                                     </div>
                 
-                                </div>
+                                </div> -->
                                 <!-- featured products end -->
                     
                 <!-- call to action -->
