@@ -26,8 +26,8 @@
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
     <script src="js/custom.js" defer></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
     <!-- jquery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -806,8 +806,8 @@
                             </div>
                         </div> -->
 
-                        <h2 class="mil-center mil-up mil-mb-60 mil-dark">Customer <span
-                                class="mil-thin">Voices:</span> <br>Hear
+                        <h2 class="mil-center mil-up mil-mb-60 mil-dark">Customer <span class="mil-thin">Voices:</span>
+                            <br>Hear
                             What
                             <span class="mil-thin">They Say!</span>
                         </h2>
@@ -1281,40 +1281,54 @@
                                         <br>
                                         project<span class="txt-thin" style="margin: 0 10px;">WITH US</span>
                                     </h1>
+
                                     <form action="">
                                         <div class="form-row">
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="floatingName"
-                                                    placeholder="Name">
-                                                <label for="floatingName">Name*</label>
+
+                                            <div class="did-floating-label-content">
+                                                <input class="did-floating-input" type="text" id="name" name="name"
+                                                    placeholder=" ">
+                                                <label class="did-floating-label" for="name">Name</label>
                                             </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="floatingCompany"
-                                                    placeholder="Company">
-                                                <label for="floatingCompany">Company*</label>
+                                            <div class="did-floating-label-content">
+                                                <input class="did-floating-input" type="text" id="company"
+                                                    name="company" placeholder=" ">
+                                                <label class="did-floating-label" for="company">Company</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+
+
+                                            <div class="did-floating-label-content">
+                                                <input class="did-floating-input" type="email" id="email" name="email"
+                                                    placeholder=" ">
+                                                <label class="did-floating-label" for="email">Email</label>
+                                            </div>
+                                            <div class="did-floating-label-content">
+                                                <input class="did-floating-input" type="text" id="website"
+                                                    name="website" placeholder=" ">
+                                                <label class="did-floating-label" for="website">Website</label>
                                             </div>
                                         </div>
 
                                         <div class="form-row">
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="floatingWebsite"
-                                                    placeholder="Website/Social">
-                                                <label for="floatingWebsite">Website/Social</label>
+                                            <div class="did-floating-label-content">
+                                                <input class="did-floating-input" type="tel" id="phone" name="phone"
+                                                    placeholder=" ">
+                                                <label class="did-floating-label" for="phone">Phone Number</label>
                                             </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="email" class="form-control" id="floatingEmail"
-                                                    placeholder="name@example.com">
-                                                <label for="floatingEmail">Email*</label>
-                                            </div>
+
                                         </div>
 
                                         <div class="form-row">
-                                            <div class="form-floating mb-3">
-                                                <input type="tel" class="form-control" id="floatingPhone"
-                                                    placeholder="Phone">
-                                                <label for="floatingPhone">Phone</label>
+
+                                            <div class="did-floating-label-content">
+                                                <textarea class="did-floating-input" id="message" name="message"
+                                                    placeholder=" "></textarea>
+                                                <label class="did-floating-label" for="message">Message Box</label>
                                             </div>
                                         </div>
+
 
 
                                         <div id="role-group" class="form-group">
