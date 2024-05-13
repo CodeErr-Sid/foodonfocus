@@ -101,6 +101,7 @@ body {
 }
 #projecttxt {
   text-align: center;
+  color: var(--maroon);
 }
 
 
@@ -461,6 +462,7 @@ blockquote {
 }
 
 .mil-thin {
+  color: black;
   font-weight: 100;
 }
 
@@ -495,6 +497,10 @@ a {
 
 .mil-red {
   color: red;
+}
+
+.mil-maroon{
+  color: var(--maroon);
 }
 
 
@@ -2794,11 +2800,11 @@ services
 }
 
 .mil-services-grid .mil-services-grid-item {
-  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-right: solid 2px #bcb6b6
 }
 
 .mil-services-grid .mil-services-grid-item:first-child {
-  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 2px #bcb6b6;
 }
 
 @media screen and (max-width: 992px) {
@@ -3750,6 +3756,7 @@ portfolio
 }
 
 .mil-portfolio-nav {
+  margin-bottom: 26px;
   background-color: rgb(242, 242, 242);
   width: 100%;
   padding: 0 60px;
@@ -4953,7 +4960,7 @@ video {
 
 /*  */
 .custrow {
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .txt-maroon{
@@ -4965,19 +4972,19 @@ video {
 }
 
   .outer-container-fp {
-    background-color: rgb(248 156 31); /* Set the background color of the outer container */
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    
+  }
+  /* featured products */
   
-}
-/* featured products */
-
-#container-fp {
+  #container-fp {
+  background-color: rgb(248 156 31); /* Set the background color of the outer container */
   min-height: 100vh;
   width: 100%;
-  background-color: white;
   color: black;
   --border-radius: 90px;
   border-top-left-radius: var(--border-radius);
@@ -4997,6 +5004,7 @@ video {
   font-family: sans-serif;
   font-size: 3.5rem;
   font-weight: 600;
+  color: var(--maroon);
   text-align: center;
 }
 

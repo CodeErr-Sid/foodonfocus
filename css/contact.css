@@ -10,7 +10,7 @@
 
 .container-ss {
   display: flex;
-  background-color: #edece8;
+  background-color: #fff;
 }
 
 .txt-thin {
@@ -31,6 +31,7 @@
   width: 100%;
   height: 100%;
   display: block;
+  object-fit: cover;
 }
 
 
@@ -106,25 +107,27 @@ form>div {
 }
 
 .did-floating-input {
-  font-size: 12px;
+  font-size: 1.5rem;
   display: block;
   width: 100%;
   height: 70px;
-  /* padding: 0 20px; */
+  padding: 0 20px;
   background: #fff;
   color: #323840;
-  border: none;
+  border: 2px solid black;
   border-radius: 16px;
   box-sizing: border-box;
 }
 
 .did-floating-input:focus~.did-floating-label {
-  top: -8px;
+  top: -3px;
   font-size: 13px;
+  font-weight: bold;
 }
 
 .did-floating-input:not(:placeholder-shown)~.did-floating-label {
-  top: -8px;
+  font-weight: bold;
+  top: -3px;
   font-size: 13px;
 }
 
