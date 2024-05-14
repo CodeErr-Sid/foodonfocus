@@ -26,23 +26,24 @@
     <script src="js/custom.js" defer></script>
     <!-- jquery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <scripts src="js/custom.js"></script>
-    <!-- page name -->
-    <title>FoodOnFocus</title>
-    <!-- icon -->
-    <link rel="icon" href="img/base/FNFico.ico" type="image/x-icon">
-    <!-- fancybox -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <scripts src="js/custom.js">
+        </script>
+        <!-- page name -->
+        <title>FoodOnFocus</title>
+        <!-- icon -->
+        <link rel="icon" href="img/base/FNFico.ico" type="image/x-icon">
+        <!-- fancybox -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
-    <style>
-        link[rel="icon"] {
-            width: 32px;
-            height: 32px;
-        }
-    </style>
+        <style>
+            link[rel="icon"] {
+                width: 32px;
+                height: 32px;
+            }
+        </style>
 </head>
 
 <body>
@@ -212,14 +213,14 @@
                     <span></span>
                 </div>
             </div>
-            <div class="mil-frame-bottom">
+            <!-- <div class="mil-frame-bottom">
                 <div class="mil-current-page"></div>
                 <div class="mil-back-to-top">
                     <a href="#top" class="mil-link mil-dark mil-arrow-place">
                         <span>Back to top</span>
                     </a>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!-- frame end -->
 
@@ -270,125 +271,233 @@
 
                 <!-- counter -->
 
-<section class="counter-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3 col-sm-6">
-        <div class="counter-box">
-          <i class="fas fa-users"></i>
-          <p>Clients Served</p>
-          <span class="counter" data-target="100">0</span>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="counter-box">
-          <i class="fas fa-project-diagram"></i>
-          <p>Projects</p>
-          <span class="counter" data-target="200">0</span>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="counter-box">
-          <i class="fas fa-trophy"></i>
-          <p>Awards</p>
-          <span class="counter" data-target="20">0</span>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="counter-box">
-          <i class="fas fa-clock"></i>
-          <p>Experience</p>
-          <span class="counter" data-target="25">0</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- background image -->
-  <div class="bg-image" style="background-image: url('img/works/1/4.jpg');"></div>
-</section>
+                <section class="counter-section">
+                    <div class="bg-image-container">
+                        <img class="bg-image" src="img/photo/design-counter-bg.webp" alt="">
+                    </div>
 
-<script>
-    // Get all counter elements
-const counters = document.querySelectorAll('.counter');
+                    <div class="container counter-section-container">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="counter-box">
+                                    <i class="fas fa-users"></i>
+                                    <p>Clients Served</p>
+                                    <span class="counter" data-target="100">0</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="counter-box">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <p>Projects</p>
+                                    <span class="counter" data-target="200">0</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="counter-box">
+                                    <i class="fas fa-trophy"></i>
+                                    <p>Awards</p>
+                                    <span class="counter" data-target="20">0</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="counter-box">
+                                    <i class="fas fa-clock"></i>
+                                    <p>Experience</p>
+                                    <span class="counter" data-target="25">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- background image -->
+                </section>
 
-// Function to animate counter
-function animateCounter(counter) {
-  const target = counter.getAttribute('data-target');
-  let count = 0;
-  const interval = setInterval(() => {
-    count++;
-    counter.textContent = count;
-    if (count >= target) {
-      clearInterval(interval);
-    }
-  }, 10);
-}
+                <script>
+                    // Get all counter elements
+                    const counters = document.querySelectorAll('.counter');
 
-// Animate counters on page load
-counters.forEach(animateCounter);
-</script>
+                    // Function to animate counter
+                    function animateCounter(counter) {
+                        const target = counter.getAttribute('data-target');
+                        let count = 0;
+                        const interval = setInterval(() => {
+                            count++;
+                            counter.textContent = count;
+                            if (count >= target) {
+                                clearInterval(interval);
+                            }
+                        }, 10);
+                    }
+
+                    // Animate counters on page load
+                    counters.forEach(animateCounter);
+                </script>
                 <!-- counter end -->
 
                 <!-- section start -->
                 <div class="container-sid">
-                    <div class="content">
-                      <div class="section">
-                        <h2 id="pad">Why are we special?</h2>
-                        <p id="pad1" style="text-align: center;">Lorem ipsum dolor sit amet, elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <ul>
-                          <li class="expandable">
-                            <h3 style="padding-top: 8px; font-size: 2em; text-align: center;">Award Winning +</h3>
-                            <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                          </li>
-                          <li class="expandable">
-                            <h3 style="font-size: 2em; text-align: center">Flawless Design +</h3>
-                            <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                          </li>
-                          <li class="expandable">
-                            <h3 style="font-size: 2em; text-align: center">Technical Excellence +</h3>
-                            <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                          </li>
-                          <li class="expandable">
-                            <h3 style="font-size: 2em; text-align: center">Easy Building +</h3>
-                            <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                          </li>
-                        </ul>
-                      </div>
+
+                    <div class="vertical-video-container">
+                        <div class="video-container-abc">
+                            <video id="video" autoplay loop muted class="video">
+                                <source src="video/vid1.mp4" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
 
-<div class="vertical-video-container">
-  <div class="video-container-abc">
-    <video id="video" autoplay loop muted class="video">
-      <source src="video/vid1.mp4" type="video/mp4">
-    </video>
-  </div>
-</div>
+                    <div class="content">
+                        <div class="section">
 
-                  </div>
+                            <h2 id="pad">Why are we special?</h2>
+                            <p id="pad1">Lorem ipsum dolor sit amet, elit.Lorem ipsum dolor
+                                sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <ul>
+                                <li class="expandable">
+                                    <div class="ex-list-item">
+                                        <div class="ex-h3-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
+                                                focusable="false"
+                                                color="var(--token-c8809533-d74e-4474-af14-ef3a211efd13, rgb(1, 70, 112))"
+                                                style="align-self: end;user-select: none;width: 6%;height: 6%;display: inline-block;fill: rgb(0, 0, 0);color: rgb(0, 0, 0);flex-shrink: 0;">
+                                                <g color="var(--token-c8809533-d74e-4474-af14-ef3a211efd13, rgb(1, 70, 112))"
+                                                    weight="thin">
+                                                    <path
+                                                        d="M220,216a4,4,0,0,1-4,4H40a4,4,0,0,1,0-8H216A4,4,0,0,1,220,216Zm-80-40V80a12,12,0,0,1,12-12h40a12,12,0,0,1,12,12v96a12,12,0,0,1-12,12H152A12,12,0,0,1,140,176Zm8,0a4,4,0,0,0,4,4h40a4,4,0,0,0,4-4V80a4,4,0,0,0-4-4H152a4,4,0,0,0-4,4Zm-96,0V40A12,12,0,0,1,64,28h40a12,12,0,0,1,12,12V176a12,12,0,0,1-12,12H64A12,12,0,0,1,52,176Zm8,0a4,4,0,0,0,4,4h40a4,4,0,0,0,4-4V40a4,4,0,0,0-4-4H64a4,4,0,0,0-4,4Z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                            <h3>Award Winning</h3>
+                                        </div>
+                                        <span class="ex-plus">+</span>
+                                    </div>
+                                    <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elitLorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                                <li class="expandable">
+                                    <div class="ex-list-item">
+                                        <div class="ex-h3-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
+                                                focusable="false"
+                                                color="var(--token-c8809533-d74e-4474-af14-ef3a211efd13, rgb(1, 70, 112))"
+                                                style="align-self: end;user-select: none;width: 6%;height: 6%;display: inline-block;fill: rgb(0, 0, 0);color: rgb(0, 0, 0);flex-shrink: 0;">
+                                                <g color="var(--token-c8809533-d74e-4474-af14-ef3a211efd13, rgb(1, 70, 112))"
+                                                    weight="thin">
+                                                    <path
+                                                        d="M220,216a4,4,0,0,1-4,4H40a4,4,0,0,1,0-8H216A4,4,0,0,1,220,216Zm-80-40V80a12,12,0,0,1,12-12h40a12,12,0,0,1,12,12v96a12,12,0,0,1-12,12H152A12,12,0,0,1,140,176Zm8,0a4,4,0,0,0,4,4h40a4,4,0,0,0,4-4V80a4,4,0,0,0-4-4H152a4,4,0,0,0-4,4Zm-96,0V40A12,12,0,0,1,64,28h40a12,12,0,0,1,12,12V176a12,12,0,0,1-12,12H64A12,12,0,0,1,52,176Zm8,0a4,4,0,0,0,4,4h40a4,4,0,0,0,4-4V40a4,4,0,0,0-4-4H64a4,4,0,0,0-4,4Z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                            <h3>Award Winning</h3>
+                                        </div>
+                                        <span class="ex-plus">+</span>
+                                    </div>
+                                    <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elitLorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                                <li class="expandable">
+                                    <div class="ex-list-item">
+                                        <div class="ex-h3-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
+                                                focusable="false"
+                                                color="var(--token-c8809533-d74e-4474-af14-ef3a211efd13, rgb(1, 70, 112))"
+                                                style="align-self: end;user-select: none;width: 6%;height: 6%;display: inline-block;fill: rgb(0, 0, 0);color: rgb(0, 0, 0);flex-shrink: 0;">
+                                                <g color="var(--token-c8809533-d74e-4474-af14-ef3a211efd13, rgb(1, 70, 112))"
+                                                    weight="thin">
+                                                    <path
+                                                        d="M220,216a4,4,0,0,1-4,4H40a4,4,0,0,1,0-8H216A4,4,0,0,1,220,216Zm-80-40V80a12,12,0,0,1,12-12h40a12,12,0,0,1,12,12v96a12,12,0,0,1-12,12H152A12,12,0,0,1,140,176Zm8,0a4,4,0,0,0,4,4h40a4,4,0,0,0,4-4V80a4,4,0,0,0-4-4H152a4,4,0,0,0-4,4Zm-96,0V40A12,12,0,0,1,64,28h40a12,12,0,0,1,12,12V176a12,12,0,0,1-12,12H64A12,12,0,0,1,52,176Zm8,0a4,4,0,0,0,4,4h40a4,4,0,0,0,4-4V40a4,4,0,0,0-4-4H64a4,4,0,0,0-4,4Z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                            <h3>Award Winning</h3>
+                                        </div>
+                                        <span class="ex-plus">+</span>
+                                    </div>
+                                    <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elitLorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                                <li class="expandable">
+                                    <div class="ex-list-item">
+                                        <div class="ex-h3-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
+                                                focusable="false"
+                                                color="var(--token-c8809533-d74e-4474-af14-ef3a211efd13, rgb(1, 70, 112))"
+                                                style="align-self: end;user-select: none;width: 6%;height: 6%;display: inline-block;fill: rgb(0, 0, 0);color: rgb(0, 0, 0);flex-shrink: 0;">
+                                                <g color="var(--token-c8809533-d74e-4474-af14-ef3a211efd13, rgb(1, 70, 112))"
+                                                    weight="thin">
+                                                    <path
+                                                        d="M220,216a4,4,0,0,1-4,4H40a4,4,0,0,1,0-8H216A4,4,0,0,1,220,216Zm-80-40V80a12,12,0,0,1,12-12h40a12,12,0,0,1,12,12v96a12,12,0,0,1-12,12H152A12,12,0,0,1,140,176Zm8,0a4,4,0,0,0,4,4h40a4,4,0,0,0,4-4V80a4,4,0,0,0-4-4H152a4,4,0,0,0-4,4Zm-96,0V40A12,12,0,0,1,64,28h40a12,12,0,0,1,12,12V176a12,12,0,0,1-12,12H64A12,12,0,0,1,52,176Zm8,0a4,4,0,0,0,4,4h40a4,4,0,0,0,4-4V40a4,4,0,0,0-4-4H64a4,4,0,0,0-4,4Z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                            <h3>Award Winning</h3>
+                                        </div>
+                                        <span class="ex-plus">+</span>
+                                    </div>
+                                    <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elitLorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                                <li class="expandable">
+                                    <div class="ex-list-item">
+                                        <div class="ex-h3-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
+                                                focusable="false"
+                                                color="var(--token-c8809533-d74e-4474-af14-ef3a211efd13, rgb(1, 70, 112))"
+                                                style="align-self: end;user-select: none;width: 6%;height: 6%;display: inline-block;fill: rgb(0, 0, 0);color: rgb(0, 0, 0);flex-shrink: 0;">
+                                                <g color="var(--token-c8809533-d74e-4474-af14-ef3a211efd13, rgb(1, 70, 112))"
+                                                    weight="thin">
+                                                    <path
+                                                        d="M220,216a4,4,0,0,1-4,4H40a4,4,0,0,1,0-8H216A4,4,0,0,1,220,216Zm-80-40V80a12,12,0,0,1,12-12h40a12,12,0,0,1,12,12v96a12,12,0,0,1-12,12H152A12,12,0,0,1,140,176Zm8,0a4,4,0,0,0,4,4h40a4,4,0,0,0,4-4V80a4,4,0,0,0-4-4H152a4,4,0,0,0-4,4Zm-96,0V40A12,12,0,0,1,64,28h40a12,12,0,0,1,12,12V176a12,12,0,0,1-12,12H64A12,12,0,0,1,52,176Zm8,0a4,4,0,0,0,4,4h40a4,4,0,0,0,4-4V40a4,4,0,0,0-4-4H64a4,4,0,0,0-4,4Z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                            <h3>Award Winning</h3>
+                                        </div>
+                                        <span class="ex-plus">+</span>
+                                    </div>
+                                    <p class="expanded" style="text-align:justify">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elitLorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
-                  
-                  <script>
-                    document.addEventListener("DOMContentLoaded", function() {
-                      const expandables = document.querySelectorAll('.expandable');
-                  
-                      expandables.forEach(item => {
-                        item.addEventListener('click', () => {
-                          item.querySelector('.expanded').classList.toggle('active');
+
+
+                </div>
+
+                <script>
+                    $(document).ready(function () {
+                        $(".expandable").click(function () {
+                            var $exPlus = $(this).find('.ex-plus');
+                            var $exPanded = $(this).find('.expanded')
+                            $exPanded.slideToggle();
+                            $exPlus.toggleClass('rotated')
+                            if ($exPlus.text() === "+") {
+                                $exPlus.text("-");
+                            } else {
+                                $exPlus.text("+");
+                            }
+
                         });
-                      });
                     });
-                  </script>
+                </script>
                 <!-- section end -->
 
                 <!-- featured services -->
                 <section class="services-section">
                     <h2>Our Services</h2>
-                    
+
                     <div class="lorem-ipsum">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero eu erat posuere facilisis. Sed mollis mauris ut lacinia tempor.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero eu erat posuere
+                            facilisis. Sed mollis mauris ut lacinia tempor.</p>
                     </div>
                     <div class="text-separator"></div>
-                    
+
                     <div class="service-box">
                         <i class="fas fa-paint-brush"></i>
                         <h3>Design 1</h3>
@@ -425,7 +534,7 @@ counters.forEach(animateCounter);
                         <i class="fas fa-search"></i>
                         <h3>Design 9</h3>
                     </div>
-                
+
                 </section>
                 <!-- featured services end -->
 
@@ -434,54 +543,66 @@ counters.forEach(animateCounter);
                     <div class="container">
                         <h2 style="font-size: 2.5em; text-align: center;">Explore recent works</h2>
                         <div class="text-separator"></div>
-                      <ul>
-                        <li>
-                          <div class="project-box">
-                            <figure class="project-image reveal-effect masker wow"> <a href="img/works/1.jpg" data-fancybox="2"><img src="img/works/1.jpg" alt="Image"></a> </figure>
-                            <div class="project-content">
-                              <h3><a href="images/works01.jpg" data-fancybox="">Moments Matter Event Studio</a></h3>
-                              <small>Branding — Website</small> </div>
-                            <!-- end project-content --> 
-                          </div>
-                          <!-- end project-box --> 
-                        </li>
-                        <li>
-                          <div class="project-box">
-                            <figure class="project-image reveal-effect masker wow"> <a href="" data-fancybox=""><img src="img/works/1.jpg" alt="Image"></a> </figure>
-                            <div class="project-content">
-                              <h3><a href="img/works/1.jpg" data-fancybox="">More Powered Macbook Pro X</a></h3>
-                              <small>Website — eCommerce</small> </div>
-                            <!-- end project-content --> 
-                          </div>
-                          <!-- end project-box --> 
-                        </li>
-                        <li>
-                            <div class="project-box">
-                              <figure class="project-image reveal-effect masker wow"> <a href="img/works/1.jpg" data-fancybox="2"><img src="img/works/1.jpg" alt="Image"></a> </figure>
-                              <div class="project-content">
-                                <h3><a href="images/works01.jpg" data-fancybox="">Moments Matter Event Studio</a></h3>
-                                <small>Branding — Website</small> </div>
-                              <!-- end project-content --> 
-                            </div>
-                            <!-- end project-box --> 
-                          </li>
-                          <li>
-                            <div class="project-box">
-                              <figure class="project-image reveal-effect masker wow"> <a href="" data-fancybox="2"><img src="img/works/1.jpg" alt="Image"></a> </figure>
-                              <div class="project-content">
-                                <h3><a href="img/works/1.jpg" data-fancybox="">More Powered Macbook Pro X</a></h3>
-                                <small>Website — eCommerce</small> </div>
-                              <!-- end project-content --> 
-                            </div>
-                            <!-- end project-box --> 
-                          </li>
-                      </ul>
+                        <ul>
+                            <li>
+                                <div class="project-box">
+                                    <figure class="project-image reveal-effect masker wow"> <a href="img/works/1.jpg"
+                                            data-fancybox="2"><img src="img/works/1.jpg" alt="Image"></a> </figure>
+                                    <div class="project-content">
+                                        <h3><a href="images/works01.jpg" data-fancybox="">Moments Matter Event
+                                                Studio</a></h3>
+                                        <small>Branding — Website</small>
+                                    </div>
+                                    <!-- end project-content -->
+                                </div>
+                                <!-- end project-box -->
+                            </li>
+                            <li>
+                                <div class="project-box">
+                                    <figure class="project-image reveal-effect masker wow"> <a href=""
+                                            data-fancybox=""><img src="img/works/1.jpg" alt="Image"></a> </figure>
+                                    <div class="project-content">
+                                        <h3><a href="img/works/1.jpg" data-fancybox="">More Powered Macbook Pro X</a>
+                                        </h3>
+                                        <small>Website — eCommerce</small>
+                                    </div>
+                                    <!-- end project-content -->
+                                </div>
+                                <!-- end project-box -->
+                            </li>
+                            <li>
+                                <div class="project-box">
+                                    <figure class="project-image reveal-effect masker wow"> <a href="img/works/1.jpg"
+                                            data-fancybox="2"><img src="img/works/1.jpg" alt="Image"></a> </figure>
+                                    <div class="project-content">
+                                        <h3><a href="images/works01.jpg" data-fancybox="">Moments Matter Event
+                                                Studio</a></h3>
+                                        <small>Branding — Website</small>
+                                    </div>
+                                    <!-- end project-content -->
+                                </div>
+                                <!-- end project-box -->
+                            </li>
+                            <li>
+                                <div class="project-box">
+                                    <figure class="project-image reveal-effect masker wow"> <a href=""
+                                            data-fancybox="2"><img src="img/works/1.jpg" alt="Image"></a> </figure>
+                                    <div class="project-content">
+                                        <h3><a href="img/works/1.jpg" data-fancybox="">More Powered Macbook Pro X</a>
+                                        </h3>
+                                        <small>Website — eCommerce</small>
+                                    </div>
+                                    <!-- end project-content -->
+                                </div>
+                                <!-- end project-box -->
+                            </li>
+                        </ul>
                     </div>
-                    <!-- end container --> 
-                  </section>
+                    <!-- end container -->
+                </section>
                 <!-- featur prod end -->
-                                <!-- featured Products -->
-                                <!-- <div class="outer-container-fp">
+                <!-- featured Products -->
+                <!-- <div class="outer-container-fp">
                                     <div id="container-fp">
                                         <div class="primary-heading-box">
                                             <h1>FEATURED WORKS </h1>
@@ -539,8 +660,8 @@ counters.forEach(animateCounter);
                                     </div>
                 
                                 </div> -->
-                                <!-- featured products end -->
-                    
+                <!-- featured products end -->
+
                 <!-- call to action -->
                 <section class="mil-soft-bg">
                     <div class="container mil-p-120-120">
