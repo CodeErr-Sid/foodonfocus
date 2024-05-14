@@ -5368,79 +5368,108 @@ ul {
   margin-bottom: 20px;
 }
 
+/* featured works sid */
 
-/* works */
-/* Featured Products Section */
-.featured-products {
-  padding: 50px 0;
+.projects-section {
+  padding: 40px;
+  font-family: "Outfit", sans-serif;
 }
 
-.section-title {
-  font-size: 2.5em;
-  text-align: center;
+.heading {
+  float: left;
   margin-bottom: 20px;
 }
 
-.text-separator {
-  width: 100px;
-  height: 2px;
-  background-color: #333; /* Adjust to your color scheme */
-  margin: 0 auto 20px auto;
+.heading2 {
+  text-align: right;
+  padding-top: 5%;
 }
 
-.product-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.product-item {
-  margin: 0 20px 20px 0; /* Adjust spacing between products */
-}
-
-.product-box {
-  border: 1px solid #ccc; /* Add border for each product box */
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.product-image {
-  overflow: hidden;
-}
-
-.product-image img {
+.divider {
   width: 100%;
-  height: auto;
-  transition: transform 0.3s ease; /* Add transition effect for image hover */
+  border-bottom: 1px solid black;
+  clear: both;
 }
 
-.product-image img:hover {
-  transform: scale(1.1); /* Zoom effect on hover */
+.project {
+  margin-top: 20px;
 }
 
-.product-content {
-  padding: 15px;
+.project-details {
+  flex: 1;
+  margin-right: 20px;
+  /* padding-left: 8%; */
+  text-align: justify;
 }
 
-.product-content h3 {
-  font-size: 1.2em;
+.project-details h3 {
   margin-top: 0;
 }
 
-.product-content small {
-  display: block;
-  font-size: 0.9em;
-  color: #888; /* Adjust to your color scheme */
+.buttons {
+  text-align: right;
 }
 
+.image-container {
+  flex: 1;
+  text-align: right;
 
-.product-image  {
-  width: 50%;
-  height: auto;
-  transition: transform 0.3s ease;
-  max-width: 50%; /* Add max-width to prevent images from exceeding their container */
 }
 
+.image-container img {
+  width: 90%;
+}
+
+.location-year {
+  clear: both;
+  margin-top: 10px;
+}
+
+.location-year p {
+  margin: 0;
+}
+
+.top-btn {
+  display: inline-block;
+  padding: 11px;
+  background-color: #fbae19;
+  /* Green */
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  /* font-size: 16px; */
+  border-radius: 30px;
+  border-color: black;
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.top-btn:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+.bot-btn {
+  display: inline-block;
+  padding: 3px 3px;
+  background-color: #fbae19;
+  /* Green */
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  /* font-size: 16px; */
+  border-radius: 20px;
+  border-color: black;
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+
+}
+
+.bot-btn:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
