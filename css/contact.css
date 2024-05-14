@@ -10,29 +10,30 @@
 
 .container-ss {
   display: flex;
-  background-color: #edece8;
+  background-color: #fff;
 }
 
-.txt-thin{
+.txt-thin {
   font-weight: 900;
 }
 
-.image-container-ss {
+.image-container-ss,
+.form-content {
   flex: 1;
   max-width: 50%;
+}
+
+.form-content {
+  padding-left: 20px;
 }
 
 .image-container-ss img {
   width: 100%;
   height: 100%;
   display: block;
+  object-fit: cover;
 }
 
-.form-content {
-  max-width: 50%;
-  flex: 1;
-  padding-left: 20px;
-}
 
 form {
   margin: 0;
@@ -47,6 +48,7 @@ form>div {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  padding: 0 10px;
 }
 
 .form-group fieldset {
@@ -61,25 +63,100 @@ form>div {
   gap: 4px;
 }
 
-.strch-btn{
+.strch-btn {
   width: 100%;
 }
 
 .form-row {
   display: flex;
   flex-wrap: wrap;
+  margin: 16px 0;
+  gap: 16px;
+  padding: 0 10px;
+}
+
+.form-row>div {
+  flex: 1;
 }
 
 .form-floating {
-  flex: 1 0 calc(50% - 10px); /* Two items per row */
+  flex: 1 0 calc(50% - 10px);
+  /* Two items per row */
   margin-right: 10px;
 }
 
+.did-floating-label-content {
+  position: relative;
+  /* margin-bottom: 20px; */
+}
+
+.did-floating-label {
+  color: black;
+  font-size: 20px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 5px;
+  background: #fff;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.did-floating-input {
+  font-size: 1.5rem;
+  display: block;
+  width: 100%;
+  height: 70px;
+  padding: 0 20px;
+  background: #fff;
+  color: #323840;
+  border: 2px solid black;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.did-floating-input:focus~.did-floating-label {
+  top: -3px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.did-floating-input:not(:placeholder-shown)~.did-floating-label {
+  font-weight: bold;
+  top: -3px;
+  font-size: 13px;
+}
+
+
 @media (max-width: 768px) {
   .form-floating {
-      flex: 1 0 100%; /* One item per row on smaller screens */
-      margin-right: 0;
-      margin-bottom: 10px;
+    flex: 1 0 100%;
+    /* One item per row on smaller screens */
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (width < 1024px) {
+  .container-ss {
+    flex-direction: column
+  }
+
+  .image-container-ss,
+  .form-content {
+    flex: 1;
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (width < 640px) {
+  .form-row {
+    flex-direction: column;
   }
 }
 
