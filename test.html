@@ -1,143 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Services</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>Projects</title>
+    <style>
+        .projects-section {
+            padding: 40px;
+            font-family: "Outfit", sans-serif;
+        }
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
-    body {
-        font-family: 'Outfit', sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-
-    .services-section {
-        text-align: center;
-        padding: 50px 0;
-        padding: 10px;
-    }
-
-    .service-box {
-        position: relative;
-        width: calc(33.33% - 22px); 
-        background-color: white;
-        border: 2px solid whitesmoke;
-        display: inline-block;
-        margin: 0 2px; 
-        margin-bottom: 2px;
-        padding: 15px;
-        border-radius: 0;
-        transition: background-color 0.3s;
-        box-sizing: border-box;
-    }
-
-    .service-box:hover {
-        background-color: #f89c1f;
-        cursor: pointer;
-    }
-
-    .service-box:hover h3,
-    .service-box:hover i {
-        color: #fff;
-    }
-
-    .service-box h3 {
-        color: #333;
-        font-size: 20px;
-        margin: 0;
-        text-align: left;
-        transition: color 0.3s;
-    }
-
-    .service-box i {
-        font-size: 24px;
-        margin-bottom: 10px;
-        display: block;
-        color: #333;
-        text-align: left;
-        transition: color 0.3s;
-    }
-
-    @media (max-width: 768px) {
-        .service-box {
-            width: calc(50% - 22px); /* Adjusted width to account for 2px margin */
+        .heading {
+            float: left;
             margin-bottom: 20px;
         }
-    }
 
-    @media (max-width: 480px) {
-        .service-box {
-            width: calc(100% - 22px); /* Adjusted width to account for 2px margin */
+        .heading2 {
+            text-align: right;
+            padding-top: 5%;
         }
-    }
 
-    .text-separator {
-        margin: 20px auto;
-        width: 50px;
-        height: 2px;
-        background-color: #333;
-    }
+        .divider {
+            width: 100%;
+            border-bottom: 1px solid black;
+            clear: both;
+        }
 
-    .lorem-ipsum {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-</style>
+        .project {
+            margin-top: 20px;
+        }
+
+        .project-details {
+            flex: 1;
+            margin-right: 20px;
+            /* padding-left: 8%; */
+            text-align: justify;
+        }
+
+        .project-details h3 {
+            margin-top: 0;
+        }
+
+        .buttons {
+            text-align: right;
+        }
+
+        .image-container {
+            flex: 1;
+            text-align: right;
+
+        }
+
+        .image-container img {
+            width: 90%;
+        }
+
+        .location-year {
+            clear: both;
+            margin-top: 10px;
+        }
+
+        .location-year p {
+            margin: 0;
+        }
+
+        .top-btn {
+            display: inline-block;
+            padding: 11px;
+            background-color: #fbae19;
+            /* Green */
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            /* font-size: 16px; */
+            border-radius: 30px;
+            border-color: black;
+            border: none;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .top-btn:hover {
+            background-color: white;
+            color: black;
+            border-color: black;
+        }
+
+        .bot-btn {
+            display: inline-block;
+            padding: 3px 3px;
+            background-color: #fbae19;
+            /* Green */
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            /* font-size: 16px; */
+            border-radius: 20px;
+            border-color: black;
+            border: none;
+            cursor: pointer;
+            border: 2px solid transparent;
+
+        }
+
+        .bot-btn:hover {
+            background-color: white;
+            color: black;
+            border-color: black;
+        }
+    </style>
 </head>
+
 <body>
+    <section class="projects-section">
+        <div class="heading">
+            <h4 style="margin-bottom: -15px;">Projects</h4>
+            <h1>Proof is in<br> our portfolio</h1>
+        </div>
+        <div class="heading2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <br>Fuga quas molestiae aut quam, eligendi quod veritatis sapiente.
+                <br>Provident saepe numquam quis quibusdam, laborum maxime quas .
+            </p>
+        </div>
 
-<section class="services-section">
-    <h2>Our Services</h2>
-    
-    <div class="lorem-ipsum">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero eu erat posuere facilisis. Sed mollis mauris ut lacinia tempor.</p>
-    </div>
-    <div class="text-separator"></div>
-    
-    <div class="service-box">
-        <i class="fas fa-paint-brush"></i>
-        <h3>Design 1</h3>
-    </div>
-    <div class="service-box">
-        <i class="fas fa-pencil-alt"></i>
-        <h3>Design 2</h3>
-    </div>
-    <div class="service-box">
-        <i class="fas fa-drafting-compass"></i>
-        <h3>Design 3</h3>
-    </div>
-    <div class="service-box">
-        <i class="fas fa-cube"></i>
-        <h3>Design 4</h3>
-    </div>
-    <div class="service-box">
-        <i class="fas fa-palette"></i>
-        <h3>Design 5</h3>
-    </div>
-    <div class="service-box">
-        <i class="fas fa-brush"></i>
-        <h3>Design 6</h3>
-    </div>
-    <div class="service-box">
-        <i class="fas fa-paint-roller"></i>
-        <h3>Design 7</h3>
-    </div>
-    <div class="service-box">
-        <i class="fas fa-magic"></i>
-        <h3>Design 8</h3>
-    </div>
-    <div class="service-box">
-        <i class="fas fa-search"></i>
-        <h3>Design 9</h3>
-    </div>
+        <div class="divider"></div>
 
-</section>
+        <div style="text-align: right; padding-top: 7px;">
+            <a class="top-btn" href="">View all Projects</a>
+        </div>
+        <!-- 1p -->
+        <div class="project">
+            <div class="project-details">
+                <h3>Food On Focus - Project 1</h3>
+            </div>
+            <div class="image-container">
+                <img style="height: 60vh;;" src="img/works/2.jpg" alt="Project Image">
+            </div>
+        </div>
+        <div style="text-align: right; padding-top: 3px;">
+            <a href="" class="bot-btn">Button 1</a>
+            <a href="" class="bot-btn">Button 2</a>
+        </div>
+        <div class="">
+            <!-- <h2>Year <br> <h3 style="top: -15px;">2024</h3></h2> -->
+            <h2>Location <br>
+                <h3 style="top: -15px;">Chennai, India</h3>
+            </h2>
+        </div>
+        <div class="divider"></div>
+        <!-- 1p -->
 
+        <!-- 1p -->
+        <div class="project">
+            <div class="project-details">
+                <h3>Food On Focus - Project 1</h3>
+            </div>
+            <div class="image-container">
+                <img style="height: 60vh;;" src="img/works/1.jpg" alt="Project Image">
+            </div>
+        </div>
+        <div style="text-align: right; padding-top: 3px;">
+            <a href="" class="bot-btn">Button 1</a>
+            <a href="" class="bot-btn">Button 2</a>
+        </div>
+        <div class="">
+            <!-- <h2>Year <br> <h3 style="top: -15px;">2024</h3></h2> -->
+            <h2>Location <br>
+                <h3 style="top: -15px;">Chennai, India</h3>
+            </h2>
+        </div>
+        <div class="divider"></div>
+        <!-- 1p -->
+
+        <!-- 1p -->
+        <div class="project">
+            <div class="project-details">
+                <h3>Food On Focus - Project 1</h3>
+            </div>
+            <div class="image-container">
+                <img style="height: 60vh;;" src="img/works/5.jpg" alt="Project Image">
+            </div>
+        </div>
+        <div style="text-align: right; padding-top: 3px;">
+            <a href="" class="bot-btn">Button 1</a>
+            <a href="" class="bot-btn">Button 2</a>
+        </div>
+        <div class="">
+            <!-- <h2>Year <br> <h3 style="top: -15px;">2024</h3></h2> -->
+            <h2>Location <br>
+                <h3 style="top: -15px;">Chennai, India</h3>
+            </h2>
+        </div>
+        <div class="divider"></div>
+        <!-- 1p -->
+
+        <!-- 1p -->
+        <div class="project">
+            <div class="project-details">
+                <h3>Food On Focus - Project 1</h3>
+            </div>
+            <div class="image-container">
+                <img style="height: 60vh;;" src="img/works/3.jpg" alt="Project Image">
+            </div>
+        </div>
+        <div style="text-align: right; padding-top: 3px;">
+            <a href="" class="bot-btn">Button 1</a>
+            <a href="" class="bot-btn">Button 2</a>
+        </div>
+        <div class="">
+            <!-- <h2>Year <br> <h3 style="top: -15px;">2024</h3></h2> -->
+            <h2>Location <br>
+                <h3 style="top: -15px;">Chennai, India</h3>
+            </h2>
+        </div>
+        <div class="divider"></div>
+        <!-- 1p -->
+
+
+
+
+    </section>
 </body>
+
 </html>
