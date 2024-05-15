@@ -5296,8 +5296,6 @@ video {
  padding: 0 20px;
 }
 
-@media only screen and (max-width: 768px) {
-  .section {
 
 @media only screen and (max-width: 768px) {
   .section {
@@ -5663,7 +5661,7 @@ ul {
     width: 24px;
     fill: #fbae19;
     z-index: 9;
-    transition: all 0.8s cubic]]-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .animated-button .arr-1 {
