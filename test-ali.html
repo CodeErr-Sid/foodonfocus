@@ -2,145 +2,261 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Second Section</title>
-	<link rel="stylesheet" href="test.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        html {
+            background-color: #eaf0f2;
+        }
+
+        header {
+            text-align: center;
+            padding-top: 100px;
+            margin-bottom: 300px;
+            font-size: 35px;
+        }
+
+        header h2 {
+            color: #f0525f;
+        }
+
+        header span {
+            color: #eaa03f;
+        }
+
+        /* The footer is fixed to the bottom of the page */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-height:800px) {
+            footer {
+                position: static;
+            }
+
+            header {
+                padding-top: 40px;
+            }
+        }
+
+        .footer-distributed {
+            background-color: #ffffff;
+            color: #000000;
+            width: 100%;
+            text-align: left;
+            font: bold 16px sans-serif;
+            padding: 50px 50px 60px 50px;
+            margin-top: 80px;
+        }
+
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        /* Footer left */
+        .footer-distributed .footer-left {
+            width: 30%;
+        }
+		.footer-logo{
+			height: 5vh;
+			width: auto;
+		}
+
+        .footer-distributed .footer-logo {
+            margin-bottom: 20px;
+        }
+
+        /* Footer links */
+        .footer-distributed .footer-links {
+            color: #000000;
+            margin: 20px 0 12px;
+        }
+
+        .footer-distributed .footer-links a {
+            display: inline-block;
+            line-height: 1.8;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .footer-distributed .footer-company-name {
+            color: #8f9296;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        /* Footer Center */
+        .footer-distributed .footer-center {
+            width: 35%;
+        }
+
+        .footer-distributed .footer-center i {
+            background-color: #33383b;
+            color: #ffffff;
+            font-size: 25px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 38px;
+            margin: 10px 15px;
+            vertical-align: middle;
+        }
+
+        .footer-distributed .footer-center i.fa-envelope {
+            font-size: 17px;
+            line-height: 38px;
+        }
+
+        .footer-distributed .footer-center p {
+            display: inline-block;
+            color: #000000;
+            vertical-align: middle;
+            margin: 0;
+        }
+
+        .footer-distributed .footer-center p span {
+            display: block;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .footer-distributed .footer-center p a {
+            color: #e0ac1c;
+            text-decoration: none;
+        }
+
+        /* Footer Right */
+        .footer-distributed .footer-right {
+            width: 30%;
+        }
+
+        .footer-distributed .footer-company-about {
+            line-height: 20px;
+            color: #92999f;
+            font-size: 13px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .footer-distributed .footer-company-about span {
+            display: block;
+            color: #000000;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .footer-distributed .footer-icons {
+            margin-top: 25px;
+        }
+
+        .footer-distributed .footer-icons a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            background-color: #33383b;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 35px;
+            margin-right: 3px;
+            margin-bottom: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .footer-distributed .footer-icons a:hover,
+        .footer-distributed .footer-links a:hover {
+            color: #fbae19;
+            background-color: transparent;
+        }
+
+        @media (max-width: 880px) {
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right {
+                display: block;
+                width: 100%;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+
+            .footer-distributed .footer-center i {
+                margin-left: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
-	<section id="contact-form-ss">
-		<div class="container-ss">
-			<div class="image-container-ss">
-				<img src="img/photo/contact-bg.webp" alt="">
-			</div>
-			<div class="form-content">
-				<h1 class="primary-heading" style="    font-weight: 100;
-				word-spacing: 0px;">
-					Start your next
-					<br>
-					project<span class="txt-thin" style="margin: 0 10px;">WITH US</span>
-				</h1>
-				<form action="">
-					<div class="form-row">
-						<div class="form-floating mb-3">
-							<input type="text" class="form-control" id="floatingName" placeholder="Name">
-							<label for="floatingName">Name*</label>
-						</div>
-						<div class="form-floating mb-3">
-							<input type="text" class="form-control" id="floatingCompany" placeholder="Company">
-							<label for="floatingCompany">Company*</label>
-						</div>
-					</div>
+    <header>
+        <h2>Welcome to My Website</h2>
+        <span>Your tagline here</span>
+    </header>
 
-					<div class="form-row">
-						<div class="form-floating mb-3">
-							<input type="text" class="form-control" id="floatingWebsite" placeholder="Website/Social">
-							<label for="floatingWebsite">Website/Social</label>
-						</div>
-						<div class="form-floating mb-3">
-							<input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
-							<label for="floatingEmail">Email*</label>
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-floating mb-3">
-							<input type="tel" class="form-control" id="floatingPhone" placeholder="Phone">
-							<label for="floatingPhone">Phone</label>
-						</div>
-					</div>
-
-
-					<div id="role-group" class="form-group">
-						<fieldset>
-							<legend>What is your role?*</legend>
-							<input type="radio" id="owner" name="role" value="Owner/Founder" required>
-							<label for="owner">Owner/Founder</label><br>
-							<input type="radio" id="partner" name="role" value="Partner">
-							<label for="partner">Partner</label><br>
-							<input type="radio" id="manager" name="role" value="Marketing Manager">
-							<label for="manager">Marketing Manager</label><br>
-							<input type="radio" id="coordinator" name="role" value="Social Media Coordinator">
-							<label for="coordinator">Social Media Coordinator</label><br>
-							<input type="radio" id="otherRole" name="role" value="Other">
-							<label for="otherRole">Other</label><br>
-						</fieldset>
-					</div>
-					<div id="help-group" class="form-group">
-						<fieldset>
-							<legend>What can we help you with?*</legend>
-							<input type="radio" id="advisory" name="help" value="Advisory" required>
-							<label for="advisory">Advisory</label><br>
-							<input type="radio" id="strategy" name="help" value="Strategy">
-							<label for="strategy">Strategy</label><br>
-							<input type="radio" id="branding" name="help" value="Branding">
-							<label for="branding">Branding</label><br>
-							<input type="radio" id="content" name="help" value="Content">
-							<label for="content">Content</label><br>
-							<input type="radio" id="marketing" name="help" value="Marketing">
-							<label for="marketing">Marketing</label><br>
-							<input type="radio" id="socialManagement" name="help" value="Social Management">
-							<label for="socialManagement">Social Management</label><br>
-							<input type="radio" id="press" name="help" value="Press">
-							<label for="press">Press</label><br>
-							<input type="radio" id="generalInquiry" name="help" value="General Inquiry">
-							<label for="generalInquiry">General Inquiry</label><br>
-						</fieldset>
-					</div>
-					<div id="find-group" class="form-group">
-						<fieldset>
-							<legend>How did you find us?*</legend>
-							<input type="radio" id="socialMedia" name="find" value="Social Media" required>
-							<label for="socialMedia">Social Media</label><br>
-							<input type="radio" id="googleSearch" name="find" value="Google Search">
-							<label for="googleSearch">Google Search</label><br>
-							<input type="radio" id="event" name="find" value="Event or Activation">
-							<label for="event">Event or Activation</label><br>
-							<input type="radio" id="clientReferral" name="find" value="Client Referral">
-							<label for="clientReferral">Client Referral</label><br>
-							<input type="radio" id="otherFind" name="find" value="Other">
-							<label for="otherFind">Other</label><br>
-						</fieldset>
-					</div>
-					<div id="budget-group" class="form-group">
-						<fieldset>
-							<legend>Budget*</legend>
-							<input type="radio" id="budget1" name="budget" value="10-25k" required>
-							<label for="budget1">10-25k</label><br>
-							<input type="radio" id="budget2" name="budget" value="25-50k">
-							<label for="budget2">25-50k</label><br>
-							<input type="radio" id="budget3" name="budget" value="50-100k">
-							<label for="budget3">50-100k</label><br>
-							<input type="radio" id="budget4" name="budget" value="100k+">
-							<label for="budget4">100k+</label><br>
-						</fieldset>
-					</div>
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col">
-								<textarea class="form-control" rows="2" style="resize: none;">Message</textarea>
-							</div>
-						</div>
-					</div>
-					<div class="strch-btn" style="padding: .8rem;">
-						<button type="submit" class="strch-btn" style="    padding: 1rem;
-						background: white;
-						border: none;
-						border-radius: .5rem;
-					">SUBMIT</button>
-					</div>
-				</form>
-				<!-- <label class="input">
-					<input class="input__field" type="text" placeholder=" " />
-					<span class="input__label">Some Fancy Label</span>
-				  </label>  -->
-			</div>
-		</div>
-	</section>
-
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <img src="img/base/FNF LOGO NEW.png" alt="Your Logo" class="footer-logo" width="100">
+            <p class="footer-links">
+                <a href="#">Home</a> |
+                <a href="#">About</a> |
+                <a href="#">Contact</a> |
+                <a href="#">Blog</a>
+            </p>
+            <p class="footer-company-name">Copyright © 2023 <strong>FoodOnFocus.com</strong> All rights reserved</p>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Dubai</span> Qatar</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>123456 78910</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:sagar00001.co@gmail.com">xyz@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                <strong>FoodonFocus</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repellendus officia nam temporibus quia, at dicta voluptatum laborum distinctio aspernatur fuga in doloribus. Error, reiciendis quae nobis repellat in quibusdam?
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
