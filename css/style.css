@@ -2730,7 +2730,7 @@ services
 .mil-service-card-sm {
   position: relative;
   display: block;
-  padding: 60px 30px;
+  /* padding: 60px 30px; */
   text-decoration: none;
   color: var(--maroon);
 }
@@ -2807,11 +2807,12 @@ services
 }
 
 .mil-services-grid .mil-services-grid-item {
-  border-right: solid 2px #bcb6b6
+  /* border-right: solid 2px #bcb6b6 */
+  border-bottom: solid 2px #bcb6b6
 }
 
 .mil-services-grid .mil-services-grid-item:first-child {
-  border-left: solid 2px #bcb6b6;
+  /* border-left: solid 2px #bcb6b6; */
 }
 
 @media screen and (max-width: 992px) {
@@ -4977,6 +4978,8 @@ video {
 /*  */
 .custrow {
   justify-content: center;
+  display: flex;
+  justify-content: space-around;
 }
 
 .txt-maroon {
@@ -5292,6 +5295,9 @@ video {
 .section {
  padding: 0 20px;
 }
+
+@media only screen and (max-width: 768px) {
+  .section {
 
 @media only screen and (max-width: 768px) {
   .section {
@@ -5653,11 +5659,11 @@ ul {
 }
 
 .animated-button svg {
-  position: absolute;
-  width: 24px;
-  fill: #fbae19;
-  z-index: 9;
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    position: absolute;
+    width: 24px;
+    fill: #fbae19;
+    z-index: 9;
+    transition: all 0.8s cubic]]-bezier(0.23, 1, 0.32, 1);
 }
 
 .animated-button .arr-1 {
@@ -6042,5 +6048,17 @@ ul {
 
   .footer-distributed .footer-center i {
     margin-left: 0;
+  }
+}
+
+/* screen problem css */
+
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .mil-circle-text {
+    display: none;
+  }
+
+  .mil-button {
+    display: none;
   }
 }
