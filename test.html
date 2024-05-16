@@ -1,684 +1,307 @@
+<!DOCTYPE html>
+<!-- Design by foolishdeveloper.com-->
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <title>Projects</title>
-    <style>
-        .projects-section {
-            padding: 40px;
-            font-family: "Outfit", sans-serif;
-        }
-
-        .heading2s {
-            text-align: right;
-        }
-
-        .divider {
-            width: 0%;
-            border-bottom: 2px solid black;
-            clear: both;
-            padding-top: 2px;
-            padding-bottom: 8px;
-            transition: width 3s ease;
-        }
-
-        .divider.animated {
-            width: 100%;
-        }
-
-        .project {
-            margin-top: 20px;
-        }
-
-        .project-details {
-            flex: 1;
-            margin-right: 20px;
-            /* padding-left: 8%; */
-            text-align: justify;
-        }
-
-        .project-details h3 {
-            margin-top: 0;
-        }
-
-        .buttons {
-            text-align: right;
-        }
-
-        .image-container2 {
-            flex: 1;
-            text-align: right;
-            border-radius: 15px;
-            overflow: hidden;
-            position: relative;
-            width: 90%;
-            margin-left: auto;
-        }
-
-        .image-container2 img {
-            width: 100%;
-            border-radius: 15px;
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-
-        .image-container2:hover img {
-            transform: scale(1.1);
-        }
+  <title>filterable gallery</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style media="screen">
 
 
+.container3{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+img{
+  max-width: 100%;
+  vertical-align: middle;
+  transition: transform 0.5s ease;
+}
+img:hover{
+  transform: scale(1.1);
+}
+/*.gallery*/
+.gallery{
+  width: 100%;
+  display: block;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  padding: 100px 0;
+}
+.gallery .gallery-filter{
+  padding: 0 15px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.gallery .gallery-filter .filter-item{
+  color: black;
+  font-size: 17px;
+  border: 2px solid #fbae19;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 20px;
+  margin-right: 8px;
+  cursor: pointer;
+  padding: 8px 20px 8px 20px;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+}
+.gallery .gallery-filter .filter-item.active{
+  color: black;
+  border-color : white;
+  background: #fbae19;
+}
+.gallery .gallery-item{
+  width: calc(100% / 3);
+  padding: 15px;
 
-        .location-year {
-            clear: both;
-            margin-top: 10px;
-        }
-
-        .location-year p {
-            margin: 0;
-        }
-
-        .container2 {
-            display: flex;
-            align-items: center;
-        }
-
-        .button2 {
-            line-height: 1;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: .75rem;
-            background-color: white;
-            color: #fbae19;
-            border: 1px solid black;
-            border-radius: 10rem;
-            font-weight: 600;
-            padding: .75rem 1.5rem;
-            padding-left: 20px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            transition: background-color .3s;
-        }
-
-        .button2__icon-wrapper {
-            flex-shrink: 0;
-            width: 25px;
-            height: 25px;
-            position: relative;
-            color: #fbae19;
-            background-color: #fff;
-            border-radius: 50%;
-            border: 1px solid black;
-            display: grid;
-            place-items: center;
-            overflow: hidden;
-        }
-
-        .button2:hover {
-            background-color: #fbae19;
-            color: black;
-        }
-
-        .button2:hover .button2__icon-wrapper {
-            color: #000;
-        }
-
-        .button2__icon-svg--copy {
-            position: absolute;
-            transform: translate(-150%, 150%);
-        }
-
-        .button2:hover .button2__icon-svg:first-child {
-            transition: transform .3s ease-in-out;
-            transform: translate(150%, -150%);
-        }
-
-        .button2:hover .button2__icon-svg--copy {
-            transition: transform .3s ease-in-out .1s;
-            transform: translate(0);
-        }
-
-        /* anim buton */
-
-        .animated-button {
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            padding-top: 4px;
-            padding-bottom: 4px;
-            padding-left: 29px;
-            padding-right: 29px;
-            border: 1px solid black;
-            /* border-color: transparent; */
-            font-size: 16px;
-            background-color: white;
-            border-radius: 50px;
-            font-weight: 600;
-            color: #fbae19;
-            box-shadow: 0 0 0 2px #ffffff;
-            cursor: pointer;
-            overflow: hidden;
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .animated-button svg {
-            position: absolute;
-            width: 24px;
-            fill: #fbae19;
-            z-index: 9;
-            transition: all 0.8s cubic]]-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .animated-button .arr-1 {
-            right: 16px;
-        }
-
-        .animated-button .arr-2 {
-            left: -25%;
-        }
-
-        .animated-button .circle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 20px;
-            height: 20px;
-            background-color: #fbae19;
-            border-radius: 50%;
-            opacity: 0;
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .animated-button .text2 {
-            position: relative;
-            z-index: 1;
-            transform: translateX(-12px);
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .animated-button:hover {
-            box-shadow: 0 0 0 12px transparent;
-            color: black;
-            border-radius: 12px;
-            border: 1px solid black;
-        }
-
-        .animated-button:hover .arr-1 {
-            right: -25%;
-        }
-
-        .animated-button:hover .arr-2 {
-            left: 16px;
-        }
-
-        .animated-button:hover .text2 {
-            transform: translateX(12px);
-        }
-
-        .animated-button:hover svg {
-            fill: black;
-        }
-
-        .animated-button:active {
-            scale: 0.95;
-            box-shadow: 0 0 0 4px black;
-        }
-
-        .animated-button:hover .circle {
-            width: 220px;
-            height: 220px;
-            opacity: 1;
-        }
-        .big-but{
-            text-align: right; 
-            padding-top: 7px;
-    }
-    .hd-cor{
-        color: #972221; 
-        font-weight: 700; 
-        font-size: 2rem;
-    }
-    .but-mid{
-        display: flex; 
-        gap:.7rem; 
-        justify-content: right; 
-        padding-top: 6px;
-    }
-
-        /* Media queries css */
-
-        @media only screen and (max-width: 1200px) {
-    .projects-section {
-        padding: 30px;
-    }
-    .project-details h3 {
-        font-size: 1.8rem;
-    }
-    .image-container2 {
-        width: 100%;
-    }
-    .image-container2 img {
-        height: 50vh;
-    }
+}
+.gallery .gallery-item-inner img{
+  width: 100%;
+  /* border: 3px solid #d4dad9; */
+  cursor: pointer;
+  border-radius: 25px;
+}
+.gallery .gallery-item.show{
+  animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.gallery .gallery-item.hide{
+  display: none;
 }
 
-@media only screen and (max-width: 992px) {
-    .projects-section {
-        padding: 20px;
-    }
-    .heading2s p {
-        font-size: 1rem;
-    }
-
-    .image-container2 img {
-        height: 40vh;
-    }
+/* Modal Styles */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 60px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9); 
 }
 
-@media only screen and (max-width: 768px) {
-    .heading {
-        text-align: center;
-    }
-    .heading2s {
-        text-align: center;
-    }
-    .container2{
-        display: none;
-    }
-    .but-mid{
-        text-align: center;
-        justify-content: center;
-        padding-bottom: 10px;
-    }
-    .hd-cor{
-        text-align: center;
-        font-size: 1rem;
-        padding-top: 5px;
-    }
-    .big-but{
-        text-align: center;
-    }
-    .image-container2 {
-        width: 100%;
-        height: 50%;
-    }
-    .image-container2 img {
-        height: 35vh;
-    }
-    .project-details h3 {
-        font-size: 1.5rem;
-    }
-    .buttons {
-        text-align: center;
-    }
-    .container2 {
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.modal-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+  margin-top: 25vh;
+}
+
+@keyframes zoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*responsive*/
+@media(max-width: 491px){
+  .gallery .gallery-item{
+    width: 50%;
+  }
+}
+@media(max-width: 467px){
+    .gallery .gallery-item{
+    width: 100%;
+  }
+  .gallery .gallery-filter .filter-item{
+    margin-bottom: 10px;
+  }
+}
+/* Responsive Styles for Filter Buttons */
+@media(max-width: 767px){
+  .gallery-filter .filter-item{
+    font-size: 14px; /* Reduce font size */
+    padding: 6px 15px; /* Adjust padding */
+    margin-bottom: 8px; /* Increase bottom margin */
+  }
+  /* .gallery .gallery-filter{
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-    }
-    .box2 h2,
-    .box2 h4 {
-        text-align: left;
-    }
+    } */
 }
 
-@media only screen and (max-width: 576px) {
-    .projects-section {
-        padding: 15px;
-    }
-    .project {
-        margin-top: 15px;
-    }
-    .project-details h3 {
-        font-size: 1.3rem;
-    }
-    .image-container2 img {
-        height: 30vh;
-    }
-    .container2 {
-        align-items: center;
-    }
+@media(max-width: 467px){
+  .gallery-filter .filter-item{
+    font-size: 12px; /* Further reduce font size */
+    padding: 5px 12px; /* Further adjust padding */
+  }
+  /* .gallery .gallery-filter{
+        display: flex;
+        flex-direction: column;
+    } */
 }
 
-@media only screen and (max-width: 480px) {
-    .projects-section {
-        padding: 10px;
-    }
-    .heading h4 {
-        font-size: 1.5rem;
-    }
-    .heading h1 {
-        font-size: 1.25rem;
-    }
-    .heading2s p {
-        font-size: 0.9rem;
-    }
-    .image-container2 img {
-        height: 25vh;
-    }
-    .animated-button {
-        padding-top: 3px;
-        padding-bottom: 3px;
-        padding-left: 20px;
-        padding-right: 20px;
-        font-size: 14px;
-    }
-    .animated-button svg {
-        width: 20px;
-    }
-    .buttons {
-        text-align: center;
-    }
-}
-
-    </style>
+  </style>
 </head>
-
 <body>
-    <section class="projects-section">
-        <div class="heading">
-            <h4 style="margin-bottom: -15px; color: #972221; font-size: 2rem;">Featured Projects</h4>
-            <h1 style="font-size: 1.5rem;">The Proof is in<br> our portfolio !</h1>
+
+<section class="gallery">
+  <div class="container3">
+    <div class="row">
+      <div class="gallery-filter">
+        <span class="filter-item active" data-filter="all">all</span>
+        <span class="filter-item" data-filter="watch">Watch</span>
+        <span class="filter-item" data-filter="headphone">headphone</span>
+        <span class="filter-item" data-filter="camera">camera</span>
+        <span class="filter-item" data-filter="phone">Phone</span>
+      </div>
+    </div>
+    <div class="row">
+      <!-- gallery item start -->
+      <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-QvLveiaH3VI/YS_C1lXw6-I/AAAAAAAACa0/1hIbUlfQUQ8ew--PZ8IYB_55WFYTX8OtQCNcBGAsYHQ/s0/shoe-1.jpg" alt="shoe">
         </div>
-        <div class="heading2s">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                <br>Fuga quas molestiae aut quam, eligendi quod veritatis sapiente.
-                <br>Provident saepe numquam quis quibusdam, laborum maxime quas .
-            </p>
+      </div>
+      <!-- gallery item end -->
+      <!-- gallery item start -->
+      <div class="gallery-item headphone">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-T3KmNJ1-wYw/YS_E3rHDRII/AAAAAAAACb4/_DVj1_wL7eUZzJ45z9RQS5JG1orI_VlvACNcBGAsYHQ/s0/headphone-1.jpg" alt="headphone">
         </div>
-
-        <div class="divider"></div>
-
-        <div class="big-but" >
-            <a style="--clr: #7808d0" class="button2" href="#">
-                <span class="button2__icon-wrapper">
-                    <svg width="10" class="button2__icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 14 15">
-                        <path fill="currentColor"
-                            d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z">
-                        </path>
-                    </svg>
-
-                    <svg class="button2__icon-svg  button2__icon-svg--copy" xmlns="http://www.w3.org/2000/svg"
-                        width="10" fill="none" viewBox="0 0 14 15">
-                        <path fill="currentColor"
-                            d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z">
-                        </path>
-                    </svg>
-                </span>
-                View All Projects
-            </a>
+      </div>
+      <!-- gallery item end -->
+      <!-- gallery item start -->
+      <div class="gallery-item camera">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-I4zq8AEp_jY/YS_C3MiTUqI/AAAAAAAACa8/GjRpPmI0eqE_g52nIv7gUrh_9AGQbQkoACNcBGAsYHQ/s0/camera-1.jpg" alt="camera">
         </div>
-
-        <!-- 1product -->
-        <div>
-        <div class="project">
-            <div class="project-details">
-                <h3 class="hd-cor" >Food On Focus - Project 1</h3>
-            </div>
-            <div class="image-container2">
-                <img id="hoverable-img" style="height: 60vh;" src="img/works/2.jpg" alt="Project Image">
-            </div>
+      </div>
+      <!-- gallery item end -->
+      <!-- gallery item start -->
+      <div class="gallery-item headphone">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-pEh6HYKdNtc/YS_DSTsTrVI/AAAAAAAACbk/ND95Y8qxhPUQlUE0N38GNUx207fkzTR2QCNcBGAsYHQ/s0/headphone-2.jpg" alt="headphone">
         </div>
-        <div class="but-mid">
-            <button class="animated-button" onclick="window.location.href='#.'">
-                <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-                    <path
-                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                    </path>
-                </svg>
-                <span class="text2">Button 1</span>
-                <span class="circle"></span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-                    <path
-                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                    </path>
-                </svg>
-            </button>
-
-            <button class="animated-button" onclick="window.location.href='#.'">
-                <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-                    <path
-                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                    </path>
-                </svg>
-                <span class="text2">Button 2</span>
-                <span class="circle"></span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-                    <path
-                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                    </path>
-                </svg>
-            </button>
+      </div>
+      <!-- gallery item end -->
+      <!-- gallery item start -->
+      <div class="gallery-item camera">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/--7JZU9HynIU/YS_DH53WPiI/AAAAAAAACbY/ivcZm6OVbTgSfc9JWX1OE4WwKmvhcY07wCNcBGAsYHQ/s0/camera-2.jpg" alt="camera">
         </div>
-        <div class="container2">
-            <div class="box2">
-                <h2 style="margin-bottom: -15px; padding-right: 20px; color: #f89c1f;">Year<br>
-                    <h4 style="top: -15px; margin-left: 4px; color: #972221;">2024</h4>
-                </h2>
-            </div>
-            <div class="box2">
-                <h2 style="margin-bottom: -15px; padding-right: 20px; color: #f89c1f;">Location<br>
-                    <h4 style="top: -15px; margin-left: 4px; color: #972221;">India</h4>
-                </h2>
+      </div>
+      <!-- gallery item end -->
+            <div class="gallery-item phone">
+              <div class="gallery-item-inner">
+                <img src="https://1.bp.blogspot.com/-wX4lusii0OE/YS_DC2BpADI/AAAAAAAACbA/tTGcB7QUQnshvW8hbEtf1-Nnj6dl3wSzgCNcBGAsYHQ/s0/phone-1.jpg" alt="phone">
+              </div>
             </div>
 
+      <div class="gallery-item camera">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-12xO4l2QXGM/YS_DDwhwSYI/AAAAAAAACbI/OyLyIX89tnwmpwxcYoVED-x8uRWq56TawCNcBGAsYHQ/s0/camera-3.jpg" alt="camera">
         </div>
-        <div class="divider"></div>
+      </div>
+
+      <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-rAOuebpUc6E/YS_C1gP9q2I/AAAAAAAACa4/emX-5ZEz-MUeUr11_iaj_BkEYbs-FH8kQCNcBGAsYHQ/s0/watch-1.jpg" alt="watch">
         </div>
-        <!-- 1product -->
+      </div>
 
-                <!-- 1product -->
-                <div>
-                    <div class="project">
-                        <div class="project-details">
-                            <h3 class="hd-cor" >Food On Focus - Project 2</h3>
-                        </div>
-                        <div class="image-container2">
-                            <img id="hoverable-img" style="height: 60vh;" src="img/works/3.jpg" alt="Project Image">
-                        </div>
-                    </div>
-                    <div class="but-mid">
-                        <button class="animated-button" onclick="window.location.href='#.'">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-                                <path
-                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                                </path>
-                            </svg>
-                            <span class="text2">Button 1</span>
-                            <span class="circle"></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-                                <path
-                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                                </path>
-                            </svg>
-                        </button>
-            
-                        <button class="animated-button" onclick="window.location.href='#.'">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-                                <path
-                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                                </path>
-                            </svg>
-                            <span class="text2">Button 2</span>
-                            <span class="circle"></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-                                <path
-                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="container2">
-                        <div class="box2">
-                            <h2 style="margin-bottom: -15px; padding-right: 20px; color: #f89c1f;">Year<br>
-                                <h4 style="top: -15px; margin-left: 4px; color: #972221;">2024</h4>
-                            </h2>
-                        </div>
-                        <div class="box2">
-                            <h2 style="margin-bottom: -15px; padding-right: 20px; color: #f89c1f;">Location<br>
-                                <h4 style="top: -15px; margin-left: 4px; color: #972221;">India</h4>
-                            </h2>
-                        </div>
-            
-                    </div>
-                    <div class="divider"></div>
-                    </div>
-                    <!-- 1product -->
-
-                            <!-- 1product -->
-        <div>
-            <div class="project">
-                <div class="project-details">
-                    <h3 class="hd-cor" >Food On Focus - Project 3</h3>
-                </div>
-                <div class="image-container2">
-                    <img id="hoverable-img" style="height: 60vh;" src="img/works/5.jpg" alt="Project Image">
-                </div>
-            </div>
-            <div class="but-mid">
-                <button class="animated-button" onclick="window.location.href='#.'">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-                        <path
-                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                        </path>
-                    </svg>
-                    <span class="text2">Button 1</span>
-                    <span class="circle"></span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-                        <path
-                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                        </path>
-                    </svg>
-                </button>
-    
-                <button class="animated-button" onclick="window.location.href='#.'">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-                        <path
-                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                        </path>
-                    </svg>
-                    <span class="text2">Button 2</span>
-                    <span class="circle"></span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-                        <path
-                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                        </path>
-                    </svg>
-                </button>
-            </div>
-            <div class="container2">
-                <div class="box2">
-                    <h2 style="margin-bottom: -15px; padding-right: 20px; color: #f89c1f;">Year<br>
-                        <h4 style="top: -15px; margin-left: 4px; color: #972221;">2024</h4>
-                    </h2>
-                </div>
-                <div class="box2">
-                    <h2 style="margin-bottom: -15px; padding-right: 20px; color: #f89c1f;">Location<br>
-                        <h4 style="top: -15px; margin-left: 4px; color: #972221;">India</h4>
-                    </h2>
-                </div>
-    
-            </div>
-            <div class="divider"></div>
-            </div>
-            <!-- 1product -->
-
-                    <!-- 1product -->
-        <div>
-        <div class="project">
-            <div class="project-details">
-                <h3 class="hd-cor" >Food On Focus - Project 4</h3>
-            </div>
-            <div class="image-container2">
-                <img id="hoverable-img" style="height: 60vh;" src="img/works/6.jpg" alt="Project Image">
-            </div>
+      <!-- gallery item start -->
+      <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-sBZvlxLrXL8/YS_DDZdTaJI/AAAAAAAACbE/RKImX4fKJIs7NJV_SAj1bIGYjx1-acB8wCNcBGAsYHQ/s0/watch-2.jpg" alt="watch">
         </div>
-        <div class="but-mid">
-            <button class="animated-button" onclick="window.location.href='#.'">
-                <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-                    <path
-                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                    </path>
-                </svg>
-                <span class="text2">Button 1</span>
-                <span class="circle"></span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-                    <path
-                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                    </path>
-                </svg>
-            </button>
-
-            <button class="animated-button" onclick="window.location.href='#.'">
-                <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-                    <path
-                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                    </path>
-                </svg>
-                <span class="text2">Button 2</span>
-                <span class="circle"></span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-                    <path
-                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                    </path>
-                </svg>
-            </button>
-        </div>
-        <div class="container2">
-            <div class="box2">
-                <h2 style="margin-bottom: -15px; padding-right: 20px; color: #f89c1f;">Year<br>
-                    <h4 style="top: -15px; margin-left: 4px; color: #972221;">2024</h4>
-                </h2>
-            </div>
-            <div class="box2">
-                <h2 style="margin-bottom: -15px; padding-right: 20px; color: #f89c1f;">Location<br>
-                    <h4 style="top: -15px; margin-left: 4px; color: #972221;">India</h4>
-                </h2>
-            </div>
-
-        </div>
-        <div class="divider"></div>
-        </div>
-        <!-- 1product -->
-
-    </section>
+      </div>
+      <!-- gallery item end -->
+    </div>
+  </div>
 
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+</div>
 
+<script>
+ const filterContainer = document.querySelector(".gallery-filter"),
+ galleryItems = document.querySelectorAll(".gallery-item");
 
+ filterContainer.addEventListener("click", (event) =>{
+   if(event.target.classList.contains("filter-item")){
+     // deactivate existing active 'filter-item'
+     filterContainer.querySelector(".active").classList.remove("active");
+     // activate new 'filter-item'
+     event.target.classList.add("active");
+     const filterValue = event.target.getAttribute("data-filter");
+     galleryItems.forEach((item) =>{
+       if(item.classList.contains(filterValue) || filterValue === 'all'){
+        item.classList.remove("hide");
+         item.classList.add("show");
+       }
+       else{
+        item.classList.remove("show");
+        item.classList.add("hide");
+       }
+     });
+   }
+ });
 
+ // Get the modal
+ var modal = document.getElementById("myModal");
 
+ // Get the image and insert it inside the modal
+ var modalImg = document.getElementById("img01");
 
+ document.querySelectorAll('.gallery-item-inner img').forEach(img => {
+   img.onclick = function(){
+     modal.style.display = "block";
+     modalImg.src = this.src;
+   }
+ });
 
+ // Get the <span> element that closes the modal
+ var span = document.getElementsByClassName("close")[0];
 
+ // When the user clicks on <span> (x), close the modal
+ span.onclick = function() { 
+   modal.style.display = "none";
+ }
+</script>
+</section>
 
-
-
-
-
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('animated');
-                        }
-                    });
-                });
-
-                document.querySelectorAll('.divider').forEach(divider => {
-                    observer.observe(divider);
-                });
-            });
-        </script>
 </body>
-
 </html>
