@@ -6153,14 +6153,16 @@ ul {
   display: flex;
   flex-wrap: wrap;
 }
-img{
+.gallery-img img{
   max-width: 100%;
   vertical-align: middle;
   transition: transform 0.5s ease;
 }
-img:hover{
+/* Apply hover zoom effect only to images within the gallery section */
+.gallery .gallery-img img:hover {
   transform: scale(1.1);
 }
+
 /*.gallery*/
 .gallery{
   width: 100%;
