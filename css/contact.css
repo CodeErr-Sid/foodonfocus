@@ -176,6 +176,7 @@ form>div {
   padding: 2px 14px;
   border-radius: 20px;
   background-color: #fff;
+  font-weight: 500;
   color: #000;
   border: 1px solid #000;
   cursor: pointer;
@@ -195,14 +196,17 @@ form>div {
 
 /* Hover effect */
 .form-group label:hover {
-  background-color: #000;
+  background-color: var(--orange);
   color: #fff;
+  border: none;
 }
+
 
 /* Active state */
 .form-group input[type="radio"]:checked+label {
-  background-color: #000;
+  background-color: var(--orange);
   color: #fff;
+  border: none;
 }
 
 /* Gap between buttons */
