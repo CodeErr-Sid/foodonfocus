@@ -1,307 +1,181 @@
 <!DOCTYPE html>
-<!-- Design by foolishdeveloper.com-->
 <html lang="en">
 <head>
-  <title>filterable gallery</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style media="screen">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Section</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
 
+        .consult4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 30px;
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', sans-serif;
+            background-color: whitesmoke;
+        }
 
-.container3{
-  max-width: 1170px;
-  margin:auto;
-}
-.row{
-  display: flex;
-  flex-wrap: wrap;
-}
-img{
-  max-width: 100%;
-  vertical-align: middle;
-  transition: transform 0.5s ease;
-}
-img:hover{
-  transform: scale(1.1);
-}
-/*.gallery*/
-.gallery{
-  width: 100%;
-  display: block;
-  min-height: 100vh;
-  background-color: whitesmoke;
-  padding: 100px 0;
-}
-.gallery .gallery-filter{
-  padding: 0 15px;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 40px;
-}
-.gallery .gallery-filter .filter-item{
-  color: black;
-  font-size: 17px;
-  border: 2px solid #fbae19;
-  text-transform: uppercase;
-  display: inline-block;
-  border-radius: 20px;
-  margin-right: 8px;
-  cursor: pointer;
-  padding: 8px 20px 8px 20px;
-  line-height: 1.2;
-  transition: all 0.3s ease;
-}
-.gallery .gallery-filter .filter-item.active{
-  color: black;
-  border-color : white;
-  background: #fbae19;
-}
-.gallery .gallery-item{
-  width: calc(100% / 3);
-  padding: 15px;
+        .container4 {
+            display: flex;
+            flex-direction: row;
+            border-radius: 5px;
+            margin: 0 auto;
+            background-color: #edece8;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 100%;
+            height: 90vh;
+        }
 
-}
-.gallery .gallery-item-inner img{
-  width: 100%;
-  /* border: 3px solid #d4dad9; */
-  cursor: pointer;
-  border-radius: 25px;
-}
-.gallery .gallery-item.show{
-  animation: fadeIn 0.5s ease;
-}
-@keyframes fadeIn{
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-.gallery .gallery-item.hide{
-  display: none;
-}
+        .text-section4 {
+            flex: 1;
+            padding: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-/* Modal Styles */
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 60px; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.9); 
-}
+        .heading4 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: #fbae19;
+        }
 
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
+        .dot4 {
+            height: 10px;
+            width: 10px;
+            background-color: #fbae19;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+        }
 
-.modal-content, #caption {  
-  animation-name: zoom;
-  animation-duration: 0.6s;
-  margin-top: 25vh;
-}
+        .services4 {
+            display: flex;
+            flex-direction: column;
+        }
 
-@keyframes zoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
+        .service-item4 {
+            position: relative;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #972221;
+            margin: 10px 0;
+        }
 
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
+        .service-item4::after {
+            content: '→';
+            padding-left: 3px;
+            transform: scaleX(1.5);
+            font-size: 2rem;
+            color: #972221;
+            font-weight: 400;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
 
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
+        .service-item4:hover::after {
+            opacity: 1;
+            padding-left: 10px;
+        }
 
-/*responsive*/
-@media(max-width: 491px){
-  .gallery .gallery-item{
-    width: 50%;
-  }
-}
-@media(max-width: 467px){
-    .gallery .gallery-item{
-    width: 100%;
-  }
-  .gallery .gallery-filter .filter-item{
-    margin-bottom: 10px;
-  }
-}
-/* Responsive Styles for Filter Buttons */
-@media(max-width: 767px){
-  .gallery-filter .filter-item{
-    font-size: 14px; /* Reduce font size */
-    padding: 6px 15px; /* Adjust padding */
-    margin-bottom: 8px; /* Increase bottom margin */
-  }
-  /* .gallery .gallery-filter{
-        display: flex;
-        flex-direction: column;
-    } */
-}
+        .video-section4 {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+        }
 
-@media(max-width: 467px){
-  .gallery-filter .filter-item{
-    font-size: 12px; /* Further reduce font size */
-    padding: 5px 12px; /* Further adjust padding */
-  }
-  /* .gallery .gallery-filter{
-        display: flex;
-        flex-direction: column;
-    } */
-}
+        .video4 {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+        }
 
-  </style>
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container4 {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .text-section4, .video-section4 {
+                width: 100%;
+                height: auto;
+                flex: none;
+            }
+
+            .text-section4 {
+                padding: 10px;
+            }
+
+            .heading4 {
+                font-size: 0.8rem;
+            }
+
+            .service-item4 {
+                font-size: 1.5rem;
+            }
+
+            .service-item4::after {
+                font-size: 1.5rem;
+            }
+
+            .video4 {
+                height: 50vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .heading4 {
+                font-size: 0.7rem;
+            }
+
+            .service-item4 {
+                font-size: 1.2rem;
+            }
+
+            .service-item4::after {
+                font-size: 1.2rem;
+            }
+
+            .video4 {
+                height: 40vh;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<section class="gallery">
-  <div class="container3">
-    <div class="row">
-      <div class="gallery-filter">
-        <span class="filter-item active" data-filter="all">all</span>
-        <span class="filter-item" data-filter="watch">Watch</span>
-        <span class="filter-item" data-filter="headphone">headphone</span>
-        <span class="filter-item" data-filter="camera">camera</span>
-        <span class="filter-item" data-filter="phone">Phone</span>
-      </div>
-    </div>
-    <div class="row">
-      <!-- gallery item start -->
-      <div class="gallery-item shoe">
-        <div class="gallery-item-inner">
-          <img src="https://1.bp.blogspot.com/-QvLveiaH3VI/YS_C1lXw6-I/AAAAAAAACa0/1hIbUlfQUQ8ew--PZ8IYB_55WFYTX8OtQCNcBGAsYHQ/s0/shoe-1.jpg" alt="shoe">
-        </div>
-      </div>
-      <!-- gallery item end -->
-      <!-- gallery item start -->
-      <div class="gallery-item headphone">
-        <div class="gallery-item-inner">
-          <img src="https://1.bp.blogspot.com/-T3KmNJ1-wYw/YS_E3rHDRII/AAAAAAAACb4/_DVj1_wL7eUZzJ45z9RQS5JG1orI_VlvACNcBGAsYHQ/s0/headphone-1.jpg" alt="headphone">
-        </div>
-      </div>
-      <!-- gallery item end -->
-      <!-- gallery item start -->
-      <div class="gallery-item camera">
-        <div class="gallery-item-inner">
-          <img src="https://1.bp.blogspot.com/-I4zq8AEp_jY/YS_C3MiTUqI/AAAAAAAACa8/GjRpPmI0eqE_g52nIv7gUrh_9AGQbQkoACNcBGAsYHQ/s0/camera-1.jpg" alt="camera">
-        </div>
-      </div>
-      <!-- gallery item end -->
-      <!-- gallery item start -->
-      <div class="gallery-item headphone">
-        <div class="gallery-item-inner">
-          <img src="https://1.bp.blogspot.com/-pEh6HYKdNtc/YS_DSTsTrVI/AAAAAAAACbk/ND95Y8qxhPUQlUE0N38GNUx207fkzTR2QCNcBGAsYHQ/s0/headphone-2.jpg" alt="headphone">
-        </div>
-      </div>
-      <!-- gallery item end -->
-      <!-- gallery item start -->
-      <div class="gallery-item camera">
-        <div class="gallery-item-inner">
-          <img src="https://1.bp.blogspot.com/--7JZU9HynIU/YS_DH53WPiI/AAAAAAAACbY/ivcZm6OVbTgSfc9JWX1OE4WwKmvhcY07wCNcBGAsYHQ/s0/camera-2.jpg" alt="camera">
-        </div>
-      </div>
-      <!-- gallery item end -->
-            <div class="gallery-item phone">
-              <div class="gallery-item-inner">
-                <img src="https://1.bp.blogspot.com/-wX4lusii0OE/YS_DC2BpADI/AAAAAAAACbA/tTGcB7QUQnshvW8hbEtf1-Nnj6dl3wSzgCNcBGAsYHQ/s0/phone-1.jpg" alt="phone">
-              </div>
+    <section class="consult4">
+        <div class="container4">
+            <div class="text-section4">
+                <div class="heading4">
+                    <span class="dot4"></span>
+                    <h1>Services</h1>
+                </div>
+                <div class="services4">
+                    <div class="service-item4">Branding</div>
+                    <div class="service-item4">Marketing</div>
+                    <div class="service-item4">Strategy</div>
+                    <div class="service-item4">Content</div>
+                </div>
             </div>
-
-      <div class="gallery-item camera">
-        <div class="gallery-item-inner">
-          <img src="https://1.bp.blogspot.com/-12xO4l2QXGM/YS_DDwhwSYI/AAAAAAAACbI/OyLyIX89tnwmpwxcYoVED-x8uRWq56TawCNcBGAsYHQ/s0/camera-3.jpg" alt="camera">
+            <div class="video-section4">
+                <video class="video4" autoplay loop muted>
+                    <source src="video/vid_2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
-      </div>
-
-      <div class="gallery-item watch">
-        <div class="gallery-item-inner">
-          <img src="https://1.bp.blogspot.com/-rAOuebpUc6E/YS_C1gP9q2I/AAAAAAAACa4/emX-5ZEz-MUeUr11_iaj_BkEYbs-FH8kQCNcBGAsYHQ/s0/watch-1.jpg" alt="watch">
-        </div>
-      </div>
-
-      <!-- gallery item start -->
-      <div class="gallery-item watch">
-        <div class="gallery-item-inner">
-          <img src="https://1.bp.blogspot.com/-sBZvlxLrXL8/YS_DDZdTaJI/AAAAAAAACbE/RKImX4fKJIs7NJV_SAj1bIGYjx1-acB8wCNcBGAsYHQ/s0/watch-2.jpg" alt="watch">
-        </div>
-      </div>
-      <!-- gallery item end -->
-    </div>
-  </div>
-
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-</div>
-
-<script>
- const filterContainer = document.querySelector(".gallery-filter"),
- galleryItems = document.querySelectorAll(".gallery-item");
-
- filterContainer.addEventListener("click", (event) =>{
-   if(event.target.classList.contains("filter-item")){
-     // deactivate existing active 'filter-item'
-     filterContainer.querySelector(".active").classList.remove("active");
-     // activate new 'filter-item'
-     event.target.classList.add("active");
-     const filterValue = event.target.getAttribute("data-filter");
-     galleryItems.forEach((item) =>{
-       if(item.classList.contains(filterValue) || filterValue === 'all'){
-        item.classList.remove("hide");
-         item.classList.add("show");
-       }
-       else{
-        item.classList.remove("show");
-        item.classList.add("hide");
-       }
-     });
-   }
- });
-
- // Get the modal
- var modal = document.getElementById("myModal");
-
- // Get the image and insert it inside the modal
- var modalImg = document.getElementById("img01");
-
- document.querySelectorAll('.gallery-item-inner img').forEach(img => {
-   img.onclick = function(){
-     modal.style.display = "block";
-     modalImg.src = this.src;
-   }
- });
-
- // Get the <span> element that closes the modal
- var span = document.getElementsByClassName("close")[0];
-
- // When the user clicks on <span> (x), close the modal
- span.onclick = function() { 
-   modal.style.display = "none";
- }
-</script>
-</section>
-
+    </section>
 </body>
 </html>
