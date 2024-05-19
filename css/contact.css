@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Existing CSS */
+#contact-form-ss {
+  padding: .5rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.container-ss {
+  display: flex;
+  background-color: #fff;
+}
+
+.txt-thin {
+  font-weight: 900;
+}
+
+.image-container-ss,
+.form-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.form-content {
+  padding-left: 20px;
+}
+
+.image-container-ss img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+
+form {
+  margin: 0;
+}
+
+form>div {
+  margin-bottom: 10px;
+}
+
+/* Styling for radio buttons */
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.form-group fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  border: 0;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.strch-btn {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 16px 0;
+  gap: 16px;
+  padding: 0 10px;
+}
+
+.form-row>div {
+  flex: 1;
+}
+
+.form-floating {
+  flex: 1 0 calc(50% - 10px);
+  /* Two items per row */
+  margin-right: 10px;
+}
+
+.did-floating-label-content {
+  position: relative;
+  /* margin-bottom: 20px; */
+}
+
+.did-floating-label {
+  color: black;
+  font-size: 20px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 5px;
+  background: #fff;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.did-floating-input {
+  font-size: 1.5rem;
+  display: block;
+  width: 100%;
+  height: 70px;
+  padding: 0 20px;
+  background: #fff;
+  color: #323840;
+  border: 2px solid black;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.did-floating-input:focus~.did-floating-label {
+  top: -3px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.did-floating-input:not(:placeholder-shown)~.did-floating-label {
+  font-weight: bold;
+  top: -3px;
+  font-size: 13px;
+}
+
+
+@media (max-width: 768px) {
+  .form-floating {
+    flex: 1 0 100%;
+    /* One item per row on smaller screens */
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (width < 1024px) {
+  .container-ss {
+    flex-direction: column
+  }
+
+  .image-container-ss,
+  .form-content {
+    flex: 1;
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (width < 640px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+
+.form-group fieldset legend {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.form-group input[type="radio"] {
+  display: none;
+}
+
+.form-group label {
+  position: relative;
+  display: inline-block;
+  padding: 2px 14px;
+  border-radius: 20px;
+  background-color: #fff;
+  font-weight: 500;
+  color: #000;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Styling for semi-circle effect */
+.form-group label:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.form-group label:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Hover effect */
+.form-group label:hover {
+  background-color: var(--orange);
+  color: #fff;
+  border: none;
+}
+
+
+/* Active state */
+.form-group input[type="radio"]:checked+label {
+  background-color: var(--orange);
+  color: #fff;
+  border: none;
+}
+
+/* Gap between buttons */
+.form-group label+input[type="radio"] {
+  margin-left: 10px;
+}

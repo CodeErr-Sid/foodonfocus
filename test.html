@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Section</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+
+        .consult4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 30px;
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', sans-serif;
+            background-color: whitesmoke;
+        }
+
+        .container4 {
+            display: flex;
+            flex-direction: row;
+            border-radius: 5px;
+            margin: 0 auto;
+            background-color: #edece8;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 100%;
+            height: 90vh;
+        }
+
+        .text-section4 {
+            flex: 1;
+            padding: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .heading4 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: #fbae19;
+        }
+
+        .dot4 {
+            height: 10px;
+            width: 10px;
+            background-color: #fbae19;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .services4 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-item4 {
+            position: relative;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #972221;
+            margin: 10px 0;
+        }
+
+        .service-item4::after {
+            content: '→';
+            padding-left: 3px;
+            transform: scaleX(1.5);
+            font-size: 2rem;
+            color: #972221;
+            font-weight: 400;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .service-item4:hover::after {
+            opacity: 1;
+            padding-left: 10px;
+        }
+
+        .video-section4 {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+        }
+
+        .video4 {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container4 {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .text-section4, .video-section4 {
+                width: 100%;
+                height: auto;
+                flex: none;
+            }
+
+            .text-section4 {
+                padding: 10px;
+            }
+
+            .heading4 {
+                font-size: 0.8rem;
+            }
+
+            .service-item4 {
+                font-size: 1.5rem;
+            }
+
+            .service-item4::after {
+                font-size: 1.5rem;
+            }
+
+            .video4 {
+                height: 50vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .heading4 {
+                font-size: 0.7rem;
+            }
+
+            .service-item4 {
+                font-size: 1.2rem;
+            }
+
+            .service-item4::after {
+                font-size: 1.2rem;
+            }
+
+            .video4 {
+                height: 40vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="consult4">
+        <div class="container4">
+            <div class="text-section4">
+                <div class="heading4">
+                    <span class="dot4"></span>
+                    <h1>Services</h1>
+                </div>
+                <div class="services4">
+                    <div class="service-item4">Branding</div>
+                    <div class="service-item4">Marketing</div>
+                    <div class="service-item4">Strategy</div>
+                    <div class="service-item4">Content</div>
+                </div>
+            </div>
+            <div class="video-section4">
+                <video class="video4" autoplay loop muted>
+                    <source src="video/vid_2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
