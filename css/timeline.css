@@ -115,7 +115,6 @@
   bottom: 50vh;
   opacity: 0;
   /* Initially hide */
-  transition: opacity 0.3s ease-in-out;
 
 }
 
