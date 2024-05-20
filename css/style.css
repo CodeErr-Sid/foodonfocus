@@ -6464,84 +6464,71 @@
  
  /* vertical image */
  .container5 {
-  display: flex;
-  width: 100%;
-  padding: 4% 2%;
-  box-sizing: border-box;
-  height: 100vh;
-}
-
-.box5 {
-  flex: 1;
-  overflow: hidden;
-  transition: 0.8s;
-  margin: 0 2%;
-  box-shadow: 0 20px 30px rgba(0,0,0,.2);
-  line-height: 0;
-  border-radius: 5px;
-}
-
-.box5 > video {
-  width: 200%;
-  height: calc(100% - 10vh);
-  object-fit: cover;
-  transition: 0.5s;
-}
-
-.box5 > span {
-  font-size: 3.8vh;
-  display: block;
-  text-align: center;
-  height: 10vh;
-  line-height: 2.6;
-}
-
-.box5:hover {
-  flex: 1 1 50%;
-}
-
-.box5:hover > video {
-  width: 100%;
-  height: 100%;
-}
-
-.box5:hover > video {
-  width: 100%;
-  height: 100%;
-  play();
-}
-
-/* Responsive Styles */
-@media (max-width: 1200px) {
-  .box5 {
-      flex: 1 1 calc(33.33% - 4%);
-  }
-}
-
-@media (max-width: 900px) {
-  .box5 {
-      flex: 1 1 calc(50% - 4%);
-  }
-}
-
-@media (max-width: 600px) {
-  .container5 {
-      flex-direction: column;
-      align-items: center;
-  }
-  .box5 {
-      flex: 1 1 100%;
-      margin: 2% 0;
-  }
-  .box5 > video {
-      width: 100%;
-      height: auto;
-  }
-  .box5:hover {
-      flex: 1 1 100%;
-  }
-}
-
+   display: flex;
+   width: 100%;
+   padding: 4% 2%;
+   box-sizing: border-box;
+   height: 100vh;
+ }
+ 
+ .box5 {
+   flex: 1;
+   overflow: hidden;
+   transition: 0.8s;
+   margin: 0 2%;
+   box-shadow: 0 20px 30px rgba(0,0,0,.2);
+   line-height: 0;
+   border-radius: 5px;
+ }
+ 
+ .box5 > img {
+   width: 200%;
+   height: calc(100% - 10vh);
+   object-fit: cover; 
+   transition: .5s;
+ }
+ 
+ .box5 > span {
+   font-size: 3.8vh;
+   display: block;
+   text-align: center;
+   height: 10vh;
+   line-height: 2.6;
+ }
+ 
+ .box5:hover { flex: 1 1 50%; }
+ .box5:hover > img {
+   width: 100%;
+   height: 100%;
+ }
+ /* Responsive Styles */
+ @media (max-width: 1200px) {
+   .box5 {
+     flex: 1 1 calc(33.33% - 4%);
+   }
+ }
+ 
+ @media (max-width: 900px) {
+   .box5 {
+     flex: 1 1 calc(50% - 4%);
+   }
+ }
+ 
+ @media (max-width: 600px) {
+   .container5 {
+     flex-direction: column;
+     align-items: center;
+   }
+   .box5 {
+     flex: 1 1 100%;
+     margin: 2% 0;
+   }
+   .box5 > img {
+     width: 100%;
+     height: auto;
+   }
+   .box5:hover {
+     flex: 1 1 100%;
+   }
+ }
   
-
-   

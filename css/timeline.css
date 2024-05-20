@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --maroon:#972221;
@@ -76,6 +77,7 @@
   max-height: 12px;
   position: -webkit-sticky;
   position: sticky;
+  transition: all 0.3s ease-in-out;
   top: 50vh;
   box-shadow: 0 0 0 8px var(--orange)
 }
@@ -203,7 +205,7 @@
 
 .timeline_text {
   color: var(--light-3);
-  font-family: Atkinsonhyperlegible, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: 500;
   line-height: 110%
@@ -307,7 +309,7 @@
 .timeline_date-text {
   color: var(--light-3);
   letter-spacing: -.03em;
-  font-family: Atkinsonhyperlegible, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 60px;
   font-weight: 500;
   line-height: 100%;
