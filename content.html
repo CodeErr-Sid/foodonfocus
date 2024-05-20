@@ -309,28 +309,46 @@
                 <!-- section 2 -->
 
                 <!-- vertical image -->
-                <section class="vertical-img">
-                    <h2 id="gallerytxt" style="padding-top: 3px;">Top Rated !</h2>
+                <section class="vertical-video">
+                    <h2 id="gallerytxt" style="padding-top: 3px;">Top Rated!</h2>
                     <div class="container5">
+                        
                         <div class="box5">
-                            <img src="https://source.unsplash.com/1000x800">
-                            <span style="color: #fbae19;">IMG 1</span>
+                            <video src="video/vid3.mp4" muted></video>
+                            <span style="color: #fbae19;">Video 1</span>
                         </div>
                         <div class="box5">
-                            <img src="https://source.unsplash.com/1000x802">
-                            <span style="color: #fbae19;">IMG 2</span>
+                            <video src="video/vid_2.mp4" muted></video>
+                            <span style="color: #fbae19;">Video 2</span>
                         </div>
                         <div class="box5">
-                            <img src="https://source.unsplash.com/1000x804">
-                            <span style="color: #fbae19;">IMG 3</span>
+                            <video src="video/vid3.mp4" muted></video>
+                            <span style="color: #fbae19;">Video 3</span>
                         </div>
                         <div class="box5">
-                            <img src="https://source.unsplash.com/1000x806">
-                            <span style="color: #fbae19;">IMG 4</span>
+                            <video src="video/vid_2.mp4" muted></video>
+                            <span style="color: #fbae19;">Video 4</span>
                         </div>
                     </div>
                 </section>
+
+                <script>
+                    document.querySelectorAll('.box5').forEach(box => {
+                        const video = box.querySelector('video');
+                        box.addEventListener('mouseover', () => {
+                            video.play();
+                        });
+                        box.addEventListener('mouseout', () => {
+                            video.pause();
+                            video.currentTime = 0; // Optional: Reset video to the start
+                        });
+                    });
+                </script>
+
+
                 <!-- vertical image -->
+
+
 
                 <!-- Gallery -->
                 <section class="gallery">
