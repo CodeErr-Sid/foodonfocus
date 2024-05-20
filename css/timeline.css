@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --maroon:#972221;
-  --orange:#f89c1f;
+  --maroon: #972221;
+  --orange: #f89c1f;
   --darkest: #0f0d11;
   --blue: #222acc;
   --120: 120px;
@@ -61,6 +61,14 @@
   position: relative
 }
 
+.timeline-heading {
+  padding: .7em;
+  text-align: center;
+  background: var(--orange);
+  color: white;
+}
+
+
 .text-colour-white {
   color: #fff
 }
@@ -105,13 +113,15 @@
   position: fixed;
   top: 0;
   bottom: 50vh;
-  opacity: 0; /* Initially hide */
+  opacity: 0;
+  /* Initially hide */
   transition: opacity 0.3s ease-in-out;
-  
+
 }
 
 .timeline_progress .show {
-  opacity: 1; /* Show when entering the section */
+  opacity: 1;
+  /* Show when entering the section */
 }
 
 .text-colour-lightgrey {
@@ -360,13 +370,13 @@
 .section-vr-timeline {
   margin-left: auto;
   margin-right: auto;
-  padding: 0 6%;
+  /* padding: 0 6%; */
   display: block;
   position: relative
 }
 
 @media screen and (max-width:991px) {
- 
+
   .container---1280 {
     flex-flow: column;
     justify-content: flex-start;
@@ -393,6 +403,7 @@
     padding-left: 20px;
     padding-right: 20px
   }
+
   .container-1282 {
     width: 84vw
   }
@@ -446,6 +457,7 @@
     padding-left: 20px;
     padding-right: 20px
   }
+
   .section-timeline {
     margin-top: 130px
   }
@@ -816,4 +828,3 @@
     grid-area: 1/1/3/2
   }
 }
-
