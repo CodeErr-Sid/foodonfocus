@@ -5811,7 +5811,7 @@ ul {
   position: absolute;
   width: 24px;
   fill: #fbae19;
-  z-index: 9;
+  z-index: 1;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
