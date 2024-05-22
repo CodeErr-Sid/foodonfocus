@@ -3802,8 +3802,8 @@ a {
   padding: 0 15px;
   height: 70px;
   border-radius: 70px;
-  color: white;
-  background-color: var(--orange);
+  color: var(--orange);
+  /* background-color: var(--orange); */
 }
 
 @media screen and (max-width: 992px) {
@@ -6732,5 +6732,130 @@ ul {
   background-color: var(--maroon);
 }
 
-.cc-txt{
+/* Teaser section for Contact Form*/
+.teaser-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-side {
+  position: relative;
+  width: 50%;
+}
+.Form-teaser{
+  padding: 50px;
+}
+
+.schedule-button svg {
+  margin-left: 8px;
+  fill: black; /* Ensure the icon color matches the text color */
+}
+.teaser-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-button {
+  position: absolute;
+  font-weight: 600;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 25px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.center-btn{
+  text-align: center;
+  justify-content: center;
+}
+.schedule-button:hover {
+  background-color: black;
+  color: white;
+  border: 1.5px solid white;
+}
+
+.right-side {
+  width: 45%;
+  padding: 20px;
+}
+
+.right-side h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.right-side p {
+  font-size: 16px;
+  color: #666;
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .teaser-section {
+    padding: 50px;
+  }
+
+  .left-side, .right-side {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .schedule-button {
+    bottom: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .teaser-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .left-side, .right-side {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .schedule-button {
+    position: static;
+    margin-top: -70px;
+    transform: none;
+    
+  }
+}
+
+@media (max-width: 480px) {
+  .teaser-section {
+    padding: 10px;
+  }
+
+  .right-side h2 {
+    font-size: 20px;
+  }
+
+  .right-side p {
+    font-size: 14px;
+  }
+
+  .schedule-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    
+  }
 }
