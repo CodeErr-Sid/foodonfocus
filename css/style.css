@@ -1416,7 +1416,7 @@ a {
 }
 
 .mil-frame {
-  padding: 50px 60px 60px 60px;
+  /* padding: 50px 60px 60px 60px; */
   position: fixed;
   z-index: 999;
   pointer-events: none;
@@ -1529,6 +1529,8 @@ a {
 }
 
 .mil-frame-top {
+  padding: 1rem;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
