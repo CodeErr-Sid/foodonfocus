@@ -134,10 +134,9 @@ body {
     "slnt" 0;
 }
 
-.hover-text-1 {
-  transition: color 0.5s cubic-bezier(0.39, 0.58, 0.57, 1);
-  cursor: pointer;
-  background-image: url('../img/photo/bg-69.jpg');
+.hover-text-1,
+.hover-text-2,
+.hover-text-3 {
   background-size: cover;
   -webkit-background-clip: text;
   background-clip: text;
@@ -145,32 +144,20 @@ body {
   /* Start position of the background image (bottom) */
   background-repeat: no-repeat;
   position: relative;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.hover-text-1 {
+  background-image: url('../img/photo/bg-69.jpg');
 }
 
 .hover-text-2 {
-  transition: color 0.5s cubic-bezier(0.39, 0.58, 0.57, 1);
-  cursor: pointer;
   background-image: url('../img/photo/text-bg-2.jpg');
-  background-size: cover;
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-position: 0% 100%;
-  /* Start position of the background image (bottom) */
-  background-repeat: no-repeat;
-  position: relative;
 }
 
 .hover-text-3 {
-  transition: color 0.5s cubic-bezier(0.39, 0.58, 0.57, 1);
-  cursor: pointer;
   background-image: url('../img/photo/text-bg-3.jpg');
-  background-size: cover;
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-position: 0% 100%;
-  /* Start position of the background image (bottom) */
-  background-repeat: no-repeat;
-  position: relative;
 }
 
 #service-1:hover .hover-text-1,
@@ -5069,11 +5056,11 @@ html.is-animating .mil-menu-frame {
   padding: 0 1rem;
   gap: 1rem;
   justify-items: center;
+  transition: .5s;
 }
 
 .featured-works .featured-work-box .image-box {
-  width: 40vw;
-  max-width: 45vw;
+  width: 100%;
   position: relative;
   overflow: hidden;
   border-radius: 25px;
@@ -5105,6 +5092,8 @@ html.is-animating .mil-menu-frame {
 .featured-work-box {
   display: flex;
   gap: 10px;
+  transition: .5s;
+
   flex-direction: column;
 }
 
@@ -5134,11 +5123,12 @@ html.is-animating .mil-menu-frame {
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
-  #play-pause-btn{
+  #play-pause-btn {
     top: 60%;
   }
+
   .featured-works {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
     /* Adjust to your needs */
   }
 }
@@ -6428,14 +6418,15 @@ ul {
 
 /* Responsive Styles for Filter Buttons */
 @media(max-width: 767px) {
-  .gallery-img img{
+  .gallery-img img {
     padding: 20px;
     border-radius: 5px;
   }
-  
-  .modal-content{
+
+  .modal-content {
     margin-top: 32vh;
   }
+
   .gallery-filter .filter-item {
     font-size: 14px;
     /* Reduce font size */
@@ -6569,7 +6560,8 @@ ul {
     flex-direction: column;
     height: auto;
   }
-  .consult4{
+
+  .consult4 {
     padding: 20px;
   }
 
@@ -6749,16 +6741,16 @@ ul {
   flex-direction: column;
 }
 
-.consult-buttons:hover{
-  zoom:1;
+.consult-buttons:hover {
+  zoom: 1;
 }
 
-.cc-txt-1{
+.cc-txt-1 {
   font-size: 3.2rem;
   font-weight: 900;
 }
 
-.cc-txt-box{
+.cc-txt-box {
   width: 40%;
   border-radius: 52px;
   display: flex;
@@ -6768,7 +6760,7 @@ ul {
   transition: background-color .5s ease-in;
 }
 
-.cc-txt-box:hover{
+.cc-txt-box:hover {
   background-color: var(--maroon);
 }
 
@@ -6787,14 +6779,17 @@ ul {
   position: relative;
   width: 50%;
 }
-.Form-teaser{
+
+.Form-teaser {
   padding: 50px;
 }
 
 .schedule-button svg {
   margin-left: 8px;
-  fill: black; /* Ensure the icon color matches the text color */
+  fill: black;
+  /* Ensure the icon color matches the text color */
 }
+
 .teaser-image {
   width: 100%;
   border-radius: 8px;
@@ -6818,10 +6813,11 @@ ul {
   transition: background-color 0.3s;
 }
 
-.center-btn{
+.center-btn {
   text-align: center;
   justify-content: center;
 }
+
 .schedule-button:hover {
   background-color: black;
   color: white;
@@ -6843,13 +6839,15 @@ ul {
   font-size: 16px;
   color: #666;
 }
+
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
   .teaser-section {
     padding: 50px;
   }
 
-  .left-side, .right-side {
+  .left-side,
+  .right-side {
     width: 100%;
     padding: 10px;
   }
@@ -6865,14 +6863,15 @@ ul {
   .Form-teaser {
     padding: 20px;
     margin-bottom: 30px;
-    }
+  }
 
   .teaser-section {
     flex-direction: column;
     padding: 20px;
   }
 
-  .left-side, .right-side {
+  .left-side,
+  .right-side {
     width: 100%;
     padding: 10px;
   }
@@ -6881,7 +6880,7 @@ ul {
     position: static;
     margin-top: -70px;
     transform: none;
-    
+
   }
 }
 
@@ -6901,13 +6900,13 @@ ul {
   .schedule-button {
     padding: 10px 15px;
     font-size: 14px;
-    
+
   }
 }
 
 
 /*  */
-#adjust-btn{
+#adjust-btn {
   position: absolute;
   font-weight: 600;
   bottom: 60px;
@@ -6924,7 +6923,7 @@ ul {
   transition: background-color 0.3s;
 }
 
-#adjust-btn:hover{
+#adjust-btn:hover {
   background-color: black;
   color: white;
   border: 1.5px solid white;
@@ -6934,12 +6933,13 @@ ul {
 .footer8 {
   box-sizing: border-box;
 
-  margin: 0;  
+  margin: 0;
   color: black;
   background-color: white;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.1)
 }
+
 .container8 {
   max-width: 1200px;
   margin: 0 auto;
@@ -6949,12 +6949,14 @@ ul {
   align-items: center;
 
 }
+
 .container8 ul {
   list-style: none;
   margin: 1em 0;
   padding-top: 9px;
   margin-bottom: -3px;
 }
+
 .footer_adr {
   color: black;
   max-width: 25em;
@@ -6962,6 +6964,7 @@ ul {
   line-height: 23px;
   margin: 1em auto;
 }
+
 .media-icons8 a {
   font-size: 1.1em;
   width: 2em;
@@ -6974,15 +6977,18 @@ ul {
   transition: 0.3s;
   margin: 0 0.5em;
 }
+
 .media-icons8 a:hover {
   background: #972221;
   color: #fbae19;
 }
+
 .footer8 .menu8 a {
   transition: 0.3s;
   font-weight: 600;
-  color:#972221;
+  color: #972221;
 }
+
 .footer8 .menu8 a:hover {
   color: #fbae19;
 }
@@ -6991,17 +6997,20 @@ ul {
   display: inline-block;
   margin: 0 1em;
   text-align: center;
-  
+
 }
+
 .footer8 .media-icons8 {
   display: flex;
   justify-content: center;
   margin: 1.5em 0;
 }
-.footer_logo8{
+
+.footer_logo8 {
   height: auto;
   width: 50%;
 }
+
 .footer_logo8 {
   margin-bottom: 20px;
 }
@@ -7010,6 +7019,7 @@ ul {
   max-width: 50%;
   height: auto;
 }
+
 /* Responsive Design */
 
 @media (max-width: 768px) {
