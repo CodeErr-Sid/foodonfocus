@@ -1516,8 +1516,8 @@ a {
 }
 
 .mil-frame-top {
+  margin: 3rem;
   padding: 1rem;
-  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1527,6 +1527,12 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  transition: .5s;
+}
+
+.mil-frame-top.nav-scrolled{
+  margin: 0;
+  background-color: white;
 }
 
 .mil-frame-top .mil-logo {
