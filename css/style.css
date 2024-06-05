@@ -2761,7 +2761,7 @@ a {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   line-clamp: 3;
-  -webkit-box-orient: vertical;
+  /* -webkit-box-orient: vertical; */
   /* -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1); */
   /* transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);/ */
 }
@@ -6799,8 +6799,8 @@ ul {
 .schedule-button {
   position: absolute;
   font-weight: 600;
-  bottom: 60px;
-  left: 50%;
+  /* bottom: 60px;
+  left: 50%; */
   transform: translateX(-50%);
   padding: 15px 25px;
   background-color: white;
@@ -6819,7 +6819,7 @@ ul {
 }
 
 .schedule-button:hover {
-  background-color: black;
+  background-color: #fbae19;
   color: white;
   border: 1.5px solid white;
 }
