@@ -242,10 +242,10 @@ h1,
 
 @media screen and (max-width: 1400px) {
 
-  h1,
+  /* h1,
   .mil-h1 {
     font-size: 74px;
-  }
+  } */
 }
 
 @media screen and (max-width: 1200px) {
@@ -1530,7 +1530,7 @@ a {
   transition: .5s;
 }
 
-.mil-frame-top.nav-scrolled{
+.mil-frame-top.nav-scrolled {
   margin: 0;
   background-color: white;
 }
@@ -2009,15 +2009,15 @@ a {
   bottom: calc(100% + 120px);
 }
 
-.mil-inner-banner .mil-banner-content {
-  /* padding: 100px 0 0 0; */
+/* .mil-inner-banner .mil-banner-content {
+  padding: 100px 0 0 0;
 }
 
 @media screen and (max-width: 1200px) {
   .mil-inner-banner .mil-banner-content {
-    /* padding: 180px 0 0 0; */
+    padding: 180px 0 0 0;
   }
-}
+} */
 
 .mil-banner-personal {
   height: 100vh;
@@ -6604,9 +6604,9 @@ ul {
     font-size: 0.7rem;
   }
 
-  .service-item4 {
-    /* font-size: 1.2rem; */
-  }
+  /* .service-item4 {
+    font-size: 1.2rem;
+  } */
 
   .service-item4::after {
     font-size: 2.5rem;
@@ -6949,12 +6949,13 @@ ul {
 .container8 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2em;
+  padding: 2em 2em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  gap: 1.5rem;
 }
+
 
 .container8 ul {
   list-style: none;
@@ -6963,12 +6964,23 @@ ul {
   margin-bottom: -3px;
 }
 
+p#copywright-p {
+  background: #f9f9f9;
+  padding: 1rem;
+  margin: 0;
+}
+
 .footer_adr {
   color: black;
   max-width: 25em;
   font-size: 0.9em;
   line-height: 23px;
-  margin: 1em auto;
+  margin: 0;
+  padding: 0;
+}
+
+.footer_adr div {
+  margin: 10px;
 }
 
 .media-icons8 a {
@@ -7009,16 +7021,14 @@ ul {
 .footer8 .media-icons8 {
   display: flex;
   justify-content: center;
-  margin: 1.5em 0;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .footer_logo8 {
   height: auto;
   width: 50%;
-}
-
-.footer_logo8 {
-  margin-bottom: 20px;
 }
 
 .img8 {
