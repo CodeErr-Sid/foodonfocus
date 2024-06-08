@@ -5015,6 +5015,10 @@ html.is-animating .mil-menu-frame {
   /* Set the background color of the outer container */
 }
 
+.bg-white{
+  background-color: white;
+}
+
 .outer-container-fp {
   background-color: white;
   display: flex;
@@ -6708,7 +6712,7 @@ ul {
   font-weight: 200;
   font-size: 2.9rem;
   margin-top: 7rem;
-  padding: 0 1.2em;
+  padding: 1.2em;
 }
 
 .hero-heading {
