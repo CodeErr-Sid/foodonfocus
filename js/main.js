@@ -364,11 +364,48 @@ $(function () {
      menu
 
     ***************************/
-    $('.mil-menu-btn').on("click", function () {
-        $('.mil-menu-btn').toggleClass('mil-active');
-        $('.mil-menu').toggleClass('mil-active');
-        $('.mil-menu-frame').toggleClass('mil-active');
+     $(document).ready(function() {
+        var $navbar = $('.mil-frame-top');
+        var $milMenuFrame = $('.mil-menu-frame');
+        var $milMenuBtn = $('.mil-menu-btn');
+    
+        // Function to handle scroll event
+        function handleScroll() {
+            var scrollTop = $(window).scrollTop();
+    
+            if ($milMenuFrame.hasClass('mil-active')) {
+                $navbar.removeClass('nav-scrolled');
+            } else {
+                if (scrollTop === 0) {
+                    $navbar.removeClass('nav-scrolled'); // Remove the 'nav-scrolled' class when scrolled to the top
+                } else {
+                    $navbar.addClass('nav-scrolled'); // Add the 'nav-scrolled' class when scrolled away from the top
+                }
+            }
+        }
+    
+        // Initial scroll check
+        handleScroll();
+    
+        // Scroll event listener
+        $(window).on('scroll', function() {
+            handleScroll();
+        });
+    
+        // Button click event listener
+        $milMenuBtn.on('click', function() {
+            $milMenuBtn.toggleClass('mil-active');
+            $milMenuFrame.toggleClass('mil-active');
+    
+            // Check the state and update navbar class accordingly
+            if ($milMenuFrame.hasClass('mil-active')) {
+                $navbar.removeClass('nav-scrolled');
+            } else {
+                handleScroll(); // Re-check scroll position and update class
+            }
+        });
     });
+    
     /***************************
 
     main menu
