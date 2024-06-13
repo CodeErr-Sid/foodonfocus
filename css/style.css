@@ -4025,6 +4025,11 @@ a {
   padding: 60px 0 30px;
 }
 
+.mil-price-card-wbg{
+  border-top: solid 1px rgba(0, 0, 0, 0.1);
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+
 .mil-price-card .mil-price-number {
   padding-top: 10px;
   line-height: 70%;
