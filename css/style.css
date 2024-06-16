@@ -4946,7 +4946,12 @@ html.is-animating .mil-menu-frame {
 
 /* vertical video */
 
+.vertical-video{
+  background-color: whitesmoke;
+}
+
 .vertical-video-container {
+
   display: flex;
   align-items: center;
   justify-content: center;
