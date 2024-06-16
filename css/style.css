@@ -2361,11 +2361,11 @@ a {
   animation-delay: 0.5s;
 }
 
-@media screen and (max-width: 1400px) {
+/* @media screen and (max-width: 1400px) {
   .mil-position-2 {
     display: none;
   }
-}
+} */
 
 .mil-position-3 {
   bottom: -100px;
