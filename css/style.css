@@ -1009,6 +1009,10 @@ a {
   margin-right: 30px;
 }
 
+.mil-mb-25{
+  margin-bottom: 25px;
+}
+
 .mil-mb-5 {
   margin-bottom: 5px;
 }
@@ -1696,9 +1700,9 @@ a {
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
 
-.mil-menu-frame .mil-menu-right-frame .mil-menu-right {
+/* .mil-menu-frame .mil-menu-right-frame .mil-menu-right {
   padding-bottom: 60px;
-}
+} */
 
 .mil-menu-frame .mil-menu-right-frame .mil-animation-in {
   position: absolute;
@@ -1711,7 +1715,7 @@ a {
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
 
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
   .mil-menu-frame .mil-menu-right-frame {
     display: none;
   }
@@ -1721,7 +1725,7 @@ a {
   .mil-menu-frame .mil-menu-right-frame {
     display: none;
   }
-}
+} */
 
 .mil-menu-frame.mil-active {
   opacity: 1;
