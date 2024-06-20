@@ -376,11 +376,12 @@ $(function () {
             if ($milMenuFrame.hasClass('mil-active')) {
                 $navbar.removeClass('nav-scrolled');
             } else {
-                if (scrollTop === 0) {
+                if (scrollTop === 0 && $(window).width() >= 786) {
                     $navbar.removeClass('nav-scrolled'); // Remove the 'nav-scrolled' class when scrolled to the top
                 } else {
                     $navbar.addClass('nav-scrolled'); // Add the 'nav-scrolled' class when scrolled away from the top
                 }
+                
             }
         }
     

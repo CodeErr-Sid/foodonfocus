@@ -183,11 +183,6 @@ body {
   height: 100%;
 }
 
-@media screen and (max-width: 992px) {
-  .mil-mobile-hidden {
-    display: none;
-  }
-}
 
 section {
   position: relative;
@@ -1009,7 +1004,7 @@ a {
   margin-right: 30px;
 }
 
-.mil-mb-25{
+.mil-mb-25 {
   margin-bottom: 25px;
 }
 
@@ -1981,9 +1976,6 @@ a {
  banner
  
  ------------------------------------------- */
-.mil-banner {
-  height: 100vh;
-}
 
 .mil-banner .container {
   min-height: 100%;
@@ -3789,6 +3781,11 @@ a {
   .mil-portfolio-slider-frame {
     padding-top: 180px;
   }
+
+  .mil-portfolio-slider-frame-home {
+    padding: 0;
+  }
+
 }
 
 .mil-portfolio-nav {
@@ -4029,7 +4026,7 @@ a {
   padding: 60px 0 30px;
 }
 
-.mil-price-card-wbg{
+.mil-price-card-wbg {
   border-top: solid 1px rgba(0, 0, 0, 0.1);
   border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 }
@@ -4946,7 +4943,7 @@ html.is-animating .mil-menu-frame {
 
 /* vertical video */
 
-.vertical-video{
+.vertical-video {
   background-color: whitesmoke;
 }
 
@@ -5029,7 +5026,7 @@ html.is-animating .mil-menu-frame {
   /* Set the background color of the outer container */
 }
 
-.bg-white{
+.bg-white {
   background-color: white;
 }
 
@@ -7097,5 +7094,17 @@ p#copywright-p {
     font-size: 0.75em;
     line-height: 1.4em;
     max-width: 20em;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .mil-mobile-hidden {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .mil-tab-mobile {
+    display: none;
   }
 }
