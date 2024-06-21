@@ -643,13 +643,13 @@ a {
 }
 
 .mil-link.mil-dark svg {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--orange);
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
 
 .mil-link.mil-dark svg path {
-  fill: rgb(0, 0, 0);
+  fill: rgb(255, 255, 255);
 }
 
 .mil-link:hover svg {
@@ -758,7 +758,7 @@ a {
 }
 
 .mil-button.mil-icon-button-sm svg path {
-  fill: rgb(0, 0, 0);
+  fill: rgb(255, 255, 255);
 }
 
 .mil-button:hover {
@@ -1044,6 +1044,10 @@ a {
   .mil-mb-120 {
     margin-bottom: 90px;
   }
+}
+
+.mil-mt-120{
+  margin-top: 120px;
 }
 
 .mil-mt-suptitle-offset {
@@ -1533,6 +1537,7 @@ a {
   margin: 0;
   background-color: white;
 }
+
 
 .mil-frame-top .mil-logo {
   pointer-events: all;
@@ -3976,7 +3981,7 @@ a {
   width: 40px;
   height: 40px;
   color: rgb(0, 0, 0);
-  background-color: rgb(229, 229, 229);
+  background-color: var(--orange);
   font-size: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3993,6 +3998,10 @@ a {
 .mil-accordion-group .mil-accordion-menu .mil-symbol .mil-plus,
 .mil-accordion-group .mil-accordion-menu .mil-symbol .mil-minus {
   position: absolute;
+}
+
+.mil-plus,.mil-minus{
+  color: white;
 }
 
 .mil-accordion-group .mil-accordion-menu .mil-symbol .mil-minus {
@@ -5794,7 +5803,7 @@ ul {
 
 .button2:hover {
   background-color: #fbae19;
-  color: black;
+  color: white;
 }
 
 .button2:hover .button2__icon-wrapper {
@@ -5897,10 +5906,11 @@ ul {
 
 .animated-button:hover .text2 {
   transform: translateX(12px);
+  color: white;
 }
 
 .animated-button:hover svg {
-  fill: black;
+  fill: white;
 }
 
 .animated-button:active {
@@ -6930,8 +6940,8 @@ ul {
 #adjust-btn {
   position: absolute;
   font-weight: 600;
-  bottom: 60px;
-  left: 27%;
+  bottom: 10%;
+  left: 50%;
   transform: translateX(-50%);
   padding: 15px 25px;
   background-color: white;
@@ -7106,5 +7116,27 @@ p#copywright-p {
 @media screen and (max-width: 992px) {
   .mil-tab-mobile {
     display: none;
+  }
+}
+
+@media screen and ( width < 992px) {
+  #meetOurTeam{
+    padding-top: 0;
+  }
+  .container-2-boxes{
+    flex-wrap: wrap;
+  }
+
+  .custrow{
+    padding-bottom: 25px;
+  }
+
+  .mil-frame-top{
+    margin: 0;
+    background-color: white;
+  }
+
+  #container-2{
+    align-items: center;
   }
 }

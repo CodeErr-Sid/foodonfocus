@@ -731,7 +731,6 @@ $(function () {
                     ease: "none",
                 }, 0)
                 .to(symbol, {
-                    background: accent,
                     ease: "none",
                 }, 0)
                 .reverse();
