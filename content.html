@@ -21,12 +21,18 @@
     <link rel="stylesheet" href="css/plugins/swiper.min.css">
     <!-- fancybox css -->
     <link rel="stylesheet" href="css/plugins/fancybox.min.css">
+    <!-- Flickity CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css" />
     <!-- Timeline css -->
     <link rel="stylesheet" href="css/timeline.css">
     <!-- contact.css -->
     <link rel="stylesheet" href="css/contact.css">
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
+      <!-- Flickity CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <!-- Flickity JS -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <!-- fontawesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!--Boxicons for cookie-->
@@ -243,7 +249,7 @@
                 <!-- banner end -->
 
                 <!-- bg video playing -->
-                <div class="video-container">
+                <!-- <div class="video-container">
                     <video id="video" autoplay loop muted>
                         <source src="video/vid1.mp4" type="video/mp4">
                     </video>
@@ -276,8 +282,57 @@
                     video.addEventListener('ended', function () {
                         video.play();
                     });
-                </script>
+                </script> -->
                 <!-- bg video playing end -->
+
+                <!-- slider hero -->
+                <div class="sid-hero-slider" data-carousel>
+                    <div class="sid-carousel-cell" style="background-image:url(./img/featured/2.jpg);">
+                      <div class="sid-overlay"></div>
+                    </div>
+                    <div class="sid-carousel-cell" style="background-image:url(./img/projects/2.jpg);">
+                      <div class="sid-overlay"></div>
+                    </div>
+                    <div class="sid-carousel-cell" style="background-image:url(./img/projects/3.jpg);">
+                      <div class="sid-overlay"></div>
+                    </div>
+                  </div>
+                  
+
+                 <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+  var options = {
+    accessibility: true,
+    prevNextButtons: true,
+    pageDots: true,
+    setGallerySize: false,
+    autoPlay: 3000, // Slides will change every 3 seconds
+    wrapAround: true, // Allows continuous looping of slides
+    arrowShape: {
+      x0: 10,
+      x1: 60,
+      y1: 50,
+      x2: 60,
+      y2: 45,
+      x3: 15
+    }
+  };
+
+  var carousel = document.querySelector('[data-carousel]');
+  var slides = document.getElementsByClassName('sid-carousel-cell');
+  var flkty = new Flickity(carousel, options);
+
+  flkty.on('scroll', function () {
+    flkty.slides.forEach(function (slide, i) {
+      var image = slides[i];
+      var x = (slide.target + flkty.x) * -1 / 3;
+      image.style.backgroundPosition = x + 'px';
+    });
+  });
+});
+
+                 </script>
+                 <!-- slider hero -->
 
 
 
@@ -1174,6 +1229,9 @@
     <!-- ashley js -->
     <script src="js/custom.js"></script>
     <script src="js/main.js"></script>
+    <!-- flickity -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
 
 </body>
 
