@@ -589,7 +589,7 @@ $(function () {
         speed: 800,
         parallax: true,
         mousewheel: {
-            enable: true
+            forceToAxis: true, // Only allow horizontal scroll when scrolling along the horizontal axis
         },
         navigation: {
             nextEl: '.mil-portfolio-next',
@@ -1029,7 +1029,7 @@ $(function () {
             speed: 800,
             parallax: true,
             mousewheel: {
-                enable: true
+                forceToAxis: true, // Only allow horizontal scroll when scrolling along the horizontal axis
             },
             navigation: {
                 nextEl: '.mil-portfolio-next',
