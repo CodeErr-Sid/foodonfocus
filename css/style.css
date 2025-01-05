@@ -1533,6 +1533,23 @@ a {
   transition: .5s;
 }
 
+.mil-frame-top-scrolled {
+  margin: 3rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  transition: .5s;
+  margin: 0;
+  background-color: white;
+}
+
 .mil-frame-top.nav-scrolled {
   margin: 0;
   background-color: white;
@@ -5744,6 +5761,7 @@ ul {
   width: 100%;
   border-radius: 15px;
   position: relative;
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
