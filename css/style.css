@@ -6315,6 +6315,9 @@ ul {
   /* padding: 20px; */
   vertical-align: middle;
   transition: transform 0.5s ease;
+  aspect-ratio: 1/1;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Apply hover zoom effect only to images within the gallery section */
@@ -6473,6 +6476,7 @@ ul {
   .gallery-img img {
     padding: 20px;
     border-radius: 5px;
+
   }
 
   .modal-content {
