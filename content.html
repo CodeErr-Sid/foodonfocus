@@ -29,10 +29,10 @@
     <link rel="stylesheet" href="css/contact.css">
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
-      <!-- Flickity CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-  <!-- Flickity JS -->
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <!-- Flickity CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- Flickity JS -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <!-- fontawesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!--Boxicons for cookie-->
@@ -286,53 +286,72 @@
                 <!-- bg video playing end -->
 
                 <!-- slider hero -->
+                <!-- Slider Hero -->
                 <div class="sid-hero-slider" data-carousel>
-                    <div class="sid-carousel-cell" style="background-image:url(./img/content_hero/1.jpeg);">
-                      <div class="sid-overlay"></div>
+                    <!-- Slide 1 -->
+                    <div class="sid-carousel-cell">
+                        <div class="sid-overlay">
+                            <video class="slide-video" autoplay loop muted>
+                                <source src="img/content_hero/vid1.mov" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <h2>Creating Story in Pixels</h2>
+                        </div>
                     </div>
-                    <div class="sid-carousel-cell" style="background-image:url(./img/content_hero/2.JPG);">
-                      <div class="sid-overlay"></div>
+
+                    <!-- Slide 2 -->
+                    <div class="sid-carousel-cell">
+                        <div class="sid-overlay">
+                            <img src="./img/content_hero/2.JPG" alt="">
+                            <h2>Hub For All Creative Content</h2>
+                        </div>
                     </div>
-                    <div class="sid-carousel-cell" style="background-image:url(./img/content_hero/3.JPG);">
-                      <div class="sid-overlay"></div>
+
+                    <!-- Slide 3 -->
+                    <div class="sid-carousel-cell">
+                        <div class="sid-overlay">
+                            <img src="./img/content_hero/1.jpeg" alt="">
+                            <h2>Grow Your Brand Organically</h2>
+                        </div>
                     </div>
-                  </div>
-                  
+                </div>
 
-                 <script>
-                    document.addEventListener("DOMContentLoaded", function() {
-  var options = {
-    accessibility: true,
-    prevNextButtons: true,
-    pageDots: true,
-    setGallerySize: false,
-    autoPlay: 3000, // Slides will change every 3 seconds
-    wrapAround: true, // Allows continuous looping of slides
-    arrowShape: {
-      x0: 10,
-      x1: 60,
-      y1: 50,
-      x2: 60,
-      y2: 45,
-      x3: 15
-    }
-  };
 
-  var carousel = document.querySelector('[data-carousel]');
-  var slides = document.getElementsByClassName('sid-carousel-cell');
-  var flkty = new Flickity(carousel, options);
 
-  flkty.on('scroll', function () {
-    flkty.slides.forEach(function (slide, i) {
-      var image = slides[i];
-      var x = (slide.target + flkty.x) * -1 / 3;
-      image.style.backgroundPosition = x + 'px';
-    });
-  });
-});
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        var options = {
+                            accessibility: true,
+                            prevNextButtons: true,
+                            pageDots: true,
+                            setGallerySize: false,
+                            autoPlay: 3000, // Slides will change every 3 seconds
+                            wrapAround: true, // Allows continuous looping of slides
+                            arrowShape: {
+                                x0: 10,
+                                x1: 60,
+                                y1: 50,
+                                x2: 60,
+                                y2: 45,
+                                x3: 15
+                            }
+                        };
 
-                 </script>
-                 <!-- slider hero -->
+                        var carousel = document.querySelector('[data-carousel]');
+                        var slides = document.getElementsByClassName('sid-carousel-cell');
+                        var flkty = new Flickity(carousel, options);
+
+                        flkty.on('scroll', function () {
+                            flkty.slides.forEach(function (slide, i) {
+                                var image = slides[i];
+                                var x = (slide.target + flkty.x) * -1 / 3;
+                                image.style.backgroundPosition = x + 'px';
+                            });
+                        });
+                    });
+
+                </script>
+                <!-- slider hero -->
 
 
 
@@ -346,11 +365,11 @@
                                 <h6 style="font-size: 1.5rem; color: #fbae19;">• Services</h6>
                             </div>
                             <div class="services4">
-                                <div class="service-item4">Branding</div>
-                                <div class="service-item4">Marketing</div>
-                                <div class="service-item4">Strategy</div>
-                                <div class="service-item4">Content</div>
-                                <div class="service-item4">Advisory</div>
+                                <div class="service-item4">food photography</div>
+                                <div class="service-item4">brand ad films</div>
+                                <div class="service-item4">social first content</div>
+                                <div class="service-item4">ugc</div>
+                                <div class="service-item4">life style</div>
                             </div>
                         </div>
                         <div class="video-section4">
@@ -429,8 +448,9 @@
                         <div class="row justify-content-between">
                             <div class="col-lg-4 mil-relative mil-mb-90">
 
-                                <h4 class="mil-up mil-mb-30 mil-maroon">Your <span class="mil-thin">Approach</span> <br>and <span
-                                        class="mil-thin">Work Specifics</span></h4>
+                                <h4 class="mil-up mil-mb-30 mil-maroon">Your <span class="mil-thin">Approach</span>
+                                    <br>and <span class="mil-thin">Work Specifics</span>
+                                </h4>
                                 <p class="mil-up mil-mb-30">At our agency, we have a unique approach to web design and
                                     development. We believe in creating websites that not only look great but also
                                     perform well in terms of user experience, functionality, and search engine
@@ -576,20 +596,22 @@
                 <!-- service end -->
 
                 <!-- prices -->
-                <section style="background-color: whitesmoke;">
+                <!-- <section style="background-color: whitesmoke;">
                     <div class="mil-animation-frame mil-tab-mobile">
                         <div class="mil-animation mil-position-1 mil-dark-bg mil-scale" data-value-1="2.4"
                             data-value-2="1.4" style="top: 300px; right: -100px"></div>
-                            <div class="mil-animation mil-position-2 mil-dark-bg mil-scale" data-value-1="2"
+                        <div class="mil-animation mil-position-2 mil-dark-bg mil-scale" data-value-1="2"
                             data-value-2="1" style="left: -100px;top: 100px;"></div>
-                            <div class="mil-animation mil-position-1 mil-dark-bg mil-scale" data-value-1="2.4"
-                                data-value-2="1.4" style="top: 1300px; right: -100px"></div>
-                        </div>
+                        <div class="mil-animation mil-position-1 mil-dark-bg mil-scale" data-value-1="2.4"
+                            data-value-2="1.4" style="top: 1300px; right: -100px"></div>
+                    </div>
                     <div class="mi-invert-fix">
                         <div class="container mil-p-120-120">
                             <div class="mil-center">
-                                <h2 class=" mil-up mil-mb-30 mil-center mil-maroon">Reasonable <span class="mil-thin">prices</span>
-                                    <br>for innovative <span class="mil-thin">solutions</span></h2>
+                                <h2 class=" mil-up mil-mb-30 mil-center mil-maroon">Reasonable <span
+                                        class="mil-thin">prices</span>
+                                    <br>for innovative <span class="mil-thin">solutions</span>
+                                </h2>
                                 <p class=" mil-up mil-mb-120">At our agency, we have a unique approach to web design and
                                     development. <br>We believe in creating in terms of user experience, functionality.
                                 </p>
@@ -688,11 +710,11 @@
 
                         </div>
                     </div>
-                </section>
+                </section> -->
                 <!-- prices end -->
 
-                <!-- Gallery --> 
-                 <!-- sidpoint -->
+                <!-- Gallery -->
+                <!-- sidpoint -->
                 <section class="gallery">
                     <h2 id="gallerytxt">Visit Our Gallery!</h2>
                     <div class="container3">
@@ -709,218 +731,186 @@
                         </div>
                         <div class="row">
                             <!-- 001 -->
-    
+
                             <div class="gallery-item 001">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/001/1.jpeg"
-                                        alt="Delivery Aggregator">
+                                    <img src="img/gallery/001/1.jpeg" alt="Delivery Aggregator">
                                 </div>
                             </div>
                             <div class="gallery-item 001">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/001/2.jpeg"
-                                        alt="Delivery Aggregator">
+                                    <img src="img/gallery/001/2.jpeg" alt="Delivery Aggregator">
                                 </div>
                             </div>
                             <div class="gallery-item 001">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/001/3.jpeg"
-                                        alt="Delivery Aggregator">
+                                    <img src="img/gallery/001/3.jpeg" alt="Delivery Aggregator">
                                 </div>
                             </div>
                             <div class="gallery-item 001">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/001/4.jpeg"
-                                        alt="Delivery Aggregator">
+                                    <img src="img/gallery/001/4.jpeg" alt="Delivery Aggregator">
                                 </div>
                             </div>
                             <div class="gallery-item 001">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/001/5.jpeg"
-                                        alt="Delivery Aggregator">
+                                    <img src="img/gallery/001/5.jpeg" alt="Delivery Aggregator">
                                 </div>
                             </div>
                             <div class="gallery-item 001">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/001/6.jpeg"
-                                        alt="Delivery Aggregator">
+                                    <img src="img/gallery/001/6.jpeg" alt="Delivery Aggregator">
                                 </div>
                             </div>
                             <div class="gallery-item 001">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/001/7.jpeg"
-                                        alt="Delivery Aggregator">
+                                    <img src="img/gallery/001/7.jpeg" alt="Delivery Aggregator">
                                 </div>
                             </div>
                             <div class="gallery-item 001">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/001/9.jpeg"
-                                        alt="Delivery Aggregator">
+                                    <img src="img/gallery/001/9.jpeg" alt="Delivery Aggregator">
                                 </div>
                             </div>
-        
+
                             <!-- 001 -->
 
                             <!-- 002 -->
-                             
-                                <div class="gallery-item 002">
-                                    <div class="gallery-item-inner gallery-img">
-                                        <img src="img/gallery/002/1.jpeg"
-                                            alt="Ecom">
-                                    </div>
+
+                            <div class="gallery-item 002">
+                                <div class="gallery-item-inner gallery-img">
+                                    <img src="img/gallery/002/1.jpeg" alt="Ecom">
                                 </div>
-                                <div class="gallery-item 002">
-                                    <div class="gallery-item-inner gallery-img">
-                                        <img src="img/gallery/002/2.jpeg"
-                                            alt="Ecom">
-                                    </div>
+                            </div>
+                            <div class="gallery-item 002">
+                                <div class="gallery-item-inner gallery-img">
+                                    <img src="img/gallery/002/2.jpeg" alt="Ecom">
                                 </div>
-                                <div class="gallery-item 002">
-                                    <div class="gallery-item-inner gallery-img">
-                                        <img src="img/gallery/002/3.jpeg"
-                                            alt="Ecom">
-                                    </div>
+                            </div>
+                            <div class="gallery-item 002">
+                                <div class="gallery-item-inner gallery-img">
+                                    <img src="img/gallery/002/3.jpeg" alt="Ecom">
                                 </div>
-                                <div class="gallery-item 002">
-                                    <div class="gallery-item-inner gallery-img">
-                                        <img src="img/gallery/002/4.jpeg"
-                                            alt="Ecom">
-                                    </div>
+                            </div>
+                            <div class="gallery-item 002">
+                                <div class="gallery-item-inner gallery-img">
+                                    <img src="img/gallery/002/4.jpeg" alt="Ecom">
                                 </div>
-                                <div class="gallery-item 002">
-                                    <div class="gallery-item-inner gallery-img">
-                                        <img src="img/gallery/002/5.jpeg"
-                                            alt="Ecom">
-                                    </div>
+                            </div>
+                            <div class="gallery-item 002">
+                                <div class="gallery-item-inner gallery-img">
+                                    <img src="img/gallery/002/5.jpeg" alt="Ecom">
                                 </div>
-                                <div class="gallery-item 002">
-                                    <div class="gallery-item-inner gallery-img">
-                                        <img src="img/gallery/002/6.jpeg"
-                                            alt="Ecom">
-                                    </div>
+                            </div>
+                            <div class="gallery-item 002">
+                                <div class="gallery-item-inner gallery-img">
+                                    <img src="img/gallery/002/6.jpeg" alt="Ecom">
                                 </div>
+                            </div>
                             <!-- 002 -->
 
                             <!-- 003 -->
                             <div class="gallery-item 003">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/003/1.jpeg"
-                                        alt="Lifestyle">
+                                    <img src="img/gallery/003/1.jpeg" alt="Lifestyle">
                                 </div>
                             </div>
                             <div class="gallery-item 003">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/003/2.jpeg"
-                                        alt="Lifestyle">
+                                    <img src="img/gallery/003/2.jpeg" alt="Lifestyle">
                                 </div>
                             </div>
                             <div class="gallery-item 003">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/003/3.jpeg"
-                                        alt="Lifestyle">
+                                    <img src="img/gallery/003/3.jpeg" alt="Lifestyle">
                                 </div>
                             </div>
                             <div class="gallery-item 003">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/003/4.jpeg"
-                                        alt="Lifestyle">
+                                    <img src="img/gallery/003/4.jpeg" alt="Lifestyle">
                                 </div>
                             </div>
                             <div class="gallery-item 003">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/003/5.jpeg"
-                                        alt="Lifestyle">
+                                    <img src="img/gallery/003/5.jpeg" alt="Lifestyle">
                                 </div>
                             </div>
                             <div class="gallery-item 003">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/003/6.jpeg"
-                                        alt="Lifestyle">
+                                    <img src="img/gallery/003/6.jpeg" alt="Lifestyle">
                                 </div>
                             </div>
-                             <!-- 003 -->
+                            <!-- 003 -->
 
-                             <!--004 -->
-                             <div class="gallery-item 004">
+                            <!--004 -->
+                            <div class="gallery-item 004">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/004/1.jpeg"
-                                        alt="Menushoot">
+                                    <img src="img/gallery/004/1.jpeg" alt="Menushoot">
                                 </div>
                             </div>
                             <div class="gallery-item 004">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/004/2.jpeg"
-                                        alt="Menushoot">
+                                    <img src="img/gallery/004/2.jpeg" alt="Menushoot">
                                 </div>
                             </div>
                             <div class="gallery-item 004">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/004/3.jpeg"
-                                        alt="Menushoot">
+                                    <img src="img/gallery/004/3.jpeg" alt="Menushoot">
                                 </div>
                             </div>
                             <div class="gallery-item 004">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/004/4.jpeg"
-                                        alt="Menushoot">
+                                    <img src="img/gallery/004/4.jpeg" alt="Menushoot">
                                 </div>
                             </div>
                             <div class="gallery-item 004">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/004/5.jpeg"
-                                        alt="Menushoot">
+                                    <img src="img/gallery/004/5.jpeg" alt="Menushoot">
                                 </div>
                             </div>
                             <div class="gallery-item 004">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/004/6.jpeg"
-                                        alt="Menushoot">
+                                    <img src="img/gallery/004/6.jpeg" alt="Menushoot">
                                 </div>
                             </div>
-                             <!-- 004 -->
+                            <!-- 004 -->
 
-                             <!-- 005 -->
-                             <div class="gallery-item 005">
+                            <!-- 005 -->
+                            <div class="gallery-item 005">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/005/1.jpg"
-                                        alt="Portfolio">
+                                    <img src="img/gallery/005/1.jpg" alt="Portfolio">
                                 </div>
                             </div>
                             <div class="gallery-item 005">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/005/2.jpeg"
-                                        alt="Portfolio">
+                                    <img src="img/gallery/005/2.jpeg" alt="Portfolio">
                                 </div>
                             </div>
-                              <!-- 005 -->
+                            <!-- 005 -->
 
-                              <!-- 006 -->
-                              <div class="gallery-item 006">
+                            <!-- 006 -->
+                            <div class="gallery-item 006">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/006/1.jpeg"
-                                        alt="Power Visual">
+                                    <img src="img/gallery/006/1.jpeg" alt="Power Visual">
                                 </div>
                             </div>
                             <div class="gallery-item 006">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/006/2.jpeg"
-                                        alt="Power Visual">
+                                    <img src="img/gallery/006/2.jpeg" alt="Power Visual">
                                 </div>
                             </div>
                             <div class="gallery-item 006">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/006/3.jpeg"
-                                        alt="Power Visual">
+                                    <img src="img/gallery/006/3.jpeg" alt="Power Visual">
                                 </div>
                             </div>
                             <div class="gallery-item 006">
                                 <div class="gallery-item-inner gallery-img">
-                                    <img src="img/gallery/006/4.jpeg"
-                                        alt="Power Visual">
+                                    <img src="img/gallery/006/4.jpeg" alt="Power Visual">
                                 </div>
                             </div>
-                               <!-- 006 -->
-      
+                            <!-- 006 -->
+
                         </div>
                     </div>
 
@@ -1041,10 +1031,13 @@
                                 <div class="footer_logo8"><img class="img8" src="img/base/FNF LOGO NEW.png" alt="">
                                 </div>
                                 <ul class="media-icons8">
-                                    <li><a href=""><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                                    <li><a
+                                            href="https://www.instagram.com/foodonfocusmedia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                                                class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/foodonfocus/"><i
+                                                class="fab fa-linkedin"></i></a></li>
+                                    <li><a href="https://www.youtube.com/@zarakmedia/featured"><i
+                                                class="fab fa-youtube"></i></a></li>
                                 </ul>
                                 <div class="footer_adr">
                                     Office #802, SIT Tower, Dubai Silicon Oasis, Dubai, United Arab Emirates

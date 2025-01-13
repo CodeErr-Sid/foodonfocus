@@ -6566,10 +6566,11 @@ ul {
 
 .service-item4 {
   position: relative;
-  font-size: 4rem;
+  font-size: 3rem;
   cursor: pointer;
   color: #972221;
   margin: 10px 0;
+  text-transform: uppercase;
 }
 
 .service-item4::after {
@@ -7176,6 +7177,42 @@ p#copywright-p {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  /* margin-top: 71.5px; */
+
+  .sid-overlay {
+    height: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    h2 {
+      text-align: center;
+      color: white;
+      font-weight: 800;
+      z-index: 10;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      filter: brightness(0.7);
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      filter: brightness(0.7);
+    }
+  }
+
 
   .sid-carousel-cell {
     width: 100%;
@@ -7192,6 +7229,7 @@ p#copywright-p {
       text-align: center;
     }
   }
+
 
   /* Arrow Button Styling */
   .flickity-prev-next-button {
