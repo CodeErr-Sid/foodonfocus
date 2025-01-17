@@ -3054,6 +3054,7 @@ a {
 
 .mil-team-card .mil-description .mil-secrc-text a {
   color: rgb(255, 255, 255);
+  font-size: 1rem;
   -webkit-transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
 }
