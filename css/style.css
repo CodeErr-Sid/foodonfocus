@@ -3199,12 +3199,13 @@ a {
 }
 
 .mil-revi-pagination .swiper-pagination-bullet .mil-custom-dot {
-  background-color: red;
+  background-color: white;
   width: 90px;
   height: 90px;
+  background-repeat: no-repeat;
   border-radius: 50%;
-  background-size: cover;
-  background-position: top;
+  background-size: contain;
+  background-position: center;
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1) !important;
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1) !important;
 }
@@ -3216,33 +3217,36 @@ a {
   }
 }
 
-.mil-revi-pagination .swiper-pagination-bullet .mil-custom-dot.mil-slide-1 {
-  background-image: url(../img/faces/customers/1.jpg);
-}
 
-.mil-revi-pagination .swiper-pagination-bullet .mil-custom-dot.mil-slide-2 {
-  background-image: url(../img/faces/customers/2.jpg);
-}
 
-.mil-revi-pagination .swiper-pagination-bullet .mil-custom-dot.mil-slide-3 {
-  background-image: url(../img/faces/customers/3.jpg);
+.mil-revi-pagination .swiper-pagination-bullet .mil-custom-dot.mil-slide-5 {
+  background-image: url(../img/brand-logos/godiva.png);
 }
 
 .mil-revi-pagination .swiper-pagination-bullet .mil-custom-dot.mil-slide-4 {
-  background-image: url(../img/faces/customers/4.jpg);
+  background-image: url(../img/brand-logos/oma.jpg);
 }
 
-.mil-revi-pagination .swiper-pagination-bullet .mil-custom-dot.mil-slide-5 {
-  background-image: url(../img/faces/customers/5.jpg);
+.mil-revi-pagination .swiper-pagination-bullet .mil-custom-dot.mil-slide-3 {
+  background-image: url(../img/brand-logos/plantaholic.png);
 }
 
-.mil-revi-pagination .swiper-pagination-bullet .mil-custom-dot.mil-slide-6 {
-  background-image: url(../img/faces/customers/6.jpg);
+.mil-revi-pagination .swiper-pagination-bullet .mil-custom-dot.mil-slide-2 {
+  background-image: url(../img/brand-logos/talabat.png);
+}
+
+.mil-revi-pagination .swiper-pagination-bullet .mil-custom-dot.mil-slide-1 {
+  background-image: url(../img/brand-logos/alpro.png);
+}
+
+
+/* .mil-revi-pagination .swiper-pagination-bullet .mil-custom-dot.mil-slide-6 {
+  background-image: url(../img/brand-logos/);
 }
 
 .mil-revi-pagination .swiper-pagination-bullet .mil-custom-dot.mil-slide-7 {
-  background-image: url(../img/faces/customers/7.jpg);
-}
+  background-image: url(../img/brand-logos/godiva.png7.jpg);
+} */
 
 .mil-revi-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   -webkit-box-shadow: inset 0 0 0 4px var(--maroon);
@@ -3727,7 +3731,7 @@ a {
 
 .mil-portfolio-item.mil-slider-item .mil-cover-frame {
   margin-bottom: 30px;
-  height: calc(100vh - 360px);
+  height: 400px;
 }
 
 @media screen and (max-width: 992px) {
@@ -5238,7 +5242,7 @@ html.is-animating .mil-menu-frame {
   width: 100%;
   opacity: 1;
   padding: 20px;
-  /* border: 1px solid black; */
+  /* border:none; */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -5770,9 +5774,9 @@ ul {
   transform: scale(1.1);
 }
 
-#hoverable-img {
+/* #hoverable-img {
   height: 60vh;
-}
+} */
 
 
 .location-year {
@@ -5797,7 +5801,7 @@ ul {
   gap: .75rem;
   background-color: white;
   color: #fbae19;
-  border: 1px solid black;
+  border: none;
   border-radius: 10rem;
   font-weight: 600;
   padding: .75rem 1.5rem;
@@ -5816,7 +5820,7 @@ ul {
   color: #fbae19;
   background-color: #fff;
   border-radius: 50%;
-  border: 1px solid black;
+  border: none;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -5862,17 +5866,70 @@ ul {
   padding-bottom: 4px;
   padding-left: 29px;
   padding-right: 29px;
-  border: 1px solid black;
+  border: none;
   /* border-color: transparent; */
   font-size: 16px;
-  background-color: white;
+  background-color: #fbae19;
   border-radius: 50px;
   font-weight: 600;
-  color: #fbae19;
+  color: white;
   box-shadow: 0 0 0 2px #ffffff;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:focus {
+  border: none;
+  outline: none;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: #018380;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown-button:hover {
+  background-color: #00DAD4;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #121212;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #fbae19;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .animated-button svg {
@@ -5915,7 +5972,7 @@ ul {
   box-shadow: 0 0 0 12px transparent;
   color: black;
   border-radius: 12px;
-  border: 1px solid black;
+  border: none;
 }
 
 .animated-button:hover .arr-1 {
