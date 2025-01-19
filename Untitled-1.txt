@@ -169,5 +169,35 @@ img/visit-our-gallery/powervisuals/ZMP_6909.jpg
 
 duplicate images delted 8875 8920 ( 54 - 2 = 52)
 
+ <div class="gallery-item 003">
+                                <div class="gallery-item-inner gallery-img">
+                                    <img loading="lazy" src="img/visit-our-gallery/lifestyle/BOMBAY/IMG_9589 (1).JPG"
+                                        alt="Bombay Lifestyle">
+                                </div>
+                            </div>
+
+
+src="img/visit-our-gallery/EDIBLE WORLDCUP_OCT_2022_FOOD ON FOCUS_ (2).jpg"
+src="img/visit-our-gallery/EDIBLE WORLDCUP_OCT_2022_FOOD ON FOCUS_ (4).jpg"
+src="img/visit-our-gallery/FOOD ON FOCUS MEDIA_GLADIO CAFE_SOCIAL MEDIA_SEPT _IMG_5322 .jpg"
+src="img/visit-our-gallery/FOOD ON FOCUS MEDIA_GLADIO CAFE_SOCIAL MEDIA_SEPT _IMG_5356  (1).jpg"
+src="img/visit-our-gallery/IMG_1095.JPG"
+src="img/visit-our-gallery/IMG_4681.jpg"
+src="img/visit-our-gallery/IMG_4682.jpg"
+src="img/visit-our-gallery/IMG_9589 (1).JPG"
+src="img/visit-our-gallery/IMG_9609 (1).JPG"
+src="img/visit-our-gallery/IMG_9616.JPG"
+src="img/visit-our-gallery/IMG_9730 (1).JPG"
+src="img/visit-our-gallery/IRISH_WICKERS_FOOD_PHOTOGRAPHY_FOODONFOCUSMEDIA-0668.jpg"
+src="img/visit-our-gallery/IRISH_WICKERS_FOOD_PHOTOGRAPHY_FOODONFOCUSMEDIA-0696 .jpg"
+src="img/visit-our-gallery/IRISH_WICKERS_FOOD_PHOTOGRAPHY_FOODONFOCUSMEDIA-0864 .jpg"
+src="img/visit-our-gallery/IRISH_WICKERS_FOOD_PHOTOGRAPHY_FOODONFOCUSMEDIA-0896 .jpg"
+src="img/visit-our-gallery/IRISH_WICKERS_FOOD_PHOTOGRAPHY_FOODONFOCUSMEDIA-0922.jpg"
+src="img/visit-our-gallery/Talabat Ride Event.png"
+src="img/visit-our-gallery/ZMP_0471.JPG"
+src="img/visit-our-gallery/ZMP_3541.jpg"
+src="img/visit-our-gallery/ZMP_3950.jpg"
+src="img/visit-our-gallery/ZMP_8695.jpg"
+
 
 

@@ -3710,8 +3710,8 @@ a {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: top;
-  object-position: top;
+  -o-object-position: center ;
+  object-position: center;
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
