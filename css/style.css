@@ -1707,8 +1707,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+  -ms-flex-align: center;
+  align-items: center;
   border-left: solid 1px rgba(255, 255, 255, 0.1);
   opacity: 0;
   -webkit-transform: translateY(30px);
