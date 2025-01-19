@@ -3484,7 +3484,7 @@ a {
   margin-right: 0;
 }
 
-.mil-category-list li a {
+.mil-category-list li {
   height: 40px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -3507,13 +3507,25 @@ a {
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
 
-.mil-category-list li a:hover {
+.mil-category-list li:hover {
   background-color: rgb(229, 229, 229);
 }
 
-.mil-category-list li a.mil-active {
+.mil-category-list li.mil-active {
   background-color: rgb(255, 152, 0);
 }
+
+/* fof-content */
+
+.fof-content-show {
+  display: block!important;
+}
+.fof-content {
+  display: none;
+}
+
+/* fof-content */
+
 
 @media screen and (max-width: 768px) {
   .mil-category-list {
@@ -3535,7 +3547,7 @@ a {
     margin-bottom: 0;
   }
 
-  .mil-category-list li a {
+  .mil-category-list li{
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
