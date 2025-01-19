@@ -56,13 +56,13 @@ $(function () {
 
     timeline.fromTo(
         ".mil-animation-1 .mil-h3", {
-            y: "30px",
-            opacity: 0
-        }, {
-            y: "0px",
-            opacity: 1,
-            stagger: 0.4
-        },
+        y: "30px",
+        opacity: 0
+    }, {
+        y: "0px",
+        opacity: 1,
+        stagger: 0.4
+    },
     );
 
     timeline.to(".mil-animation-1 .mil-h3", {
@@ -364,15 +364,15 @@ $(function () {
      menu
 
     ***************************/
-     $(document).ready(function() {
+    $(document).ready(function () {
         var $navbar = $('.mil-frame-top');
         var $milMenuFrame = $('.mil-menu-frame');
         var $milMenuBtn = $('.mil-menu-btn');
-    
+
         // Function to handle scroll event
         function handleScroll() {
             var scrollTop = $(window).scrollTop();
-    
+
             if ($milMenuFrame.hasClass('mil-active')) {
                 $navbar.removeClass('nav-scrolled');
             } else {
@@ -381,32 +381,35 @@ $(function () {
                 } else {
                     $navbar.addClass('nav-scrolled'); // Add the 'nav-scrolled' class when scrolled away from the top
                 }
-                
+
             }
         }
-    
+
         // Initial scroll check
         handleScroll();
-    
+
         // Scroll event listener
-        $(window).on('scroll', function() {
+        $(window).on('scroll', function () {
             handleScroll();
         });
-    
+
         // Button click event listener
-        $milMenuBtn.on('click', function() {
+        $milMenuBtn.on('click', function () {
             $milMenuBtn.toggleClass('mil-active');
             $milMenuFrame.toggleClass('mil-active');
-    
+
+
             // Check the state and update navbar class accordingly
             if ($milMenuFrame.hasClass('mil-active')) {
                 $navbar.removeClass('nav-scrolled');
+                $('body').css('overflow', 'hidden'); // Disable scrolling
             } else {
                 handleScroll(); // Re-check scroll position and update class
+                $('body').css('overflow', ''); // Restore scrolling
             }
         });
     });
-    
+
     /***************************
 
     main menu
@@ -526,7 +529,7 @@ $(function () {
             "zoom",
             "fullScreen",
             "close"
-          ],
+        ],
         loop: false,
         protect: true
     });
@@ -962,11 +965,11 @@ $(function () {
         ***************************/
         $('[data-fancybox="gallery"]').fancybox({
             buttons: [
-            "slideShow",
-            "zoom",
-            "fullScreen",
-            "close"
-          ],
+                "slideShow",
+                "zoom",
+                "fullScreen",
+                "close"
+            ],
             loop: false,
             protect: true
         });
