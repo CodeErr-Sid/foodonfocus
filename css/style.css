@@ -1859,6 +1859,13 @@ a {
   }
 }
 
+
+@media screen and (768px <= width) {
+  .mil-challenges h4 {
+    text-align: right
+  }
+}
+
 .mil-main-menu ul li a:before {
   content: "";
   position: absolute;
@@ -6834,6 +6841,17 @@ ul {
 }
 
 .hero-heading {
+  font-family: "Montserrat", sans-serif;
+}
+
+.hero-heading-b h1 {
+  width: 67%;
+  font-weight: 200;
+  font-size: 2.9rem;
+  margin: 7rem 0;
+}
+
+.hero-heading-b {
   font-family: "Montserrat", sans-serif;
 }
 
