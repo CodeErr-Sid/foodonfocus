@@ -105,6 +105,10 @@ body {
   color: var(--maroon);
 }
 
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
 
 .container {
   pointer-events: all;
@@ -1860,7 +1864,7 @@ a {
 }
 
 
-@media screen and (768px <= width) {
+@media screen and (768px <=width) {
   .mil-challenges h4 {
     text-align: right
   }
