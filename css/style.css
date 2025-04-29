@@ -5746,7 +5746,7 @@ ul {
 
 .divider {
   width: 0%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--maroon);
   clear: both;
   padding-top: 2px;
   padding-bottom: 8px;
@@ -7265,6 +7265,32 @@ p#copywright-p {
   }
 }
 
+
+.video-overlay {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  h2 {
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 10;
+  }
+
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+  }
+}
 
 /* Slider hero */
 
