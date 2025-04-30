@@ -74,6 +74,8 @@ body {
 :root {
   --maroon: #972221;
   --orange: #f89c1f;
+  --earthly-beige: #B2A793;
+  --green: #008000;
 }
 
 @media screen and (max-width: 768px) {
@@ -494,6 +496,21 @@ a {
 
 .mil-maroon {
   color: var(--maroon);
+}
+
+.mil-earthly-beige {
+  color: var(--earthly-beige);
+}
+
+.mil-green {
+  color: var(--green);
+}
+.bg-earthly-beige {
+  background-color: var(--earthly-beige);
+}
+
+.bg-green {
+  background-color: var(--green);
 }
 
 .mil-light-dark {
