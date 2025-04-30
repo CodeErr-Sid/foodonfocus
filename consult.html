@@ -218,70 +218,102 @@
         <div class="mil-content">
             <div id="swupMain" class="mil-main-transition">
 
-                <!-- hero text -->
-                <section class="hero-heading">
-                    <h1>We serve as <span class="txt-thin mil-maroon">TRUSTED ADVISORS</span> for founders and growing
-                        brands</h1>
+                <!-- banner -->
+                <section class="mil-banner mil-soft-bg pb-5">
+                    <div class="mi-invert-fix">
+                        <div class="mil-animation-frame">
+                            <div class="mil-animation mil-position-1 mil-dark-bg mil-scale" data-value-1="7"
+                                data-value-2="1.6"></div>
+                            <div class="mil-animation mil-position-2 mil-dark-bg mil-scale mil-mobile-hidden"
+                                data-value-1="4" data-value-2="1"></div>
+                            <div class="mil-animation mil-position-3 mil-dark-bg mil-scale mil-mobile-hidden"
+                                data-value-1="1.2" data-value-2="1"></div>
+                        </div>
+
+                        <div class="mil-gradient"></div>
+
+                        <div class="container">
+                            <div class="mil-banner-content mil-up">
+                                <h1 class="mil-maroon mil-mb-60">Leading F&B Brands <br>
+                                    <span class="mil-thin">to Success</span><br>
+                                    with Creative
+                                    <div class="inner-headings">
+                                        <span class="keyword d-block">determination</span>
+                                        <span class="keyword d-block">filing</span>
+                                        <span class="keyword d-block">reclaim</span>
+                                        <span class="keyword d-block">withholding</span>
+                                        <span class="keyword d-block">compliance</span>
+                                        <span class="keyword d-block">determination</span>
+                                    </div>
+                                </h1>
+
+                                <a href="#." class="mil-button mil-arrow-place mil-btn-space">
+                                    <span>What we do</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-                <!-- hero text -->
-                <!-- Background Image -->
-                <!-- bg video playing -->
-                <div class="video-container">
-                    <video id="video" autoplay loop muted>
-                        <source src="video/consult4.mp4" type="video/mp4">
-                    </video>
-                    <button id="play-pause-btn" class="play">&#10074;&#10074;</button>
+                <!-- banner end -->
+
+                <!-- Toggle Menu Bar -->
+                <div class="row align-items-center justify-content-center gap- mil-mb-30 mx-auto col-lg-10">
+                    <div class="col-lg-3 mil-mb-30">
+                        <h3 class="mil-up">Our Menu:</h3>
+                    </div>
+                    <div class="col-lg-7 mil-mb-30">
+                        <div class="mil-adaptive-right mil-up">
+
+                            <ul class="mil-category-list fof-content-filter header-filter">
+                                <li class="fof-content-item mil-active" data-filter="overview">Overview</li>
+                                <li class="fof-content-item" data-filter="challenges">Challenges</li>
+                                <li class="fof-content-item" data-filter="solutions">Solutions</li>
+                                <li class="fof-content-item" data-filter="results">Results</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <script>
-                    const video = document.getElementById('video');
-                    const playPauseBtn = document.getElementById('play-pause-btn');
+                <!-- Toggle Menu Bar -->
 
-                    function playVideo() {
-                        video.play();
-                        playPauseBtn.innerHTML = '&#10074;&#10074;';
-                    }
+                <seciton class="fof-content-container">
+                    <!-- Overview  -->
+                    <section section class="fof-content-show fof-content-overview fof-content">
+                        Overview
+                    </section>
+                    <!-- Challenges  -->
+                    <section section class="fof-content fof-content-challenges fof-content">
+                        Challenges
+                    </section>
+                    <!-- Solutions  -->
+                    <section section class="fof-content fof-content-solutions fof-content">
+                        Solutions
+                    </section>
+                    <!-- Results  -->
+                    <section section class="fof-content fof-content-results fof-content">
+                        Results
+                    </section>
+                </seciton>
 
-                    function pauseVideo() {
-                        video.pause();
-                        playPauseBtn.innerHTML = '&#9658;';
-                    }
+                <!-- Toggle Content -->
 
-                    playPauseBtn.addEventListener('click', function () {
-                        if (video.paused) {
-                            playVideo();
-                        } else {
-                            pauseVideo();
-                        }
-                    });
+                <!-- Toggle Menu Bar -->
+                <div class="row align-items-center justify-content-center gap- mil-mb-30 mx-auto col-lg-10">
+                    <div class="col-lg-3 mil-mb-30">
+                        <h3 class="mil-up">Our Menu:</h3>
+                    </div>
+                    <div class="col-lg-7 mil-mb-30">
+                        <div class="mil-adaptive-right mil-up">
 
-                    playVideo();
-
-                    video.addEventListener('ended', function () {
-                        video.play();
-                    });
-                </script>
-                <!-- bg video playing end -->
-                <!-- Background Image -->
-
-                <!-- cousult buttons -->
-                <!--  
-                    <div class="consult-buttons">
-                        <span class="cc-txt-1">CONSULT</span>
-                        <div class="cc-txt-box">
-                            <span class="cc-txt">Lets schedule a call</span>
-                            <img src="img/icons/right-arrow.svg" alt="">
+                            <ul class="mil-category-list fof-content-filter footer-filter">
+                                <li class="fof-content-item mil-active" data-filter="overview">Overview</li>
+                                <li class="fof-content-item" data-filter="challenges">Challenges</li>
+                                <li class="fof-content-item" data-filter="solutions">Solutions</li>
+                                <li class="fof-content-item" data-filter="results">Results</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="consult-buttons">
-                        <span class="cc-txt-1">CONSULT</span>
-                        <div class="cc-txt-box">
-                            <span class="cc-txt">Lets schedule a call</span>
-                            <img src="img/icons/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div> -->
-                <!-- cousult buttons -->
-
+                </div>
+                <!-- Toggle Menu Bar -->
 
                 <!-- getintouch -->
                 <!-- contact teaser-->
