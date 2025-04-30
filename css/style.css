@@ -5746,7 +5746,7 @@ ul {
 
 .divider {
   width: 0%;
-  border-bottom: 2px solid var(--maroon);
+  border-bottom: 2px solid var(--m);
   clear: both;
   padding-top: 2px;
   padding-bottom: 8px;
@@ -6657,6 +6657,7 @@ ul {
   color: #972221;
   margin: 10px 0;
   text-transform: uppercase;
+  line-height: .9;
 }
 
 .service-item4::after {
@@ -6771,7 +6772,8 @@ ul {
 
 .box5>video {
   width: 200%;
-  height: calc(100% - 10vh);
+  height: 100%;
+  /* height: calc(100% - 10vh); */
   object-fit: cover;
   transition: 0.5s;
 }
