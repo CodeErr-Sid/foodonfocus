@@ -106,7 +106,7 @@ form>div {
   -webkit-transition: 0.2s ease all;
 }
 
-.image-container-ss{
+.image-container-ss {
   position: relative;
 }
 
@@ -216,4 +216,58 @@ form>div {
 /* Gap between buttons */
 .form-group label+input[type="radio"] {
   margin-left: 10px;
+}
+
+.consult-gallery-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  margin-bottom: 2.5rem;
+}
+
+.consult-gallery-slides {
+  display: flex;
+}
+
+.consult-gallery-slides.rtl {
+  animation: scrollGalleryRightToLeft 30s linear infinite;
+}
+
+.consult-gallery-slides.ltr {
+  animation: scrollGalleryLeftToRight 30s linear infinite;
+}
+
+.consult-gallery-slide {
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+.fof-content-overview {
+  margin-bottom: 2rem;
+}
+
+@keyframes scrollGalleryRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollGalleryLeftToRight {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
 }
