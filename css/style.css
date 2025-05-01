@@ -102,6 +102,11 @@ body {
   max-width: 100%;
 }
 
+canvas {
+  background: #800000;
+  margin-bottom: 50px;
+}
+
 #projecttxt {
   text-align: center;
   color: var(--maroon);
@@ -192,7 +197,7 @@ body {
 
 section {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* -------------------------------------------
@@ -2330,8 +2335,8 @@ a {
   pointer-events: none;
 }
 
-.cp-mil-lines-place .mil-lines-place .mil-lines {
-  opacity: 0.9;
+.cp-mil-lines-place .mil-lines {
+  opacity: 0.5;
   pointer-events: none;
 }
 

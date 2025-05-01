@@ -51,11 +51,97 @@ footerFilter.addEventListener("click", (e) => {
     }
 });
 
-
+// rotating text
 const text = document.querySelector(".cp-text");
 text.innerHTML = text.innerText
-	.split("")
-	.map(
-		(char, i) => `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`
-	)
-	.join("");
+    .split("")
+    .map(
+        (char, i) => `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`
+    )
+    .join("");
+
+// chart code
+$(document).ready(function () {
+    const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'];
+
+    const data = {
+        labels,
+        datasets: [
+            {
+                label: 'Conversion Rate',
+                data: [5, 10, 40, 35, 25, 50],
+                borderColor: '#f9a825',
+                backgroundColor: '#f9a825',
+                fill: false,
+                tension: 0.4
+            },
+            {
+                label: 'Website Traffic',
+                data: [10, 5, 20, 15, 40, 70],
+                borderColor: '#ffffff',
+                backgroundColor: '#ffffff',
+                fill: false,
+                tension: 0.4
+            },
+            {
+                label: 'Overall Sales',
+                data: [15, 30, 25, 40, 45, 120],
+                borderColor: '#8b3e2f',
+                backgroundColor: '#8b3e2f',
+                fill: false,
+                tension: 0.4
+            }
+        ]
+    };
+
+    const configLine = {
+        type: 'line',
+        data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#fff'
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: { color: '#fff' }
+                },
+                y: {
+                    ticks: { color: '#fff' },
+                    beginAtZero: true
+                }
+            }
+        }
+    };
+
+    const configBar = {
+        type: 'bar',
+        data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#fff'
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: { color: '#fff' }
+                },
+                y: {
+                    ticks: { color: '#fff' },
+                    beginAtZero: true
+                }
+            }
+        }
+    };
+
+    new Chart(document.getElementById('lineChart'), configLine);
+    new Chart(document.getElementById('barChart'), configBar);
+});
